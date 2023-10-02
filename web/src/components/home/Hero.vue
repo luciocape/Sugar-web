@@ -1,5 +1,5 @@
 <template>
-    <div id="myCarousel" class="hero carousel slide mb-6 position-absolute top-0 w-100" data-bs-ride="carousel" style="">
+    <div id="myCarousel" class="hero carousel slide mb-6 w-100" data-bs-ride="carousel" style="">
         <div class="carousel-indicators">
             <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true"
                 aria-label="Slide 1"></button>
