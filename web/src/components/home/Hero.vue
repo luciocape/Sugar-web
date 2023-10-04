@@ -71,7 +71,6 @@ export default {
 .img-bg {
     min-height: 400px;
     max-height: 100vh;
-
 }
 
 .color-bg {

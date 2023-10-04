@@ -74,6 +74,6 @@ export default {
 @media only screen and (max-width: 768px) {
     #como_funciona {
     background-image: url('../../../public/contenido/nenes-usando-app.png');
-    }
+}    
 }
 </style>

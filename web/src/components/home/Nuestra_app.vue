@@ -1,7 +1,7 @@
 <template>
     <section id="nuestra_app" class="pt-5 pb-5">
         <div class="container">
-            <h2 class="text-start display-3" style="font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; font-weight: 550;">Nuestra App</h2>
+            <h2 class="text-start display-3">Nuestra App</h2>
             <p class="texto lead">
                 <strong class="strong">SugarCoach</strong> es una plataforma digital de automonitoreo de diabetes tipo 1 que acompaña al
                 paciente a todas partes. Desde ahora, las personas llevarán el registro diario de sus valores en tu palma de
