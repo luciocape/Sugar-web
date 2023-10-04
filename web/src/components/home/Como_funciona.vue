@@ -1,9 +1,9 @@
 <template>
     <section id="como_funciona">
         <div class="como_funciona__contenedor">
-            <div class="text-center">
-                <h2>¿Como funciona?</h2>
-                <p>Una plataforma movil para el control integral de la diabetes.</p>
+            <div class="text-center mb-4">
+                <h2 class="display-3">¿Como funciona?</h2>
+                <h3>Una plataforma movil para el control integral de la diabetes.</h3>
             </div>
             <div class="container">
                 <div class="row">
@@ -11,8 +11,8 @@
                         <div class="card mb-3 d-flex align-items-center" style="border: none; background-color: rgba(0, 0, 0, 0);">
                             <img :src="item.url" :alt="item.alt" class="rounded-4" width="70">
                             <div class="card-body">
-                                <h5 class="card-title">{{ item.title }}</h5>
-                                <p class="card-text">{{ item.description }}</p>
+                                <h4 class="card-title">{{ item.title }}</h4>
+                                <p class="card-text lead">{{ item.description }}</p>
                             </div>
                         </div>
                     </div>
@@ -62,12 +62,14 @@ export default {
 #como_funciona {
     background-image: url('https://sugar.coach/wp-content/uploads/2021/11/funciona.jpg');
     background-size: cover;
-    background-color: rgba(255, 255, 255, 0.75);
+    background-repeat: no-repeat;
+    background-position: center;
+
 }
 
 .como_funciona__contenedor {
     padding-top: 100px;
-    background-color: rgba(255, 255, 255, 0.75);
+    background-color: rgba(255, 255, 255, 0.6);
 }
 @media only screen and (max-width: 768px) {
     #como_funciona {

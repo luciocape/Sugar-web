@@ -3,6 +3,7 @@
     <Hero></Hero>
     <main>
       <Como_funciona></Como_funciona>
+      <Nuestra_app></Nuestra_app>
     </main>
     
 </template>
@@ -11,13 +12,15 @@
 import Header from './components/Header.vue';
 import Hero from './components/home/Hero.vue';
 import Como_funciona from './components/home/Como_funciona.vue';
+import Nuestra_app from './components/home/Nuestra_app.vue';
 
 export default {
   name: 'App',
   components: {
     Header,
     Hero,
-    Como_funciona
+    Como_funciona,
+    Nuestra_app
   },
   mounted() {
     document.title = 'Sugar Coach';
