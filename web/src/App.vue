@@ -35,6 +35,18 @@ export default {
     -moz-osx-font-smoothing: grayscale;
     text-align: center;
     color: #2c3e50;
-    margin-top: 60px;
   }
+      body {
+        font-family: 'Poppins', sans-serif;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 1.5;
+        color: #495057;
+        background-color: #fff;
+    }
+    * {
+      box-sizing: border-box;
+      margin: 0px;
+      padding: 0px;
+    }
 </style>

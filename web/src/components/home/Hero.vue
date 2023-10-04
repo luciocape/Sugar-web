@@ -7,16 +7,13 @@
             <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
         </div>
         <div class="carousel-inner">
-            <div v-for="(item, index) in  carousels " :key="index" :class="item.claseCSS" :style="item.imagen">
-                <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg"
-                    aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false">
-                    <rect width="100%" height="100%" fill="var(--bs-secondary-color)" />
-                </svg>
+            <div v-for="(item, index) in  carousels " :key="index" :class="item.claseCSS">
+                <img :src="item.url" :alt="item.alt" class=" img-bg d-block w-100">
+                <div class="color-bg"></div>
                 <div class="container">
-                    <div class="carousel-caption text-start">
-                        <h1>Example headline.</h1>
-                        <p class="opacity-75">Some representative placeholder content for the first slide of the carousel.
-                        </p>
+                    <div class="carousel-caption text-start ">
+                        <h1 class="display-6 lead">{{ item.title }}</h1>
+                        <p class="opacity-75 subtitulo">{{ item.description }}</p>
                     </div>
                 </div>
             </div>
@@ -40,15 +37,24 @@ export default {
             carousels: [
                 {
                     claseCSS: 'carousel-item active',
-                    imagen: 'background-image: url(https://sugar.coach/wp-content/uploads/2021/11/slider1.jpg;); height: 578.16px; background-position: center 0px;'
+                    url: 'https://sugar.coach/wp-content/uploads/2021/11/funciona.jpg',
+                    alt: 'Slide 1',
+                    title: 'Convertimos el control de la diabetes en un juego',
+                    description: '',
                 },
                 {
                     claseCSS: 'carousel-item',
-                    imagen: 'background-image: url(https://sugar.coach/wp-content/uploads/2021/11/slider2.jpg;); height: 578.16px; background-position: center 0px;'
+                    url: 'https://sugar.coach/wp-content/uploads/2021/11/slider2.jpg',
+                    alt: 'Slider2',
+                    title: 'La única App que necesitas',
+                    description: 'De manera fácil y divertida los usuarios cargan valores de glucemia, insulina y carbohidratos  de cada comida del día.',
                 },
                 {
                     claseCSS: 'carousel-item',
-                    imagen: 'background-image: url(https://sugar.coach/wp-content/uploads/2021/11/slider3-2.jpg;); height: 578.16px; background-position: center 0px;'
+                    url: 'https://sugar.coach/wp-content/uploads/2021/11/slider3-2.jpg',
+                    alt: 'Slide 3',
+                    title: 'Una experiencia gamificada',
+                    description: 'Juega y gana recompensas del mundo gaming.',
                 }
             ]
         }
@@ -61,4 +67,37 @@ export default {
 #myCarousel {
     z-index: 10;
 }
-</style>
+
+.img-bg {
+    min-height: 400px;
+    max-height: 100vh;
+
+}
+
+.color-bg {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.8) 0%, rgba(255, 255, 255, 0) 70%);
+}
+
+.subtitulo {
+    font-size: 1rem;
+    font-weight: 550;
+}
+
+@media only screen and (max-width: 768px) {
+    .img-bg {
+        object-fit: cover;
+    }
+
+}
+
+@media only screen and (max-width: 425px) {
+    body {
+        font-size: 10px;
+    }
+
+}</style>

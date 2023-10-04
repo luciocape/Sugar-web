@@ -27,14 +27,14 @@
         </header>
     </div>
     -->
-    <nav class="navbar navbar-expand-lg top-0 position-fixed w-100" style="z-index: 999; background-color: #4B23A5;">
+    <nav class="navbar navbar-expand-sm top-0 position-fixed w-100" style="z-index: 999; background-color: #4B23A5;">
         <div class="container-fluid">
             <a class="navbar-brand" href="index.html">
-                <img src="../../contenido/sugar-logo.png" class="d-inline-block " alt="Logo Sugar Coach" width="60" >
+                <img src="../../public/contenido/sugar-logo.png" class="d-inline-block " alt="Logo Sugar Coach" width="60" >
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
                 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class=""><img src="../../contenido/menu.png" alt="menu" width="45" style="filter: invert(85%);"></span>
+                <span class="menu"><img src="../../public/contenido/menu.png" alt="menu" width="45" style="filter: invert(85%);"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="d-flex justify-content-end align-items-start navbar-nav mb-2 mb-lg-0">
@@ -82,18 +82,19 @@ export default {
     @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap');
     @import url('https://fonts.googleapis.com/css2?family=Lora:wght@100;300;400;500;600;700;800;900&display=swap');
 
-    body {
-        font-family: 'Poppins', sans-serif;
-        font-weight: 400;
-        font-size: 16px;
-        line-height: 1.5;
-        color: #495057;
-        background-color: #fff;
-    }
     .nav-item a {
         font-size: 1.1rem;
         color: rgb(235, 228, 221);
         transition: 0.5s;
+    }
+
+    @media only screen and (max-width: 375px) {
+        .navbar-brand img{
+            width: 45px;
+        }
+        .menu img{
+            width: 30px;
+        }
     }
 
 </style>
