@@ -3,6 +3,7 @@
   <Hero></Hero>
   <main>
     <Como_funciona></Como_funciona>
+    <Testimonios></Testimonios>
     <Nuestra_app></Nuestra_app>
     <Equipo></Equipo>
   </main>
@@ -16,6 +17,7 @@ import Como_funciona from './components/home/Como_funciona.vue';
 import Nuestra_app from './components/home/Nuestra_app.vue';
 import Equipo from './components/home/Equipo.vue';
 import Pie from './components/Pie.vue';
+import Testimonios from './components/home/Testimonios.vue';
 
 export default {
   name: 'App',
@@ -23,9 +25,11 @@ export default {
     Header,
     Hero,
     Como_funciona,
+    Testimonios,
     Nuestra_app,
     Equipo,
-    Pie,
+    Pie
+    
   },
   mounted() {
     document.title = 'Sugar Coach';
