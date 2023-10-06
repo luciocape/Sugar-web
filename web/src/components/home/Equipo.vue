@@ -1,6 +1,6 @@
 <template>
-           <section id="equipo" class="d-flex justify-content-center align-items-center">
-        <div class="equipo__contenedor">
+    <section id="equipo" class="d-flex justify-content-center  align-items-center m-0 pt-5 w-100 bg-body-secondary">
+        <div class="equipo__contenedor d-flex flex-column d-sm-block w-75">
             <h2 class="fw-bolder display-3">Somos un equipo</h2>
             <img src="../../../public/contenido/integrantes-equipo.png" alt="Equipo" class="img-equipo">
             <div class="equipo__contenedor__contenedor">
@@ -17,13 +17,12 @@
                     En 2021, junto a Verónica Aveldaño, nuestra COO lanzaron SugarCoah, un proyecto integral que incluye una
                     App móvil, educativa y de contención para la comunidad de familias con diabetes tipo 1.
                     Queremos darles la bienvenida a SugarCoach</p>
-                <ul class="lista-equipo">
-                    <li v-for="(item, index) in  integrantes" :key="index">{{ item.Nombre }} {{ item.cargo }}</li>
+                <ul class="lista-equipo mt-4 ms-5 mb-5 lead">
+                    <li v-for="(item, index) in  integrantes" :key="index"><span class="fw-bold">{{ item.Nombre }}</span> <span class="fw-light">{{ item.cargo }}</span></li>
                 </ul>
             </div>
         </div>
-    </section> 
-
+    </section>
 </template>
 
 <script>
@@ -65,7 +64,6 @@ export default {
 </script>
 
 <style>
-
 #equipo {
     margin: 100px auto;
     width: 85%;
@@ -73,7 +71,6 @@ export default {
 
 .img-equipo {
     max-width: 350px;
-    width: auto;
     float: left;
     border: 3px solid #fff;
     border-radius: 10px;
@@ -81,16 +78,21 @@ export default {
 }
 
 .equipo__contenedor {
-    background-color: rgb(255, 255, 255);
     color: black;
 }
 
 .lista-equipo {
     align-self: left;
     text-align: start;
-    list-style-type: none;
+    list-style-type: square;
     padding: 0;
     margin: 0;
 }
-
+@media only screen and (max-width: 589px) {
+    .img-equipo{
+        margin: 0 auto;
+        width: 100%;
+        max-width: none;
+    }
+}
 </style>

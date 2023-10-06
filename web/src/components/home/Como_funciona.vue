@@ -1,6 +1,6 @@
 <template>
     <section id="como_funciona">
-        <div class="como_funciona__contenedor">
+        <div class="como_funciona__contenedor pb-5">
             <div class="text-center mb-4">
                 <h2 class="display-3">¿Como funciona?</h2>
                 <h3>Una plataforma movil para el control integral de la diabetes.</h3>

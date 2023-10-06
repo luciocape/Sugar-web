@@ -67,4 +67,9 @@ h2{
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', 'Arial', 'sans-serif';
   font-weight: 550;
 }
+@media only screen and (max-width: 450px){
+  body{
+    font-size: 14px;
+  }
+}
 </style>
