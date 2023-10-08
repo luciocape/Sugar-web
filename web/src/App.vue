@@ -1,6 +1,7 @@
 <template>
   <Header></Header>
   <Hero></Hero>
+  <Descargar></Descargar>
   <main>
     <Como_funciona></Como_funciona>
     <Testimonios></Testimonios>
@@ -18,18 +19,20 @@ import Nuestra_app from './components/home/Nuestra_app.vue';
 import Equipo from './components/home/Equipo.vue';
 import Pie from './components/Pie.vue';
 import Testimonios from './components/home/Testimonios.vue';
+import Descargar from './components/Descargar.vue';
 
 export default {
   name: 'App',
   components: {
     Header,
     Hero,
+    Descargar,
     Como_funciona,
     Testimonios,
     Nuestra_app,
     Equipo,
     Pie
-    
+
   },
   mounted() {
     document.title = 'Sugar Coach';
@@ -63,12 +66,14 @@ body {
   margin: 0px;
   padding: 0px;
 }
-h2{
+
+h2 {
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', 'Arial', 'sans-serif';
   font-weight: 550;
 }
-@media only screen and (max-width: 450px){
-  body{
+
+@media only screen and (max-width: 450px) {
+  body {
     font-size: 14px;
   }
 }
