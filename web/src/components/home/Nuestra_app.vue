@@ -2,7 +2,7 @@
     <section id="nuestra_app" class="pt-5 pb-5">
         <div class="container">
             <h2 class="text-start display-3">Nuestra App</h2>
-            <p class="texto lead">
+            <p class="texto">
                 <strong class="strong">SugarCoach</strong> es una plataforma digital de automonitoreo de diabetes tipo 1 que acompaña al
                 paciente a todas partes. Desde ahora, las personas llevarán el registro diario de sus valores en tu palma de
                 la
@@ -36,9 +36,7 @@ export default {
 </script>
 
 <style>
-.texto {
-    text-align: justify;
-}
+
 
 #nuestra_app {
     background-image: url('https://sugar.coach/wp-content/uploads/2021/11/nuestraapp.jpg');

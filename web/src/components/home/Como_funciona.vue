@@ -12,7 +12,7 @@
                             <img :src="item.url" :alt="item.alt" class="rounded-4" width="70">
                             <div class="card-body">
                                 <h4 class="card-title">{{ item.title }}</h4>
-                                <p class="card-text lead">{{ item.description }}</p>
+                                <p class="card-text texto">{{ item.description }}</p>
                             </div>
                         </div>
                     </div>

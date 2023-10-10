@@ -9,7 +9,7 @@
                     <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
                         aria-label="Slide 2"></button>
                 </div>
-                <div class="carousel-inner h-100" style="border: 1px solid white; width: 80%; border-radius: 20px;">
+                <div class="carousel-inner h-100 container" style="border: 1px solid white; border-radius: 20px;">
                     <div v-for="(item, index) in items" :key="index" :class="item.claseCSS">
                         <div class="container m-0 m-auto d-flex flex-column justify-content-center h-100">
                             <p class="m-0 lead fw-bolder text-black-50">{{ item.experiencia }}</p>

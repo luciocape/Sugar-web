@@ -1,10 +1,10 @@
 <template>
-    <section id="equipo" class="d-flex justify-content-center  align-items-center m-0 pt-5 w-100 bg-body-secondary">
+    <section id="equipo" class="d-flex justify-content-center  align-items-center m-0 pt-5 w-100">
         <div class="equipo__contenedor d-flex flex-column d-sm-block w-75">
             <h2 class="fw-bolder display-3">Somos un equipo</h2>
             <img src="../../../public/contenido/integrantes-equipo.png" alt="Equipo" class="img-equipo">
             <div class="equipo__contenedor__contenedor">
-                <p class="lead texto">Somos un grupo de mujeres decididas a mejorar la calidad de vida de las familias
+                <p class="texto">Somos un grupo de mujeres decididas a mejorar la calidad de vida de las familias
                     con
                     niños
                     con
@@ -17,7 +17,7 @@
                     En 2021, junto a Verónica Aveldaño, nuestra COO lanzaron SugarCoah, un proyecto integral que incluye una
                     App móvil, educativa y de contención para la comunidad de familias con diabetes tipo 1.
                     Queremos darles la bienvenida a SugarCoach</p>
-                <ul class="lista-equipo mt-4 ms-5 mb-5 lead">
+                <ul class="lista-equipo mt-4 ms-3  ms-sm-5 mb-5 texto" style="text-align: start;">
                     <li v-for="(item, index) in  integrantes" :key="index"><span class="fw-bold">{{ item.Nombre }}</span> <span class="fw-light">{{ item.cargo }}</span></li>
                 </ul>
             </div>
@@ -72,14 +72,11 @@ export default {
 .img-equipo {
     max-width: 350px;
     float: left;
-    border: 3px solid #fff;
+    box-shadow: 0 0 30px rgba(93, 1, 168, 0.74);
     border-radius: 10px;
     margin-right: 30px;
 }
 
-.equipo__contenedor {
-    color: black;
-}
 
 .lista-equipo {
     align-self: left;
@@ -88,9 +85,11 @@ export default {
     padding: 0;
     margin: 0;
 }
+
 @media only screen and (max-width: 589px) {
     .img-equipo{
         margin: 0 auto;
+        margin-bottom: 30px;
         width: 100%;
         max-width: none;
     }

@@ -11,8 +11,8 @@
                 <img :src="item.url" :alt="item.alt" class=" img-bg d-block w-100">
                 <div class="color-bg"></div>
                 <div class="container">
-                    <div class="carousel-caption text-start ">
-                        <h1 class="display-6 lead">{{ item.title }}</h1>
+                    <div class="carousel-caption text-start mb-4 ps-0" style="left: 60px; width: 65%;">
+                        <h1 class="display-6 .h1" style="font-weight: 700;">{{ item.title }}</h1>
                         <p class="opacity-75 subtitulo">{{ item.description }}</p>
                     </div>
                 </div>
@@ -36,21 +36,21 @@ export default {
         return {
             carousels: [
                 {
-                    claseCSS: 'carousel-item active',
+                    claseCSS: 'carousel-item active slide1',
                     url: 'https://sugar.coach/wp-content/uploads/2021/11/funciona.jpg',
                     alt: 'Slide 1',
                     title: 'Convertimos el control de la diabetes en un juego',
                     description: '',
                 },
                 {
-                    claseCSS: 'carousel-item',
+                    claseCSS: 'carousel-item slide2',
                     url: 'https://sugar.coach/wp-content/uploads/2021/11/slider2.jpg',
                     alt: 'Slider2',
                     title: 'La única App que necesitas',
                     description: 'De manera fácil y divertida los usuarios cargan valores de glucemia, insulina y carbohidratos  de cada comida del día.',
                 },
                 {
-                    claseCSS: 'carousel-item',
+                    claseCSS: 'carousel-item slide3',
                     url: 'https://sugar.coach/wp-content/uploads/2021/11/slider3-2.jpg',
                     alt: 'Slide 3',
                     title: 'Una experiencia gamificada',
@@ -68,10 +68,7 @@ export default {
     z-index: 10;
 }
 
-.img-bg {
-    min-height: 400px;
-    max-height: 100vh;
-}
+
 
 .color-bg {
     content: "";
@@ -87,6 +84,31 @@ export default {
     font-weight: 550;
 }
 
+.img-bg {
+    min-height: 450px;
+    height: 100vh;
+    position: fixed;
+    object-fit: cover;
+}
+
+.slide1,
+.slide2,
+.slide3 {
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    clip-path: inset(0);
+}
+@media only screen and (max-width: 850px) {
+    .img-bg{
+        height: auto;
+        object-fit: contain;
+    }
+    .slide1, .slide2, .slide3 {
+        height: 450px
+    }
+}
+
 @media only screen and (max-width: 768px) {
     .img-bg {
         object-fit: cover;
@@ -95,8 +117,11 @@ export default {
 }
 
 @media only screen and (max-width: 425px) {
-    body {
-        font-size: 10px;
+    .img-bg{
+        min-height: 400px;
     }
-
-}</style>
+    .slide1,.slide2,.slide3{
+        height: 400px;
+    }
+}
+</style>
