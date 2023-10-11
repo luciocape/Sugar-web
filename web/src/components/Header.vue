@@ -39,7 +39,7 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="d-flex justify-content-end align-items-start navbar-nav mb-2 mb-lg-0">
                     <!--Links navbar-->
-                    <li v-for="item in links" :key="index" class="nav-item"><a class="nav-link" href="#">{{ item.link }}</a>
+                    <li v-for="item in links" :key="index" class="nav-item"><a class="nav-link" :href="item.enlace">{{ item.link }}</a>
                     </li>
                 </ul>
             </div>
@@ -55,19 +55,23 @@ export default {
             links: [
                 {
                     link: '¿Como Funciona?',
-                    icon: 'fas fa-cogs'
+                    icon: 'fas fa-cogs',
+                    enlace: '#como_funciona'
                 },
                 {
                     link: 'Nuestra App ',
-                    icon: 'fas fa-dollar-sign'
+                    icon: 'fas fa-dollar-sign',
+                    enlace: '#nuestra_app'
                 },
                 {
                     link: 'Equipo',
-                    icon: 'fas fa-question-circle'
+                    icon: 'fas fa-question-circle',
+                    enlace: '#equipo'
                 },
                 {
                     link: 'Premium',
-                    icon: 'fas fa-info-circle'
+                    icon: 'fas fa-info-circle',
+                    enlace: 'Premium.vue'
                 }
             ]
         }

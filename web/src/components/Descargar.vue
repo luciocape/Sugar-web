@@ -4,7 +4,7 @@
             <a href="" class="d-flex justify-content-center align-items-center w-100 h-100"><img src="https://sugar.coach/wp-content/uploads/2021/08/menuDownload.png" alt="" class="w-100 h-100"></a>
         </div>
         <div class="d-flex justify-content-center align-items-center position-fixed w-100 h-auto bottom-0 d-sm-none" style="z-index: 900; min-width: 275px;">
-            <a href="" class="w-50 h-100"><img src="https://sugar.coach/wp-content/uploads/2021/08/menuDownload.png" alt="" class="w-100 h-100"></a>
+            <a href="https://play.google.com/store/apps/details?id=com.sugarcoach&hl=es" class="w-50 h-100"><img src="https://sugar.coach/wp-content/uploads/2021/08/menuDownload.png" alt="" class="w-100 h-100"></a>
         </div>
 </template>
 

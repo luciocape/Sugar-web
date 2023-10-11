@@ -6,6 +6,7 @@
             <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
             <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
         </div>
+        
         <div class="carousel-inner">
             <div v-for="(item, index) in  carousels " :key="index" :class="item.claseCSS">
                 <img :src="item.url" :alt="item.alt" class=" img-bg d-block w-100">
@@ -18,6 +19,7 @@
                 </div>
             </div>
         </div>
+
         <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
             <span class="visually-hidden">Previous</span>
@@ -44,7 +46,7 @@ export default {
                 },
                 {
                     claseCSS: 'carousel-item slide2',
-                    url: 'https://sugar.coach/wp-content/uploads/2021/11/slider2.jpg',
+                    url: '../../../contenido/nene-usando-app.jpg',
                     alt: 'Slider2',
                     title: 'La única App que necesitas',
                     description: 'De manera fácil y divertida los usuarios cargan valores de glucemia, insulina y carbohidratos  de cada comida del día.',
@@ -85,7 +87,6 @@ export default {
 }
 
 .img-bg {
-    min-height: 450px;
     height: 100vh;
     position: fixed;
     object-fit: cover;
@@ -99,26 +100,20 @@ export default {
     width: 100vw;
     clip-path: inset(0);
 }
+
+
 @media only screen and (max-width: 850px) {
     .img-bg{
-        height: auto;
-        object-fit: contain;
+        height: 450px;
     }
     .slide1, .slide2, .slide3 {
         height: 450px
     }
 }
 
-@media only screen and (max-width: 768px) {
-    .img-bg {
-        object-fit: cover;
-    }
-
-}
-
 @media only screen and (max-width: 425px) {
     .img-bg{
-        min-height: 400px;
+        height: 400px;
     }
     .slide1,.slide2,.slide3{
         height: 400px;

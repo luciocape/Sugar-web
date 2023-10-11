@@ -1,11 +1,11 @@
 <template>
   <div class="contenedor-footer w-100 h-auto">
-    <div class="container">
+    <div class="w-100 ">
       <footer class="py-3">
-        <ul class="nav justify-content-center border-bottom border-dark-subtle pb-3 mb-3">
-          <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Home</a></li>
-          <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Features</a></li>
-          <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Pricing</a></li>
+        <ul class="nav justify-content-center border-bottom border-dark-subtle pb-3 pt-3 mb-3 nav">
+          <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">¿Como Funciona?</a></li>
+          <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Nuestra App</a></li>
+          <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Pri</a></li>
           <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">FAQs</a></li>
           <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">About</a></li>
         </ul>
@@ -34,11 +34,10 @@ export default {
   background-position: center;
   background-attachment: fixed;
 }
-
-.footer {
-  background-color: #343a40;
-  color: #fff;
+.nav{
+  background-color: rgba(1, 97, 161, 0.404);
 }
+
 
 .redes {
   justify-content: end;
