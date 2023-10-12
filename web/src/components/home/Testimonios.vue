@@ -1,12 +1,12 @@
 <template>
-    <section id="Testimonios" class="w-100">
+    <section id="testimonios" class="w-100">
         <div class="color-bg-testimonios w-100 d-flex flex-column justify-content-center align-items-center">
             <h2 class="display-3">Testimonios</h2>
-            <div id="carouselExampleIndicators" class="carousel slide h-50 w-100 d-flex align-items-center justify-content-center">
+            <div id="carouselTestimonios" class="carousel slide h-50 w-100 d-flex align-items-center justify-content-center" data-bs-ride="carousel">
                 <div class="carousel-indicators">
-                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+                    <button type="button" data-bs-target="#carouselTestimonios" data-bs-slide-to="0" class="active"
                         aria-current="true" aria-label="Slide 1"></button>
-                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                    <button type="button" data-bs-target="#carouselTestimonios" data-bs-slide-to="1"
                         aria-label="Slide 2"></button>
                 </div>
                 <div class="carousel-inner h-100 container" style="border: 1px solid white; border-radius: 20px;">
@@ -15,7 +15,6 @@
                             <p class="m-0 lead fw-bolder text-black-50">{{ item.experiencia }}</p>
                             <p class="mb-0 mt-3 lead fw-bolder text-black text-opacity-75 ">{{ item.nombre }}</p>
                         </div>
-
                     </div>
                 </div>
             </div>
@@ -48,7 +47,7 @@ export default {
 </script>
 
 <style>
-#Testimonios {
+#testimonios {
     min-height: 350px;
     height: 70vh;
     background-image: url('https://sugar.coach/wp-content/uploads/2021/11/TEstimonios.jpg');

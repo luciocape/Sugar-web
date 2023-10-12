@@ -20,10 +20,10 @@
                         Queremos darles la bienvenida a SugarCoach</p>
             </div>
 
-            <ul class="lista-equipo mt-4 mb-5 contenedor-integrantes" style="text-align: center;">
-                <li v-for="(item, index) in  integrantes" :key="index" style="min-width: 150px; width: 1fr;">
-                    <div class="d-flex flex-column justify-content-center ali"><img :src="item.url" :alt="item.alt" height="" style="filter: grayscale(1) ;"
-                            class="rounded-circle mb-2 w-75"><span class="fw-bold">{{ item.Nombre }}</span> <span
+            <ul class="lista-equipo mt-4 mb-5 contenedor-integrantes d-flex flex-wrap justify-content-center align-items-center gap-4" style="text-align: center;">
+                <li v-for="(item, index) in  integrantes" :key="index" style="min-width: 150px;">
+                    <div class="d-flex flex-column justify-content-center align-items-center"><img :src="item.url" :alt="item.alt" style=" max-width: 100%;"
+                            class="rounded-circle mb-2 img-integrante"><span class="fw-bold">{{ item.Nombre }}</span> <span
                             class="fw-light">{{ item.cargo }}</span></div>
                 </li>
             </ul>
@@ -41,34 +41,34 @@ export default {
                 {
                     Nombre: 'Debora Biain',
                     cargo: 'RSE & Relaciones Públicas',
-                    url: '../../../contenido/integrantes/devora.jpg',
+                    url: '../../../contenido/integrantes/devora-circle.jpg',
                     alt: 'Devora Biain'
                 }
                 ,
                 {
                     Nombre: 'Agustina Olivo',
                     cargo: 'CM & Content Manager',
-                    url: '../../../contenido/integrantes/karina.jpg',
+                    url: '../../../contenido/integrantes/karina-circle.jpg',
                     alt: 'Agustina Olivo'
                 }
                 ,
                 {
                     Nombre: 'Isabel Berizzo',
                     cargo: 'CEO & CTO FUNDADORA',
-                    url: '../../../contenido/integrantes/isabel.jpg',
+                    url: '../../../contenido/integrantes/isabel-circle.jpg',
                     alt: 'Isabel Berizzo'
                 },
                 {
                     Nombre: 'Veronica Avendaño',
                     cargo: 'COO',
-                    url: '../../../contenido/integrantes/veronica.jpg',
+                    url: '../../../contenido/integrantes/veronica-circle.jpg',
                     alt: 'Veronica Avendaño'
                 }
                 ,
                 {
                     Nombre: 'M.Eugenia Medina',
                     cargo: 'Perfomance Coach',
-                    url: '../../../contenido/integrantes/eugenia.jpg',
+                    url: '../../../contenido/integrantes/eugenia-circle.jpg',
                     alt: 'Maria Eugenia Medina'
                 },
             ],
@@ -89,6 +89,18 @@ export default {
     box-shadow: 0 0 30px rgba(93, 1, 168, 0.74);
     border-radius: 10px;
     margin-right: 30px;
+}
+
+.img-integrante{
+    filter: grayscale(1);
+    transition: 1s;
+}
+
+.img-integrante:hover{
+    filter: grayscale(0);
+    transition: 1s;
+    box-shadow: 0 0 15px rgb(3, 73, 131);;
+
 }
 
 

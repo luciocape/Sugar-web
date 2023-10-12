@@ -3,11 +3,10 @@
     <div class="w-100 ">
       <footer class="py-3">
         <ul class="nav justify-content-center border-bottom border-dark-subtle pb-3 pt-3 mb-3 nav">
-          <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">¿Como Funciona?</a></li>
-          <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Nuestra App</a></li>
-          <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Pri</a></li>
-          <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">FAQs</a></li>
-          <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">About</a></li>
+          <li class="nav-item"><a href="#como_funciona" class="nav-link px-2 text-body-secondary fw-bolder">¿Como Funciona?</a></li>
+          <li class="nav-item"><a href="#nuestra_app" class="nav-link px-2 text-body-secondary fw-bolder">Nuestra App</a></li>
+          <li class="nav-item"><a href="#equipo" class="nav-link px-2 text-body-secondary fw-bolder">Equipo</a></li>
+          <li class="nav-item"><a href="Premium.vue" class="nav-link px-2 text-body-secondary fw-bolder">Premium</a></li>
         </ul>
         <p class="text-center text-body-secondary">&copy; 2023 Sugar Coach, Inc</p>
       </footer>

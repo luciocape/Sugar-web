@@ -7,11 +7,11 @@
             </div>
             <div v-for="(item, index) in inputs" :key="index" class="mb-3">
                 <label :for="item.for" class="form-label">{{ item.label }}</label>
-                <div v-if="item.id != 'exampleFormControlTextarea1'">
-                    <input type="text" class="form-control" :id="item.id" :placeholder="item.placeholder">
+                <div v-if="item.id != 'mensaje'">
+                    <input type="text" class="form-control" :name="item.id" :id="item.id" :placeholder="item.placeholder">
                 </div>
                 <div v-else class="h-25">
-                    <textarea class="form-control" :id="item.id" :placeholder="item.placeholder" style="max-height: 120px;"></textarea>
+                    <textarea class="form-control" :name="item.id" :id="item.id" :placeholder="item.placeholder" style="max-height: 120px;"></textarea>
                 </div>
             </div>
             <button type="submit" class="btn btn-primary">Enviar</button>
@@ -28,21 +28,21 @@ export default {
         return {
             inputs: [
                 {
-                    id: 'exampleFormControlInput1',
+                    id: 'nombre',
                     for: 'exampleFormControlInput1',
-                    placeholder: 'Example input',
+                    placeholder: 'Juan Perez',
                     label: 'Tu nombre',
                 },
                 {
-                    id: 'exampleFormControlInput2',
+                    id: 'email',
                     for: 'exampleFormControlInput2',
-                    placeholder: 'Example input',
+                    placeholder: 'juanperez@gmail.com',
                     label: 'Tu correo electronico',
                 },
                 {
-                    id: 'exampleFormControlTextarea1',
+                    id: 'mensaje',
                     for: 'exampleFormControlTextarea1',
-                    placeholder: 'Example textarea',
+                    placeholder: 'Hola, me gustaria optener la version premium',
                     label: 'Tu mensaje',
                 }
             ],
