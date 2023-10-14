@@ -31,13 +31,13 @@
     -->
     <div id="carouselExampleAutoplaying" class="carousel slide carousel-fade" data-bs-ride="carousel">
         <div class="carousel-indicators">
-                    <button type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide-to="0" class="active"
-                        aria-current="true" aria-label="Slide 1"></button>
-                    <button type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide-to="1"
-                        aria-label="Slide 2"></button>
-                        <button type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide-to="2"
-                        aria-label="Slide 3"></button>
-                </div>
+            <button type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide-to="0" class="active"
+                aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide-to="1"
+                aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide-to="2"
+                aria-label="Slide 3"></button>
+        </div>
         <div class="carousel-inner">
             <div v-for="(item, index) in  carousels " :key="index" :class="item.claseCSS">
                 <img :src="item.url" :alt="item.alt" class=" img-bg d-block w-100">
@@ -119,7 +119,7 @@ export default {
 }
 
 .img-bg {
-    height: 100vh;
+    min-height: 100vh;
     position: fixed;
     object-fit: cover;
 }
@@ -128,33 +128,44 @@ export default {
 .slide2,
 .slide3 {
     position: relative;
-    height: 100vh;
-    width: 100vw;
+    min-height: 100vh;
+    max-width: 100vw;
     clip-path: inset(0);
 }
 
 
 @media only screen and (max-width: 850px) {
     .img-bg {
-        height: 450px;
+        min-height: 80vh;
     }
 
     .slide1,
     .slide2,
     .slide3 {
-        height: 450px
+        min-height: 80vh;
     }
 }
 
-@media only screen and (max-width: 425px) {
+@media only screen and (max-width: 700px) {
     .img-bg {
-        height: 400px;
+        min-height: 70vh;
     }
 
     .slide1,
     .slide2,
     .slide3 {
-        height: 400px;
+        min-height: 70vh;
+    }
+}
+@media only screen and (max-width: 500px) {
+    .img-bg {
+        min-height: 60vh;
+    }
+
+    .slide1,
+    .slide2,
+    .slide3 {
+        min-height: 60vh;
     }
 }
 </style>

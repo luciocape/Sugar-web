@@ -7,8 +7,9 @@
 
         <div class="social-links w-100">
             <ul class="w-100 d-flex justify-content-center gap-3">
-                <li v-for="(item, index) in redes" :key="index" style="list-style: none;"><a :href="item.enlace"><img
-                            :src="item.url" :alt="item.alt" style="width: 10vw;max-width: 60px; min-width: 20px;"></a></li>
+                <li v-for="(item, index) in redes" :key="index" style="list-style: none;"><a :href="item.enlace"
+                        target="_blank"><img :src="item.url" :alt="item.alt" class="logo-red-social"
+                            style="width: 10vw;max-width: 60px; min-width: 20px; "></a></li>
             </ul>
         </div>
     </section>
@@ -62,5 +63,19 @@ export default {
 
     min-height: 25vh;
     padding: 30px;
+}
+
+.logo-red-social {
+    width: 10vw;
+    max-width: 60px;
+    min-width: 20px;
+
+    filter: grayscale(1) invert(1) ;
+    transition: 0.8s;
+}
+
+.logo-red-social:hover {
+    filter: grayscale(0) invert(0) ;
+    transition: 0.8s;
 }
 </style>
