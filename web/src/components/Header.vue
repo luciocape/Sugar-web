@@ -58,6 +58,7 @@ export default {
                     icon: 'fas fa-cogs',
                     enlace: '#como_funciona'
                 },
+                
                 {
                     link: 'Nuestra App ',
                     icon: 'fas fa-dollar-sign',
@@ -67,6 +68,11 @@ export default {
                     link: 'Equipo',
                     icon: 'fas fa-question-circle',
                     enlace: '#equipo'
+                },
+                {
+                    link: 'Contacto',
+                    icon: '',
+                    enlace: '#contactanos'
                 },
                 {
                     link: 'Premium',

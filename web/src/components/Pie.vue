@@ -3,10 +3,8 @@
     <div class="w-100 ">
       <footer class="py-3">
         <ul class="nav justify-content-center border-bottom border-dark-subtle pb-3 pt-3 mb-3 nav">
-          <li class="nav-item"><a href="#como_funciona" class="nav-link px-2 text-body-secondary fw-bolder">¿Como Funciona?</a></li>
-          <li class="nav-item"><a href="#nuestra_app" class="nav-link px-2 text-body-secondary fw-bolder">Nuestra App</a></li>
-          <li class="nav-item"><a href="#equipo" class="nav-link px-2 text-body-secondary fw-bolder">Equipo</a></li>
-          <li class="nav-item"><a href="Premium.vue" class="nav-link px-2 text-body-secondary fw-bolder">Premium</a></li>
+          <li v-for="item in links" :key="index" class="nav-item"><a :href="item.enlace"
+              class="nav-link px-2 text-body-secondary fw-bolder">{{ item.link }}</a></li>
         </ul>
         <p class="text-center text-body-secondary">&copy; 2023 Sugar Coach, Inc</p>
       </footer>
@@ -19,7 +17,33 @@ export default {
   name: 'Pie',
   data() {
     return {
-
+      links: [
+        {
+          link: '¿Como Funciona?',
+          icon: 'fas fa-cogs',
+          enlace: '#como_funciona'
+        },
+        {
+          link: 'Testimonios',
+          icon: '',
+          enlace: '#testimonios'
+        },
+        {
+          link: 'Nuestra App ',
+          icon: 'fas fa-dollar-sign',
+          enlace: '#nuestra_app'
+        },
+        {
+          link: 'Equipo',
+          icon: 'fas fa-question-circle',
+          enlace: '#equipo'
+        },
+        {
+          link: 'Premium',
+          icon: 'fas fa-info-circle',
+          enlace: 'Premium.vue'
+        }
+      ]
     }
   }
 }
@@ -33,7 +57,8 @@ export default {
   background-position: center;
   background-attachment: fixed;
 }
-.nav{
+
+.nav {
   background-color: rgba(1, 97, 161, 0.404);
 }
 
