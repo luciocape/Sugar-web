@@ -1,5 +1,5 @@
 <template>
-  <div class="contenedor-footer w-100 h-auto">
+  <div class="contenedor-footer w-100 h-auto pb-5">
     <div class="w-100 ">
       <footer class="py-3">
         <ul class="nav justify-content-center border-bottom border-dark-subtle pb-3 pt-3 mb-3 nav">
@@ -23,11 +23,7 @@ export default {
           icon: 'fas fa-cogs',
           enlace: '#como_funciona'
         },
-        {
-          link: 'Testimonios',
-          icon: '',
-          enlace: '#testimonios'
-        },
+        
         {
           link: 'Nuestra App ',
           icon: 'fas fa-dollar-sign',
@@ -37,6 +33,11 @@ export default {
           link: 'Equipo',
           icon: 'fas fa-question-circle',
           enlace: '#equipo'
+        },
+        {
+          link: 'Contacto',
+          icon: '',
+          enlace: '#contactanos'
         },
         {
           link: 'Premium',

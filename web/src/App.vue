@@ -1,16 +1,5 @@
 <template>
-  <Header></Header>
-  <Hero></Hero>
-  <Descargar></Descargar>
-  <main class="bg-body-secondary">
-    <Como_funciona></Como_funciona>
-    <Testimonios></Testimonios>
-    <Nuestra_app></Nuestra_app>
-    <Equipo></Equipo>
-    <Nuestras_novedades></Nuestras_novedades>
-    <Formulario></Formulario>
-  </main>
-  <Pie></Pie>
+  <router-view/>
 </template>
 
 <script>
@@ -24,7 +13,7 @@ import Testimonios from './components/home/Testimonios.vue';
 import Descargar from './components/Descargar.vue';
 import Formulario from './components/home/Formulario.vue';
 import Nuestras_novedades from './components/home/Nuestras_novedades.vue';
-
+import router from './Router';
 export default {
   name: 'App',
   components: {
@@ -37,9 +26,9 @@ export default {
     Nuestra_app,
     Equipo,
     Nuestras_novedades,
-    Pie
-
-  },
+    Pie,
+    router
+},
   mounted() {
     document.title = 'Sugar Coach';
   }

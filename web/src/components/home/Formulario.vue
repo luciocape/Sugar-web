@@ -69,6 +69,7 @@ export default {
     background-position: center;
     background-attachment: fixed;
 
+    padding-top: 6vh;
     min-height: 90vh;
     padding-bottom: 50px;
 }

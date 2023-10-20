@@ -1,6 +1,6 @@
 <template>
     <div class="d-none d-sm-block position-fixed h-auto bg-body-secondary opacity-100 d-flex justify-content-center align-items-center "
-        style="min-width: 180px; width: 40%; right: 50px; bottom: 10vh; z-index: 999; border-radius: 20px;">
+        style="min-width: 180px; width: 30%; right: 50px; bottom: 10vh; z-index: 999; border-radius: 20px;">
         <a href="" class="d-flex justify-content-center align-items-center w-100 h-100"><img
                 src="https://sugar.coach/wp-content/uploads/2021/08/menuDownload.png" alt="" class="w-100 h-100"></a>
     </div>
@@ -13,7 +13,10 @@
 </template>
 
 <script>
-name: 'Descargar'
+export default {
+    name: 'Descargar'
+}
+
 </script>
 
 <style></style>
