@@ -75,6 +75,7 @@ export default {
 }
 
 .form-control:hover{
-    box-shadow: 0 0 10px rgba(4, 98, 185, 0.74);
+    box-shadow: 0 0 20px rgba(4, 98, 185, 0.74);
+    transition: 250ms linear;
 }
 </style>
