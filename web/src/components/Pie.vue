@@ -3,10 +3,12 @@
     <div class="w-100 ">
       <footer class="py-3">
         <ul class="nav justify-content-center border-bottom border-dark-subtle pb-3 pt-3 mb-3 nav">
-          <li v-for="item in links" :key="index" class="nav-item"><a :href="item.enlace"
-              class="nav-link px-2 text-body-secondary fw-bolder">{{ item.link }}</a></li>
+          <li v-for="item in links" :key="index" class="nav-item"><a v-if="item.link != 'Premium'"
+              class="nav-link px-2 text-body-secondary fw-bolder" :href="item.enlace">{{ item.link }}</a>
+            <router-link v-else :to="item.enlace" class="nav-link px-2 text-body-secondary fw-bolder">{{ item.link }}</router-link>
+          </li>
         </ul>
-        <p class="text-center text-body-secondary">&copy; 2023 Sugar Coach, Inc</p>
+        <p class="text-center text-body-secondary lead">&copy; 2023 Sugar Coach, Inc</p>
       </footer>
     </div>
   </div>
@@ -19,30 +21,34 @@ export default {
     return {
       links: [
         {
+          link: 'Inicio',
+          enlace: '/'
+        },
+        {
           link: '¿Como Funciona?',
           icon: 'fas fa-cogs',
-          enlace: '#como_funciona'
+          enlace: '../#como_funciona'
         },
-        
+
         {
           link: 'Nuestra App ',
           icon: 'fas fa-dollar-sign',
-          enlace: '#nuestra_app'
+          enlace: '../#nuestra_app'
         },
         {
           link: 'Equipo',
           icon: 'fas fa-question-circle',
-          enlace: '#equipo'
+          enlace: '../#equipo'
         },
         {
           link: 'Contacto',
           icon: '',
-          enlace: '#contactanos'
+          enlace: '../#contactanos'
         },
         {
           link: 'Premium',
           icon: 'fas fa-info-circle',
-          enlace: 'Premium.vue'
+          enlace: '/premium'
         }
       ]
     }
@@ -60,7 +66,7 @@ export default {
 }
 
 .nav {
-  background-color: rgba(1, 97, 161, 0.404);
+  background-color: rgba(76, 0, 255, 0.451);
 }
 
 
