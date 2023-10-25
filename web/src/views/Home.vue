@@ -23,7 +23,7 @@ import Nuestra_app from '../components/home/Nuestra_app.vue';
 import Equipo from '../components/home/Equipo.vue';
 import Pie from '../components/Pie.vue';
 import Testimonios from '../components/home/Testimonios.vue';
-import Descargar from '../components/Descargar.vue';
+import Descargar from '../components/reutilizable/Descargar.vue';
 import Formulario from '../components/home/Formulario.vue';
 import Nuestras_novedades from '../components/home/Nuestras_novedades.vue';
 export default {

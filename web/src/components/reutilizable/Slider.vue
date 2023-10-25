@@ -1,7 +1,7 @@
 <template>
-    <div class="slider position-absolute top-0">
+    <div class="slider">
         <div class="slide-track">
-            <div  v-for="(item, index) in marcas" :key="index" class="slide">
+            <div v-for="(item, index) in marcas" :key="index" class="slide">
                 <img :src="item.url" :alt="item.alt">
             </div>
         </div>
@@ -82,8 +82,12 @@ export default {
 </script>
 
 <style>
+:root {
+    --ancho-img: 15vw;
+}
+
 .slider {
-    width: 75vw;
+    width: 90vw;
     height: auto;
     margin: auto;
     overflow: hidden;
@@ -93,13 +97,13 @@ export default {
     display: flex;
     animation: scroll 40s linear infinite;
     -webkit-animation: scroll 40s linear infinite;
-    width: calc(200px * 14);
+    width: calc(var(--ancho-img) * 14);
 }
 
 .slide {
     display: flex;
     flex-direction: row;
-    width: 200px;
+    width: var(--ancho-img);
 }
 
 .slide img {
@@ -113,8 +117,8 @@ export default {
     }
 
     100% {
-        -webkit-transform: translateX(calc(-200px * 7));
-        transform: translateX(calc(-200px * 7));
+        -webkit-transform: translateX(calc(var(--ancho-img) * -7));
+        transform: translateX(calc(var(--ancho-img) * -7));
     }
 }
 </style>
