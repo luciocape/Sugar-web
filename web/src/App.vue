@@ -3,32 +3,9 @@
 </template>
 
 <script>
-import Header from './components/Header.vue';
-import Hero from './components/home/Hero.vue';
-import Como_funciona from './components/home/Como_funciona.vue';
-import Nuestra_app from './components/home/Nuestra_app.vue';
-import Equipo from './components/home/Equipo.vue';
-import Pie from './components/Pie.vue';
-import Testimonios from './components/home/Testimonios.vue';
-import Descargar from './components/Descargar.vue';
-import Formulario from './components/home/Formulario.vue';
-import Nuestras_novedades from './components/home/Nuestras_novedades.vue';
 import router from './Router';
 export default {
   name: 'App',
-  components: {
-    Header,
-    Hero,
-    Descargar,
-    Formulario,
-    Como_funciona,
-    Testimonios,
-    Nuestra_app,
-    Equipo,
-    Nuestras_novedades,
-    Pie,
-    router
-},
   mounted() {
     document.title = 'Sugar Coach';
   }

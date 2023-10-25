@@ -1,26 +1,32 @@
 <template>
     <Header></Header>
-    <q-page id="premium" class="d-flex justify-content-center align-items-center">
-        <div class="container">
-            <div class="row  gap-5 mb-3 text-center">
-                <div v-for="(item, index) in  cards " :key="index" class="col">
-                    <div class="card mb-4 rounded-3" >
-                        <div class="card-header py-3">
-                            <h4 class="my-0 fw-normal h3">{{ item.titulo }}</h4>
-                        </div>
-                        <div class="card-body">
-                            <h1 class="card-title pricing-card-title">{{ item.precio }}</h1>
-                            <ul class="list-unstyled mt-3 mb-4">
-                                <li>{{ item.benificio1 }}</li>
-                                <li>{{ item.benificio2 }}</li>
-                                <li>{{ item.beneficio3 }}</li>
-                                <li>{{ item.beneficio4 }}</li>
-                            </ul>
-                            <button type="button" class="w-100 btn btn-lg btn-outline-primary">Seleccionar</button>
+    <q-page id="cards" class="d-flex justify-content-center align-items-center">
+        <Slider></Slider>
+
+        <div class="container-fluid m-4 mt-0">
+            <h1 class="display-1">Premium</h1>
+            <section>
+                <h2 class="h2 mb-5">Elige el plan perfecto para vos</h2>
+                <div class="row  gap-5 mb-3 text-center">
+                    <div v-for="(item, index) in  cards " :key="index" class="col">
+                        <div class="card mb-4" style="border-radius: 20px;">
+                            <div class="card-header py-3">
+                                <h4 class="my-0 fw-normal h3">{{ item.titulo }}</h4>
+                            </div>
+                            <div class="card-body">
+                                <h1 class="card-title pricing-card-title">{{ item.precio }}</h1>
+                                <ul class="list-unstyled mt-3 mb-4 container">
+                                    <li v-for="elemento in  item.beneficios" :key="elemento.id" style="line-height: 2;">{{
+                                        elemento.beneficio }}</li>
+                                </ul>
+                                <button type="button" class="w-100 btn btn-lg btn-outline-primary">{{item.boton}}</button>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
+            </section>
+
+
         </div>
     </q-page>
     <Pie></Pie>
@@ -34,43 +40,52 @@
 //});
 import Header from '../components/Header.vue';
 import Pie from '../components/Pie.vue';
+import Slider from '../components/reutilizable/Slider.vue';
 export default {
     name: 'Premium',
     components: {
         Header,
-        Pie
+        Pie,
+        Slider
     },
     data() {
         return {
             cards: [
                 {
-                    titulo: 'Clasico',
-                    precio: '25$',
-                    benificio1: 'Sin anuncios',
-                    benificio2: '10 users included',
-                    benificio3: '2 GB of storage',
-                    beneficio4: 'Email support',
-                    beneficio5: 'Help center access'
-                    
-
-
-
-                },
-                {
                     titulo: 'Becado',
                     precio: '0$',
-                    benificio1: '',
-                    benificio2: '',
-                    benificio3: '',
-                    beneficio4: '',
+                    beneficios: [
+                        { id: '1', beneficio: 'Sin anuncios' },
+                        { id: '2', beneficio: '10 users included' },
+                        { id: '3', beneficio: '2 GB of storage' },
+                        { id: '4', beneficio: 'Email support' },
+                        { id: '5', beneficio: 'Help center access' }
+                    ],
+                    boton: 'Seleccionar'
+                },
+                {
+                    titulo: 'Clasico',
+                    precio: '25$',
+                    beneficios: [
+                        { id: '1', beneficio: 'Sin anuncios' },
+                        { id: '2', beneficio: '10 users included' },
+                        { id: '3', beneficio: '2 GB of storage' },
+                        { id: '4', beneficio: 'Email support' },
+                        { id: '5', beneficio: 'Help center access' }
+                    ],
+                    boton: 'Comprar'
                 },
                 {
                     titulo: 'Para empresas',
                     precio: 'contactanos',
-                    benificio1: '',
-                    benificio2: '',
-                    benificio3: '',
-                    beneficio4: '',
+                    beneficios: [
+                        { id: '1', beneficio: 'Sin anuncios' },
+                        { id: '2', beneficio: '10 users included' },
+                        { id: '3', beneficio: '2 GB of storage' },
+                        { id: '4', beneficio: 'Email support' },
+                        { id: '5', beneficio: 'Help center access' }
+                    ],
+                    boton: 'Contactar'
                 },
             ]
         }
@@ -83,7 +98,7 @@ export default {
 </script>
 
 <style>
-#premium {
+#cards {
     background-image: url('https://sugar.coach/wp-content/uploads/2021/11/contacto-1.jpg;');
     background-repeat: no-repeat;
     background-size: cover;
@@ -94,17 +109,18 @@ export default {
     padding-top: 150px;
 }
 
-#premium .card {
+#cards .card {
     min-width: 250px;
     max-width: 100vw;
     height: 60vh;
     min-height: 500px;
-    background: linear-gradient(155deg, #e664b400, rgba(255, 255, 255, 0.39));
-    box-shadow: 0px 0px 30px rgb(213, 155, 231);
+    background: rgba(255, 255, 255, 0.35);
+    box-shadow: 0px 0px 35px rgb(212, 140, 235);
     transition: 0.5s;
 }
-#premium .card:hover {
-    background: linear-gradient(155deg, #e664b400, rgb(255, 255, 255));
-    box-shadow: 0px 0px 50px rgb(201, 75, 240);
+
+#cards .card:hover {
+    background: rgba(255, 255, 255, 0.7);
+    box-shadow: 0px 0px 50px rgb(190, 56, 231);
 }
 </style>

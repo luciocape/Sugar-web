@@ -10,7 +10,7 @@
                 <div v-for="(item, index) in inputs" :key="index" class="mb-3">
                     <label :for="item.for" class="form-label">{{ item.label }}</label>
                     <div v-if="item.id != 'mesage'">
-                        <input type="text" class="form-control" :name="item.id" :id="item.id"
+                        <input :type="item.type" class="form-control" :name="item.id" :id="item.id"
                             :placeholder="item.placeholder">
                     </div>
                     <div v-else class="h-25">
@@ -37,19 +37,21 @@ export default {
             inputs: [
                 {
                     id: 'name',
-                    for: 'exampleFormControlInput1',
+                    for: 'name',
                     placeholder: 'Juan Perez',
                     label: 'Tu nombre',
+                    type: 'text',
                 },
                 {
                     id: 'email',
-                    for: 'exampleFormControlInput2',
+                    for: 'email',
                     placeholder: 'juanperez@gmail.com',
                     label: 'Tu correo electronico',
+                    type: 'email',
                 },
                 {
                     id: 'mesage',
-                    for: 'exampleFormControlTextarea1',
+                    for: 'mesage',
                     placeholder: 'Hola, me gustaria optener la version premium',
                     label: 'Tu mensaje',
                 }

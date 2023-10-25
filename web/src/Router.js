@@ -1,8 +1,6 @@
 // Importa el módulo vue-router y los componentes que quieres usar
 import { createRouter, createWebHistory } from 'vue-router'
 import Home from './views/Home.vue'
-import Premium from './views/Premium.vue'
-import NotFound from './views/404.vue'
 
 // Define un array de objetos con las rutas
 const routes = [
@@ -14,12 +12,12 @@ const routes = [
     {
         path: '/premium', // otra ruta
         name: 'Premium',
-        component: Premium
+        component: ()=>import('@/views/Premium.vue')
     },
     {
         path: '/:catchAll(.*)', // otra ruta
         name: 'NotFound',
-        component: NotFound
+        component: ()=>import('@/views/404.vue')
     }
 ]
 

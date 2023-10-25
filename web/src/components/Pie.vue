@@ -48,7 +48,7 @@ export default {
         {
           link: 'Premium',
           icon: 'fas fa-info-circle',
-          enlace: '/premium/#premium'
+          enlace: '/premium/#cards'
         }
       ]
     }
