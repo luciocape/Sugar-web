@@ -1,11 +1,19 @@
 <template>
-  <router-view/>
+  <Header></header>
+  <router-view />
+  <Pie></Pie>
 </template>
 
 <script>
 import router from './Router';
+import Header from './components/Header.vue';
+import Pie from './components/Pie.vue';
 export default {
   name: 'App',
+  components: {
+    Header,
+    Pie
+  },
   mounted() {
     document.title = 'Sugar Coach';
   }
@@ -62,6 +70,73 @@ h2 {
   text-align: justify;
 }
 
+.item-show {
+  view-timeline-name: --item;
+  view-timeline-axis: block;
+
+  animation-timeline: --item;
+  animation-name: show;
+  animation-range: entry 30% exit 30%;
+  animation-fill-mode: both;
+}
+
+.item-appear {
+  view-timeline-name: --item;
+  view-timeline-axis: block;
+
+  animation-timeline: --item;
+  animation-name: appear;
+  animation-range: entry 25% cover 50%;
+  animation-fill-mode: both;
+}
+.item-hide {
+  view-timeline-name: --item;
+  view-timeline-axis: block;
+
+  animation-timeline: --item;
+  animation-name: hide;
+  animation-range: entry 180% cover 250%;
+  animation-fill-mode: both;
+}
+
+/*Animaciones*/
+@keyframes show {
+  from {
+    opacity: 0;
+    transform: translateY(100vh);
+
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes hide {
+  from {
+    transform: translateY(0);
+
+  }
+
+  to {
+    transform: translateY(-100vh);
+  }
+}
+
+@keyframes appear {
+  from {
+    opacity: 0;
+    scale: 0;
+
+  }
+
+  to {
+    opacity: 1;
+    scale: 1;
+  }
+}
+
 @media only screen and (min-width: 800px) {
   .texto {
     font-size: 1.6vw;
@@ -80,4 +155,5 @@ h2 {
   .texto {
     font-size: 3.8vw;
   }
-}</style>
+}
+</style>

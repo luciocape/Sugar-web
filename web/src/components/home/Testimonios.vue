@@ -63,7 +63,6 @@ export default {
     background-color: rgba(5, 237, 216, 0.5);
     height: 70vh;
     min-height: 350px;
-
 }
 </style>
 

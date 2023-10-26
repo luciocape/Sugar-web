@@ -45,6 +45,11 @@ export default {
                     alt: 'Logo Addidas',
                 },
                 {
+                    nombre: 'Villa Vicencio',
+                    url: '../../../contenido/campana.png',
+                    alt: 'Logo Villa Vicencio',
+                },
+                {
                     nombre: 'Coca Cola',
                     url: '../../../contenido/campana.png',
                     alt: 'Logo Coca Cola',

@@ -1,6 +1,5 @@
 <template>
     <q-page>
-        <Header></Header>
         <Hero></Hero>
         <Descargar></Descargar>
         <main class="bg-body-secondary">
@@ -11,7 +10,6 @@
             <Nuestras_novedades></Nuestras_novedades>
             <Formulario></Formulario>
         </main>
-        <Pie></Pie>
     </q-page>
 </template>
 
