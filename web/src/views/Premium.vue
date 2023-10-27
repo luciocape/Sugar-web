@@ -1,6 +1,6 @@
 <template>
     <q-page id="premium" class="d-flex flex-column justify-content-center align-items-center">
-        <div id="premium-presentacion" class="position-fixed">
+        <div id="premium-presentacion" :class="{ 'hidden': scrolledDown }" class="position-fixed p-3">
             <h1 class="display-1 mb-1">Premium</h1>
             <h2 class="h2">Elige el plan perfecto para ti</h2>
             <p class="text-center">Este proyecto se sustenta solo con el trabajo y el esfuerzo de los miembros del
@@ -11,35 +11,46 @@
                 Por eso puedes obtener tu licencia Premium totalmente gratis, para que todos tengan acceso y si
                 quieres también puedes aportar y volverte Mecenas o Patreon de SugarCoach</p>
         </div>
-        <div class="d-flex justify-content-evenly m-4 w-100">
-            <img v-for="(item, index) in  celus" class="rounded-4" style="width: 15%;" :src="item.url" :alt="item.al">
-        </div>
-        <div class="m-4">
-            <section>
-                <div class="row  gap-3 mb-5 text-center">
-                    <div v-for="(item, index) in  cards " :key="index" class="col p-0">
-                        <div class="card mb-4" style="border-radius: 20px;">
-                            <div class="card-header py-3">
-                                <h4 class="my-0 fw-normal h3">{{ item.titulo }}</h4>
-                            </div>
-                            <div class="card-body d-flex flex-column h-100">
-                                <h1 class="card-title pricing-card-title"><span v-if="item.precio === '0$'"><img
-                                            src="../../public/contenido/free.png" alt="Globo promocional" width="100"> /
-                                        <strike>25$</strike></span><span v-else>{{ item.precio }}</span></h1>
-                                <ul class="list-unstyled mb-0 container">
-                                    <li v-for="elemento in  item.beneficios" :key="elemento.id" style="line-height: 2.2;">{{
-                                        elemento.beneficio }}</li>
-                                </ul>
-                                <button type="button" class="w-100 btn btn-lg btn-outline-primary m-auto mb-0">{{
-                                    item.boton
-                                }}</button>
+        <main>
+            <div class="d-flex justify-content-evenly w-100" style="margin-top: 30vh;">
+                <span v-for="(item, index) in  celus" class="d-flex flex-column align-items-center gap-3"><img
+                        style="width: 15vw;" :src="item.url" :alt="item.al">
+                    <p>{{ item.description }}</p>
+                </span>
+            </div>
+            <div class="m-4">
+                <section>
+                    <div class="row  gap-3 mb-5 text-center">
+                        <div v-for="(item, index) in  cards " :key="index" class="col p-0">
+                            <div class="card mb-4" style="border-radius: 20px;">
+                                <div class="card-header py-3">
+                                    <h3 class="my-0 fw-normal display-6">{{ item.titulo }}</h3>
+                                </div>
+                                <div class="card-body d-flex flex-column h-100">
+                                    <h4 class="card-title pricing-card-title display-5"><span
+                                            v-if="item.precio === '../../contenido/becado.png'"><img :src="item.precio"
+                                                alt="Globo promocional" width="100"> /
+                                            <img src="../../public/contenido/clasico-tachado.png" alt=""></span><img
+                                            :src="item.precio" :alt="item.alt"
+                                            v-else-if="item.precio === '../../contenido/clasico.png'"><span v-else>{{
+                                                item.precio }}</span></h4>
+                                    <ul class="p-0 m-auto me-0 mt-1" style="width: 90%;">
+                                        <li v-for="elemento in  item.beneficios" :key="elemento.id" class="text-start"
+                                            style="line-height: 2.2;">{{
+                                                elemento.beneficio }}</li>
+                                    </ul>
+                                    <button type="button" class="w-100 btn btn-lg btn-outline-primary m-auto mb-0">{{
+                                        item.boton
+                                    }}</button>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-            </section>
-            <Slider></Slider>
-        </div>
+                </section>/
+                <Slider></Slider>
+            </div>
+        </main>
+
 
     </q-page>
 </template>
@@ -66,20 +77,23 @@ export default {
                 {
                     url: '../../contenido/celu1.png',
                     alt: 'pantalla1',
+                    description: 'Lorem ipsum dolor sit amet, consectetur'
                 },
                 {
                     url: '../../contenido/celu2.png',
                     alt: 'pantalla2',
+                    description: 'Lorem ipsum dolor sit amet, consectetur'
                 },
                 {
                     url: '../../contenido/celu3.png',
                     alt: 'pantalla3',
+                    description: 'Lorem ipsum dolor sit amet, consectetury'
                 }
             ],
             cards: [
                 {
                     titulo: 'Becado',
-                    precio: '0$',
+                    precio: '../../contenido/becado.png',
                     beneficios: [
                         { id: '1', beneficio: 'Apoyar a SugarCoach' },
                         { id: '2', beneficio: 'Licencia Premium' },
@@ -91,7 +105,7 @@ export default {
                 },
                 {
                     titulo: 'Clasico',
-                    precio: '25$',
+                    precio: '../../contenido/clasico.png',
                     beneficios: [
                         { id: '1', beneficio: 'Apoyar a SugarCoach' },
                         { id: '2', beneficio: 'Licencia Premium' },
@@ -115,22 +129,30 @@ export default {
                     boton: 'Contactar'
                 },
             ],
-
+            scrolledDown: false,
+            lastScrollPosition: 0,
         }
     },
+    created() {
+        window.addEventListener("scroll", this.handleScroll);
+    },
+    beforeDestroy() {
+        window.removeEventListener("scroll", this.handleScroll);
+    },
     methods: {
-        ocultar() {
-            let lastScrollTop = 0;
-            premium_presentacion = document.getElementById('premium_presentacion')
-            this.window.addEventListener("scroll", function () {
-                let scrollTop = this.window.pageYOffset || document.documentElement.scrollTop;
-                if (scrollTop > lastScrollTop) {
-                    premium_presentacion.style.top = "-100vh";
-                } else {
-                    premium_presentacion.style.top = "105px";
-                }
-                lastScrollTop = scrollTop
-            })
+
+        handleScroll() {
+            const currentScrollPosition = window.scrollY;
+
+            if (currentScrollPosition > this.lastScrollPosition) {
+                // Haciendo scroll hacia abajo
+                this.scrolledDown = true;
+            } else {
+                // Haciendo scroll hacia arriba
+                this.scrolledDown = false;
+            }
+
+            this.lastScrollPosition = currentScrollPosition;
         }
     },
     mounted() {
@@ -141,6 +163,12 @@ export default {
 </script>
 
 <style>
+/* Estilo para ocultar el header cuando se hace scroll hacia abajo */
+.hidden {
+    transform: translateY(-100%);
+    transition: transform 0.8s;
+}
+
 #premium {
     background-image: url('https://sugar.coach/wp-content/uploads/2021/11/contacto-1.jpg;');
     background-repeat: no-repeat;
@@ -158,13 +186,13 @@ export default {
     max-width: 100vw;
     min-height: 100%;
     background: rgba(255, 255, 255, 0.35);
-    box-shadow: 0px 0px 35px rgb(212, 140, 235);
+    box-shadow: 0px 0px 20px rgb(220, 154, 241);
     transition: 0.5s;
 }
 
 #premium .card:hover {
     background: rgba(255, 255, 255, 0.7);
-    box-shadow: 0px 0px 50px rgb(190, 56, 231);
+    box-shadow: 0px 0px 35px rgb(190, 56, 231);
 }
 
 #premium-presentacion {
@@ -172,6 +200,6 @@ export default {
     z-index: 700;
     top: 105px;
     background-color: #3748A3;
-    min-height: 45vh;
+    transition: 0.6s;
 }
 </style>

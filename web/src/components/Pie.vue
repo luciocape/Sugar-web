@@ -4,8 +4,8 @@
       <footer class="py-3">
         <ul class="nav justify-content-center border-bottom border-dark-subtle pb-3 pt-3 mb-3 nav">
           <li v-for="item in links" :key="index" class="nav-item"><a v-if="item.link != 'Premium'"
-              class="nav-link px-2 text-body-secondary fw-bolder" :href="item.enlace">{{ item.link }}</a>
-            <router-link v-else :to="item.enlace" class="nav-link px-2 text-body-secondary fw-bolder">{{ item.link }}</router-link>
+              class="nav-link px-2 fw-bolder" :href="item.enlace">{{ item.link }}</a>
+            <router-link v-else :to="item.enlace" class="nav-link px-2 fw-bolder">{{ item.link }}</router-link>
           </li>
         </ul>
         <p class="text-center text-body-secondary lead">&copy; 2023 Sugar Coach, Inc</p>
@@ -13,7 +13,6 @@
     </div>
   </div>
 </template>
-
 <script>
 export default {
   name: 'Pie',
@@ -72,6 +71,12 @@ export default {
 
 .redes {
   justify-content: end;
+}
+footer .nav-link{
+  color: #423C5D;
+}
+footer .nav-link:hover{
+  color: #2f2c3f;
 }
 
 @media only screen and (max-width: 435px) {

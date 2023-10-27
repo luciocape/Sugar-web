@@ -18,7 +18,8 @@
                 Recopila datos de diferentes fuentes en un solo lugar.<br><br>
                 Conecta a médicos, pacientes y familias que conviven con la diabetes.<br><br>
                 Es una experiencia de usuario gamificada que lo recompensa por cuidar su salud.<br><br>
-                <span class="strong">Jugando cuidas la salud</span> 
+                <span class="strong">Jugando cuidas la salud</span>
+                <router-link to="/premios" class="link-info link-offset-2-hover h4 d-block mt-3">Ver premios</router-link>
             </p>
         </div>
     </section>

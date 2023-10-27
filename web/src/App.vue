@@ -76,7 +76,7 @@ h2 {
 
   animation-timeline: --item;
   animation-name: show;
-  animation-range: entry 30% exit 30%;
+  animation-range: entry 0% exit 5%;
   animation-fill-mode: both;
 }
 
@@ -86,41 +86,22 @@ h2 {
 
   animation-timeline: --item;
   animation-name: appear;
-  animation-range: entry 25% cover 50%;
+  animation-range: entry 0% cover 65%;
   animation-fill-mode: both;
 }
-.item-hide {
-  view-timeline-name: --item;
-  view-timeline-axis: block;
-
-  animation-timeline: --item;
-  animation-name: hide;
-  animation-range: entry 180% cover 250%;
-  animation-fill-mode: both;
-}
-
 /*Animaciones*/
 @keyframes show {
   from {
     opacity: 0;
     transform: translateY(100vh);
+    scale: 0;
 
   }
 
   to {
     opacity: 1;
     transform: translateY(0);
-  }
-}
-
-@keyframes hide {
-  from {
-    transform: translateY(0);
-
-  }
-
-  to {
-    transform: translateY(-100vh);
+    scale: 1;
   }
 }
 

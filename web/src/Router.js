@@ -15,6 +15,11 @@ const routes = [
         component: ()=>import('@/views/Premium.vue')
     },
     {
+        path: '/premios', // otra ruta
+        name: 'Premios',
+        component: ()=>import('@/views/Premios.vue')
+    },
+    {
         path: '/:catchAll(.*)', // otra ruta
         name: 'NotFound',
         component: ()=>import('@/views/404.vue')

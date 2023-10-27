@@ -70,12 +70,13 @@ export default {
     max-width: 60px;
     min-width: 20px;
 
-    filter: grayscale(1) invert(1);
+    scale: 1;
     transition: 0.8s;
 }
 
 .logo-red-social:hover {
-    filter: grayscale(0) invert(0);
+    
+    scale: 1.2;
     transition: 0.8s;
 }
 </style>

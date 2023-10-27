@@ -75,9 +75,13 @@ export default {
     min-height: 90vh;
     padding-bottom: 50px;
 }
-
+.form-control{
+    
+    box-shadow: none;
+    transition: 250ms linear;
+}
 .form-control:hover{
     box-shadow: 0 0 20px rgba(4, 98, 185, 0.74);
-    transition: 250ms linear;
+    
 }
 </style>
