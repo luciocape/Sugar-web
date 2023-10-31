@@ -1,14 +1,14 @@
 <template>
     <q-page style="width: 100vw; min-height: 100vh;">
-        <main class="w-100 h-100 d-flex flex-column justify-content-center align-items-center"
-            style="margin-top: 105px;">
+        <main class="w-100 h-100 d-flex flex-column justify-content-center align-items-center" style="margin-top: 105px;">
             <section class="container-lg mt-5 mb-5" style="min-height: 100vh;">
                 <div class="contenedor-premios">
-                    <div v-for="(elemento, index) in  cards" :key="index" class="card text-start rounded-1 border-0" style="font-family: cursive;">
+                    <div v-for="(elemento, index) in  cards" :key="index" class="card text-start rounded-1 border-0"
+                        style="font-family: cursive;">
                         <img class="card-img-top" src="../../public/contenido/documento.png" :alt="elemento.alt">
                         <div class="card-body d-flex container-fluid">
                             <div class="row">
-                                <div class="col-5" style="border-right: 1px solid black;">
+                                <div class="col-5 pe-0" style="border-right: 1px solid black;">
                                     <p class="puntos m-0 ms-1">{{ elemento.puntos }}</p>
                                     <p class="mb-1 ms-1">Puntos</p>
                                 </div>
@@ -83,8 +83,36 @@ export default {
                     description: 'Este premio es valido por ',
                     puntos: '',
                 },
+            ],
+            restaurants: [],
+            error: null,
+            headers: { 'Content-Type': 'application/json' }
+        }
 
-            ]
+    },
+    methods: {
+        parseJSON: function (resp) {
+            return (resp.json ? resp.json() : resp);
+        },
+        checkStatus: function (resp) {
+            if (resp.status >= 200 && resp.status < 300) {
+                return resp;
+            }
+            return this.parseJSON(resp).then((resp) => {
+                throw resp;
+            });
+        }
+    },
+    async mounted() {
+        try {
+            const response = await fetch("http://localhost:1337/restaurants", {
+                method: 'GET',
+                headers: this.headers,
+            }).then(this.checkStatus)
+                .then(this.parseJSON);
+            this.restaurants = response
+        } catch (error) {
+            this.error = error
         }
     },
     mounted() {
@@ -121,10 +149,11 @@ main {
     min-height: 50vh;
     background: linear-gradient(#515658, #f4fbff);
     height: auto;
-    box-shadow: 0 0 7px #2b2c2c;
+    box-shadow: 5px 5px 10px #3e4242;
 }
-.puntos{
-    color:#164193;
+
+.puntos {
+    color: #164193;
     font-weight: 700;
     font-size: 1.5rem;
 }

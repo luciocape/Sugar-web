@@ -1,3 +1,5 @@
+/*
+
 import express from "express";
 import fetch from "node-fetch";
 import "dotenv/config";
@@ -12,11 +14,12 @@ app.use(express.static("client"));
 
 // parse post params sent in body in json format
 app.use(express.json());
-
+*/
 /**
 * Generate an OAuth 2.0 access token for authenticating with PayPal REST APIs.
 * @see https://developer.paypal.com/api/rest/authentication/
 */
+/*
 const generateAccessToken = async () => {
     try {
         if (!PAYPAL_CLIENT_ID || !PAYPAL_CLIENT_SECRET) {
@@ -39,11 +42,12 @@ const generateAccessToken = async () => {
         console.error("Failed to generate Access Token:", error);
     }
 };
-
+*/
 /**
 * Create an order to start the transaction.
 * @see https://developer.paypal.com/docs/api/orders/v2/#orders_create
 */
+/*
 const createOrder = async (cart) => {
     // use the cart information passed from the front-end to calculate the purchase unit details
     console.log(
@@ -81,11 +85,12 @@ const createOrder = async (cart) => {
 
     return handleResponse(response);
 };
-
+*/
 /**
 * Capture payment for the created order to complete the transaction.
 * @see https://developer.paypal.com/docs/api/orders/v2/#orders_capture
 */
+/*
 const captureOrder = async (orderID) => {
     const accessToken = await generateAccessToken();
     const url = `${base}/v2/checkout/orders/${orderID}/capture`;
@@ -149,4 +154,10 @@ app.get("/", (req, res) => {
 
 app.listen(PORT, () => {
     console.log(`Node server listening at http://localhost:${PORT}/`);
+});
+*/
+
+module.exports = ({ env }) => ({
+    host: env('APP_HOST', '0.0.0.0'),
+    port: env.int('NODE_PORT', 1337),
 });

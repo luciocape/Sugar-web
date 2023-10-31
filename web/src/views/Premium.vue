@@ -15,7 +15,6 @@
             <div class="d-flex justify-content-evenly w-100" style="margin-top: 30vh;">
                 <span v-for="(item, index) in  celus" class="d-flex flex-column align-items-center gap-3"><img
                         style="width: 15vw;" :src="item.url" :alt="item.al">
-                    <p>{{ item.description }}</p>
                 </span>
             </div>
             <div class="m-4">
@@ -32,7 +31,7 @@
                                                 alt="Globo promocional" width="100"> /
                                             <img src="../../public/contenido/clasico-tachado.png" alt=""></span><img
                                             :src="item.precio" :alt="item.alt"
-                                            v-else-if="item.precio === '../../contenido/clasico.png'"><span v-else>{{
+                                            v-else-if="item.precio === '../../contenido/clasico-edit.png'"><span v-else>{{
                                                 item.precio }}</span></h4>
                                     <ul class="p-0 m-auto me-0 mt-1" style="width: 90%;">
                                         <li v-for="elemento in  item.beneficios" :key="elemento.id" class="text-start"
@@ -46,7 +45,32 @@
                             </div>
                         </div>
                     </div>
-                </section>/
+                    <!--
+                                            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                        Launch demo modal
+                    </button>
+                    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                        aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    ...
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                    <button type="button" class="btn btn-primary">Save changes</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    -->
+
+                </section>
                 <Slider></Slider>
             </div>
         </main>
@@ -64,6 +88,7 @@
 import Header from '../components/Header.vue';
 import Pie from '../components/Pie.vue';
 import Slider from '../components/reutilizable/Slider.vue';
+
 export default {
     name: 'Premium',
     components: {
@@ -105,7 +130,7 @@ export default {
                 },
                 {
                     titulo: 'Clasico',
-                    precio: '../../contenido/clasico.png',
+                    precio: '../../contenido/clasico-edit.png',
                     beneficios: [
                         { id: '1', beneficio: 'Apoyar a SugarCoach' },
                         { id: '2', beneficio: 'Licencia Premium' },
@@ -131,6 +156,7 @@ export default {
             ],
             scrolledDown: false,
             lastScrollPosition: 0,
+            modalVisible: false,
         }
     },
     created() {
@@ -140,7 +166,12 @@ export default {
         window.removeEventListener("scroll", this.handleScroll);
     },
     methods: {
-
+        mostrarModal() {
+            this.modalVisible = true;
+        },
+        cerrarModal() {
+            this.modalVisible = false;
+        },
         handleScroll() {
             const currentScrollPosition = window.scrollY;
 
