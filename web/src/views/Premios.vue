@@ -3,21 +3,25 @@
         <main class="w-100 h-100 d-flex flex-column justify-content-center align-items-center" style="margin-top: 105px;">
             <section class="container-lg mt-5 mb-5" style="min-height: 100vh;">
                 <div class="contenedor-premios">
-                    <div v-for="(elemento, index) in  cards" :key="index" class="card text-start rounded-1 border-0"
+                    
+                    <div v-if="premios.length > 0" v-for="premio in  premios" :key="premio.id" class="card text-start rounded-1 border-0"
                         style="font-family: cursive;">
-                        <img class="card-img-top" src="../../public/contenido/documento.png" :alt="elemento.alt">
+                        <img class="card-img-top" :src="'http://localhost:1337'+premio.attributes.ImgPremio.data.attributes.formats.thumbnail.url" alt="premios.attributes.Titulo">
                         <div class="card-body d-flex container-fluid">
                             <div class="row">
                                 <div class="col-5 pe-0" style="border-right: 1px solid black;">
-                                    <p class="puntos m-0 ms-1">{{ elemento.puntos }}</p>
+                                    <p class="puntos m-0 ms-1">{{ premio.attributes.puntos }}</p>
                                     <p class="mb-1 ms-1">Puntos</p>
                                 </div>
                                 <div class="col-7">
-                                    <h4 class="card-title">{{ elemento.title }}</h4>
-                                    <p class="card-text">{{ elemento.description }}</p>
+                                    <h4 class="card-title">{{ premio.attributes.Titulo }}</h4>
+                                    <p class="card-text">{{ premio.attributes.Descripcion }}</p>
                                 </div>
                             </div>
                         </div>
+                    </div>
+                    <div v-else>
+                        <p>Cargando...</p>
                     </div>
                 </div>
             </section>
@@ -26,100 +30,25 @@
 </template>
 
 <script>
+import api from '../api'; // Importa el archivo api.js que hemos creado antes
+
 export default {
     name: 'Premios',
-    components: {
-
-    },
     data() {
         return {
-            cards: [
-                {
-                    url: '',
-                    alt: '',
-                    title: 'card1',
-                    description: 'Este premio es valido por ',
-                    puntos: '6000',
-                },
-                {
-                    url: '',
-                    alt: '',
-                    title: 'card1',
-                    description: 'Este premio es valido por',
-                    puntos: '5000',
-                },
-                {
-                    url: '',
-                    alt: '',
-                    title: 'card1',
-                    description: 'Este premio es valido por',
-                    puntos: '8000',
-                },
-                {
-                    url: '',
-                    alt: '',
-                    title: 'card1',
-                    description: 'Este premio es valido por ',
-                    puntos: '3000',
-                },
-                {
-                    url: '',
-                    alt: '',
-                    title: 'card1',
-                    description: 'Este premio es valido por ',
-                    puntos: '10000',
-                },
-                {
-                    url: '',
-                    alt: '',
-                    title: 'card1',
-                    description: 'Este premio es valido por ',
-                    puntos: '',
-                },
-                {
-                    url: '',
-                    alt: '',
-                    title: 'card1',
-                    description: 'Este premio es valido por ',
-                    puntos: '',
-                },
-            ],
-            restaurants: [],
-            error: null,
-            headers: { 'Content-Type': 'application/json' }
-        }
-
-    },
-    methods: {
-        parseJSON: function (resp) {
-            return (resp.json ? resp.json() : resp);
-        },
-        checkStatus: function (resp) {
-            if (resp.status >= 200 && resp.status < 300) {
-                return resp;
-            }
-            return this.parseJSON(resp).then((resp) => {
-                throw resp;
-            });
-        }
+            premios: [], // Aquí guardaremos los datos de la API
+        };
     },
     async mounted() {
+        // Hacemos la llamada a la API cuando el componente se monta
         try {
-            const response = await fetch("http://localhost:1337/restaurants", {
-                method: 'GET',
-                headers: this.headers,
-            }).then(this.checkStatus)
-                .then(this.parseJSON);
-            this.restaurants = response
+            const data = await api('/sugar-premios?populate=*&fields[0]=Titulo&fields[1]=Descripcion&fields[2]=puntos'); // Usamos la función api con la ruta del recurso
+            this.premios = data.data; // Guardamos los datos en el estado del componente
         } catch (error) {
-            this.error = error
+            console.error(error); // Manejamos el error si ocurre
         }
     },
-    mounted() {
-        document.title = 'Premios';
-    }
-}
-
+};
 </script>
 
 <style>
