@@ -3,7 +3,7 @@
         <div class="slide-track">
             <div v-for="(item, index) in marcas" :key="index" class="slide">
                 <img v-if="item.nombre != 'Arcor'" :src="item.url" :alt="item.alt">
-                <img v-else :src="item.url" :alt="item.alt" style="width: 10vw; margin: auto;">
+                <img v-else :src="item.url" :alt="item.alt" style="width: 9vw; margin: auto;">
             </div>
         </div>
     </div>
@@ -16,94 +16,96 @@ export default {
         return {
             marcas: [
                 {
-                    nombre: 'Coca Cola',
+                    nombre: 'Mercado Libre',
                     url: '../../../contenido/mercado-libre-edit.jpg',
-                    alt: 'Logo Coca Cola',
+                    alt: 'Logo Mercado Libre',
                 },
                 {
-                    nombre: 'Pepsi',
-                    url: '../../../contenido/globant-edit.png',
-                    alt: 'Logo Pepsi',
-                },
-                {
-                    nombre: 'Lays',
-                    url: '../../../contenido/swiss-medical-edit.png',
-                    alt: 'Logo Lays',
-                },
-                {
-                    nombre: 'Volkswagen',
-                    url: '../../../contenido/techint-edit.png',
-                    alt: 'Logo Volkswagen',
-                },
-                {
-                    nombre: 'Samsung',
-                    url: '../../../contenido/unilever-edit.png',
-                    alt: 'Logo Samsung',
-                },
-                {
-                    nombre: 'Addidas',
-                    url: '../../../contenido/sanofi-edit.png',
-                    alt: 'Logo Addidas',
-                },
-                {
-                    nombre: 'Villa Vicencio',
+                    nombre: 'Santander',
                     url: '../../../contenido/santander-edit.png',
-                    alt: 'Logo Villa Vicencio',
+                    alt: 'Logo Santander Rio',
                 },
                 {
-                    nombre: 'Coca Cola',
+                    nombre: 'Globant',
+                    url: '../../../contenido/globant-edit.png',
+                    alt: 'Logo Globant',
+                },
+                {
+                    nombre: 'Swiss Medical',
+                    url: '../../../contenido/swiss-medical-edit.png',
+                    alt: 'Logo Swiss Medical',
+                },
+                {
+                    nombre: 'Techint',
+                    url: '../../../contenido/techint-edit.png',
+                    alt: 'Logo Techint',
+                },
+                {
+                    nombre: 'Unilever',
+                    url: '../../../contenido/unilever-edit.png',
+                    alt: 'Logo Unilever',
+                },
+                {
+                    nombre: 'Sanofi',
+                    url: '../../../contenido/sanofi-edit.png',
+                    alt: 'Logo Sanofi',
+                },
+                
+                {
+                    nombre: 'Nestle',
                     url: '../../../contenido/nestle-edit.png',
-                    alt: 'Logo Coca Cola',
+                    alt: 'Logo Nestle',
                 },
                 {
                     nombre: 'Arcor',
                     url: '../../../contenido/arcor-edit.png',
-                    alt: 'Logo Coca Cola',
+                    alt: 'Logo Arcor',
                 },
                 {
-                    nombre: 'Coca Cola',
+                    nombre: 'Mercado Libre',
                     url: '../../../contenido/mercado-libre-edit.jpg',
-                    alt: 'Logo Coca Cola',
+                    alt: 'Logo Mercado Libre',
                 },
                 {
-                    nombre: 'Pepsi',
-                    url: '../../../contenido/globant-edit.png',
-                    alt: 'Logo Pepsi',
-                },
-                {
-                    nombre: 'Lays',
-                    url: '../../../contenido/swiss-medical-edit.png',
-                    alt: 'Logo Lays',
-                },
-                {
-                    nombre: 'Volkswagen',
-                    url: '../../../contenido/techint-edit.png',
-                    alt: 'Logo Volkswagen',
-                },
-                {
-                    nombre: 'Samsung',
-                    url: '../../../contenido/unilever-edit.png',
-                    alt: 'Logo Samsung',
-                },
-                {
-                    nombre: 'Addidas',
-                    url: '../../../contenido/sanofi-edit.png',
-                    alt: 'Logo Addidas',
-                },
-                {
-                    nombre: 'Villa Vicencio',
+                    nombre: 'Santander',
                     url: '../../../contenido/santander-edit.png',
-                    alt: 'Logo Villa Vicencio',
+                    alt: 'Logo Santander Rio',
                 },
                 {
-                    nombre: 'Coca Cola',
+                    nombre: 'Globant',
+                    url: '../../../contenido/globant-edit.png',
+                    alt: 'Logo Globant',
+                },
+                {
+                    nombre: 'Swiss Medical',
+                    url: '../../../contenido/swiss-medical-edit.png',
+                    alt: 'Logo Swiss Medical',
+                },
+                {
+                    nombre: 'Techint',
+                    url: '../../../contenido/techint-edit.png',
+                    alt: 'Logo Techint',
+                },
+                {
+                    nombre: 'Unilever',
+                    url: '../../../contenido/unilever-edit.png',
+                    alt: 'Logo Unilever',
+                },
+                {
+                    nombre: 'Sanofi',
+                    url: '../../../contenido/sanofi-edit.png',
+                    alt: 'Logo Sanofi',
+                },
+                
+                {
+                    nombre: 'Nestle',
                     url: '../../../contenido/nestle-edit.png',
-                    alt: 'Logo Coca Cola',
+                    alt: 'Logo Nestle',
                 },
                 {
                     nombre: 'Arcor',
-                    url: '../../../contenido/Arcor-edit.png',
-                    alt: 'Logo Coca Cola',
+                    url: '../../../contenido/arcor-edit.png',
+                    alt: 'Logo Arcor',
                 },
 
             ]

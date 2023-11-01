@@ -7,7 +7,7 @@ import { createApp } from 'vue'
 
 createApp(App).use(router).mount('#app')
 
-fetch('http://localhost:1337/restaurants', {
+fetch('http://localhost:1337/api/sugar-premios', {
     method: 'GET',
     headers: {
         'Content-Type': 'application/json',

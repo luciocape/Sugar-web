@@ -36,6 +36,7 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
+  
 }
 
 body {
@@ -45,9 +46,13 @@ body {
   line-height: 1.5;
   color: #495057;
   background-color: #fff;
+  
+  
 }
 
+
 * {
+  cursor: url("../public/contenido/cursor.png"),auto;
   box-sizing: border-box;
   margin: 0px;
   padding: 0px;

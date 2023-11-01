@@ -74,6 +74,7 @@ export default {
 }
 footer .nav-link{
   color: #423C5D;
+  transition: 200ms;
 }
 footer .nav-link:hover{
   color: #2f2c3f;

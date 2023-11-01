@@ -71,12 +71,12 @@ export default {
     min-width: 20px;
 
     scale: 1;
-    transition: 0.8s;
+    transition: 300ms;
 }
 
 .logo-red-social:hover {
     
     scale: 1.2;
-    transition: 0.8s;
+    transition: 0.3s;
 }
 </style>

@@ -3,19 +3,30 @@
         <main class="w-100 h-100 d-flex flex-column justify-content-center align-items-center" style="margin-top: 105px;">
             <section class="container-lg mt-5 mb-5" style="min-height: 100vh;">
                 <div class="contenedor-premios">
-                    
-                    <div v-if="premios.length > 0" v-for="premio in  premios" :key="premio.id" class="card text-start rounded-1 border-0"
-                        style="font-family: cursive;">
-                        <img class="card-img-top" :src="'http://localhost:1337'+premio.attributes.ImgPremio.data.attributes.formats.thumbnail.url" alt="premios.attributes.Titulo">
+
+                    <div v-if="premios.length > 0" v-for="premio in  premios" :key="premio.id"
+                        class="card text-start rounded-3 border-0"
+                        style="font-family: cursive; max-height: 80vh; min-height: 60vh;">
+
+                        <div class="h-75"
+                            style="min-height: 250px; width: auto; margin: auto; margin-top: 20px; overflow: hidden;">
+                            <img class="h-100 w-auto"
+                                :src="'http://localhost:1337' + premio.attributes.ImgPremio.data.attributes.formats.thumbnail.url"
+                                alt="premios.attributes.Titulo">
+                        </div>
+
                         <div class="card-body d-flex container-fluid">
                             <div class="row">
                                 <div class="col-5 pe-0" style="border-right: 1px solid black;">
-                                    <p class="puntos m-0 ms-1">{{ premio.attributes.puntos }}</p>
-                                    <p class="mb-1 ms-1">Puntos</p>
+                                    <div class="mt-4">
+                                        <p class="puntos m-auto">{{ premio.attributes.puntos }}</p>
+                                        <p class="m-auto">Puntos</p>
+
+                                    </div>
                                 </div>
                                 <div class="col-7">
-                                    <h4 class="card-title">{{ premio.attributes.Titulo }}</h4>
-                                    <p class="card-text">{{ premio.attributes.Descripcion }}</p>
+                                    <h4 class="card-title" style="font-size: 15px; font-weight: 700;">{{ premio.attributes.Titulo }}</h4>
+                                    <p class="card-text" style="font-size: 11px;">{{ premio.attributes.Descripcion }}</p>
                                 </div>
                             </div>
                         </div>
@@ -76,9 +87,15 @@ main {
 .contenedor-premios .card {
     width: 100%;
     min-height: 50vh;
-    background: linear-gradient(#515658, #f4fbff);
+    background: linear-gradient(#2d3c6b, #f4fbff);
     height: auto;
-    box-shadow: 5px 5px 10px #3e4242;
+    box-shadow: 5px 5px 2px 4px #3e4242;
+    transition: 200ms;
+}
+.contenedor-premios .card:hover{
+    box-shadow: 0px 0px 0px 0px #3e4242;
+    scale: 0.99;
+    transform: translate(10px,10px);
 }
 
 .puntos {

@@ -26,13 +26,17 @@
                                     <h3 class="my-0 fw-normal display-6">{{ item.titulo }}</h3>
                                 </div>
                                 <div class="card-body d-flex flex-column h-100">
-                                    <h4 class="card-title pricing-card-title display-5"><span
+                                    <div>
+                                        <h4 class="card-title pricing-card-title display-5"><span
                                             v-if="item.precio === '../../contenido/becado.png'"><img :src="item.precio"
                                                 alt="Globo promocional" width="100"> /
                                             <img src="../../public/contenido/clasico-tachado.png" alt=""></span><img
                                             :src="item.precio" :alt="item.alt"
                                             v-else-if="item.precio === '../../contenido/clasico-edit.png'"><span v-else>{{
                                                 item.precio }}</span></h4>
+                                                <span class="lead">Mensual</span>
+                                    </div>
+                                    
                                     <ul class="p-0 m-auto me-0 mt-1" style="width: 90%;">
                                         <li v-for="elemento in  item.beneficios" :key="elemento.id" class="text-start"
                                             style="line-height: 2.2;">{{
