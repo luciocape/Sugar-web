@@ -84,9 +84,9 @@ header nav{
     box-shadow: 0px 5px 100px 20px black;
 }
 
-@media only screen and (max-width: 619px) {
+@media only screen and (max-width: 647px) {
     .nav-item a {
-        font-size: 0.99rem;
+        font-size: 0.90rem;
     }
 }
 

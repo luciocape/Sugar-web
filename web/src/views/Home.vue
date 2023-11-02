@@ -7,8 +7,11 @@
             <Testimonios></Testimonios>
             <Nuestra_app></Nuestra_app>
             <Equipo></Equipo>
-            <Nuestras_novedades></Nuestras_novedades>
-            <Formulario></Formulario>
+            <div class="bg-foot">
+                <Nuestras_novedades></Nuestras_novedades>
+                <Formulario></Formulario>
+            </div>
+
         </main>
     </q-page>
 </template>

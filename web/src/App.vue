@@ -1,7 +1,9 @@
 <template>
   <Header></header>
   <router-view />
-  <Pie></Pie>
+  <div class="bg-foot">
+    <Pie></Pie>
+  </div>
 </template>
 
 <script>
@@ -36,7 +38,7 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  
+
 }
 
 body {
@@ -46,16 +48,24 @@ body {
   line-height: 1.5;
   color: #495057;
   background-color: #fff;
-  
-  
+  cursor: url("../public/contenido/cursor-fondo.png");
+
 }
 
 
 * {
-  cursor: url("../public/contenido/cursor.png"),auto;
+
   box-sizing: border-box;
   margin: 0px;
   padding: 0px;
+}
+
+.bg-foot {
+  background-image: url('https://sugar.coach/wp-content/uploads/2021/11/contacto-1.jpg;');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
 }
 
 h2 {
@@ -66,7 +76,6 @@ h2 {
 .h1 {
   font-family: 'Roboto', 'Lucida Sans Unicode', 'Lucida Grande';
 }
-
 .texto {
   font-family: 'Poppins', sans-serif;
   font-weight: 400;
@@ -94,6 +103,7 @@ h2 {
   animation-range: entry 0% cover 65%;
   animation-fill-mode: both;
 }
+
 /*Animaciones*/
 @keyframes show {
   from {

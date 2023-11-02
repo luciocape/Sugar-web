@@ -27,14 +27,14 @@
                                 </div>
                                 <div class="card-body d-flex flex-column h-100">
                                     <div>
-                                        <h4 class="card-title pricing-card-title display-5"><span
+                                        <div class="card-title pricing-card-title display-5"><span
                                             v-if="item.precio === '../../contenido/becado.png'"><img :src="item.precio"
                                                 alt="Globo promocional" width="100"> /
                                             <img src="../../public/contenido/clasico-tachado.png" alt=""></span><img
                                             :src="item.precio" :alt="item.alt"
                                             v-else-if="item.precio === '../../contenido/clasico-edit.png'"><span v-else>{{
-                                                item.precio }}</span></h4>
-                                                <span class="lead">Mensual</span>
+                                                item.precio }}</span></div>
+                                                <span class="lead" v-if="item.precio != 'Contactanos'" >Mensual</span>
                                     </div>
                                     
                                     <ul class="p-0 m-auto me-0 mt-1" style="width: 90%;">
@@ -214,7 +214,6 @@ export default {
     min-height: 100vh;
     padding-top: 100px;
 }
-
 #premium .card {
     min-width: 250px;
     width: auto;

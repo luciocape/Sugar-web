@@ -55,12 +55,6 @@ export default {
 
 <style>
 #nuestras_novedades {
-    background-image: url('https://sugar.coach/wp-content/uploads/2021/11/contacto-1.jpg;');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-
     min-height: 25vh;
     padding: 30px;
 }
