@@ -1,5 +1,5 @@
 <template>
-    <div id="carouselExampleAutoplaying" class="carousel slide carousel-fade" data-bs-ride="carousel" style="min-width: 100vw;">
+    <div id="carouselExampleAutoplaying" class="carousel slide carousel-fade" data-bs-ride="carousel" style="min-width: 100%;">
         <div class="carousel-indicators">
             <button type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide-to="0" class="active"
                 aria-current="true" aria-label="Slide 1"></button>
@@ -99,7 +99,7 @@ export default {
 .slide3 {
     position: relative;
     min-height: 100vh;
-    max-width: 100vw;
+    max-width: 100%;
     clip-path: inset(0);
 }
 

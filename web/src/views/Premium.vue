@@ -229,6 +229,9 @@ export default {
     background: rgba(255, 255, 255, 0.7);
     box-shadow: 0px 0px 35px rgb(190, 56, 231);
 }
+#premium .card ul{
+    list-style-image: url('../../public/contenido/tick.png');
+}
 #premium-presentacion {
     color: antiquewhite;
     z-index: 700;
