@@ -32,15 +32,14 @@
                                                 alt="Globo promocional" width="100"> /
                                             <img src="../../public/contenido/clasico-tachado.png" alt=""></span><img
                                             :src="item.precio" :alt="item.alt"
-                                            v-else-if="item.precio === '../../contenido/clasico-edit.png'"><span v-else>{{
+                                            v-else-if="item.precio === '../../contenido/clasico-edit.png'"><span v-else style="font-weight: 800;">{{
                                                 item.precio }}</span></div>
                                                 <span class="lead" v-if="item.precio != 'Contactanos'" >Mensual</span>
                                     </div>
                                     
-                                    <ul class="p-0 m-auto me-0 mt-1" style="width: 90%;">
-                                        <li v-for="elemento in  item.beneficios" :key="elemento.id" class="text-start"
-                                            style="line-height: 2.2;">{{
-                                                elemento.beneficio }}</li>
+                                    <ul class="p-0 m-auto me-0 mt-1 d-flex flex-column" style="width: 90%; gap: 16px;">
+                                        <li v-for="elemento in  item.beneficios" :key="elemento.id" class="text-start ">
+                                        {{ elemento.beneficio }}</li>
                                     </ul>
                                     <button type="button" class="w-100 btn btn-lg btn-outline-primary m-auto mb-0">{{
                                         item.boton
@@ -210,17 +209,19 @@ export default {
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
-    max-width: 100vw;
+    max-width: 100%;
     min-height: 100vh;
     padding-top: 100px;
 }
 #premium .card {
     min-width: 250px;
     width: auto;
-    max-width: 100vw;
+    max-width: 100%;
     min-height: 100%;
-    background: rgba(255, 255, 255, 0.35);
+    background: #1A1225;
     box-shadow: 0px 0px 20px rgb(220, 154, 241);
+    border: 1px solid #A667E4;
+    color: #A667E4;
     transition: 0.5s;
 }
 
@@ -228,12 +229,15 @@ export default {
     background: rgba(255, 255, 255, 0.7);
     box-shadow: 0px 0px 35px rgb(190, 56, 231);
 }
-
 #premium-presentacion {
     color: antiquewhite;
     z-index: 700;
     top: 105px;
     background-color: #3748A3;
     transition: 0.6s;
+    max-width: 100%;
+}
+main{
+    max-width: 100%;
 }
 </style>

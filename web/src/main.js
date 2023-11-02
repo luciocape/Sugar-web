@@ -6,12 +6,17 @@ import "@/assets/bootstrap.bundle.min.js"
 import { createApp } from 'vue'
 
 createApp(App).use(router).mount('#app')
-
-fetch('http://localhost:1337/api/sugar-premios', {
-    method: 'GET',
-    headers: {
-        'Content-Type': 'application/json',
-    },
-})
-    .then(response => response.json())
-    .then(data => console.log(data));
+/*
+try {
+    fetch('http://localhost:1337/api/sugar-premios', {
+        method: 'GET',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+    })
+        .then(response => response.json())
+        .then(data => console.log(data));
+}
+catch (error){
+    console.log(error)
+}*/

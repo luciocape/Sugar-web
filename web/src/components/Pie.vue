@@ -1,7 +1,8 @@
 <template>
-  <div class="contenedor-footer">
+  
+  <div class="contenedor-footer"></div><div style="background-color: #00518A;">
     <div class="container">
-      <footer class="row row-cols-1 row-cols-sm-2 row-cols-md-3">
+      <footer class="row row-cols-1 row-cols-sm-2 row-cols-md-3 ">
         <div class="col mb-3">
           <a href="/" class=" m-auto mb-1 w-100 d-flex align-items-center link-body-emphasis text-decoration-none">
             <img class="m-auto mb-0" width="100" src="../../public/contenido/sugar-logo.png" alt="">
@@ -23,7 +24,8 @@
           <nav>
             <ul class="nav flex-column">
               <li v-for="item in views" :key="index" class="nav-item mb-2">
-                <router-link :to="item.enlace" class="nav-link p-0" style="color:antiquewhite;">{{ item.link }}</router-link>
+                <router-link :to="item.enlace" class="nav-link p-0" style="color:antiquewhite;">{{ item.link
+                }}</router-link>
               </li>
             </ul>
           </nav>
@@ -32,8 +34,7 @@
       </footer>
     </div>
   </div>
-
-<!--
+  <!--
     <div class="contenedor-footer w-100 h-auto pb-5">
     <div class="w-100 ">
       <footer class="py-3">
@@ -48,7 +49,6 @@
     </div>
   </div>
 -->
-
 </template>
 <script>
 export default {
@@ -117,19 +117,21 @@ export default {
 
 <style>
 .contenedor-footer {
-  background-image: url('../../public/contenido/ola.webp');
+  background-image: url('../../public/contenido/ola.png');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
   background-position-y: bottom;
+
+  width: 100%;
+  height: 80vh;
 }
 
 .redes {
   justify-content: end;
 }
 
-footer{
-  padding-top: 300px;
+footer {
   padding-bottom: 20px;
 }
 
@@ -137,10 +139,12 @@ footer .nav-link {
   color: #423C5D;
   transition: 200ms;
 }
-footer h5{
+
+footer h5 {
+  margin-top: 0;
   font-weight: 900;
   margin-bottom: 15px;
-  color:rgb(13, 4, 53);
+  color: rgb(13, 4, 53);
 }
 
 footer .nav-link:hover {

@@ -72,7 +72,9 @@ export default {
     color: rgb(235, 228, 221);
     transition: 300ms;
 }
-
+.corona{
+    margin-left: 4px;
+}
 .nav-link {
     filter: grayscale(1);
 }
@@ -84,7 +86,7 @@ header nav{
     box-shadow: 0px 5px 100px 20px black;
 }
 
-@media only screen and (max-width: 647px) {
+@media only screen and (max-width: 650px) {
     .nav-item a {
         font-size: 0.90rem;
     }
