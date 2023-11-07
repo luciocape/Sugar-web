@@ -41,22 +41,32 @@
 </template>
 
 <script>
-import api from '../api'; // Importa el archivo api.js que hemos creado antes
+import { db } from '../firebase-init'; // Ajusta la ruta según la ubicación de tu archivo firebase-init.js
 
 export default {
     name: 'Premios',
     data() {
         return {
-            premios: [], // Aquí guardaremos los datos de la API
+            premios: [],
         };
     },
     async mounted() {
-        // Hacemos la llamada a la API cuando el componente se monta
         try {
-            const data = await api('/sugar-premios?populate=*&fields[0]=Titulo&fields[1]=Descripcion&fields[2]=puntos'); // Usamos la función api con la ruta del recurso
-            this.premios = data.data; // Guardamos los datos en el estado del componente
+            // Realiza una consulta a Firebase para obtener los datos
+            const querySnapshot = await getDocs(collection(db, 'sugar-premio'));
+
+            // Procesa los datos
+            const premios = [];
+            querySnapshot.forEach((doc) => {
+                premios.push({
+                    id: doc.id,
+                    ...doc.data(),
+                });
+            });
+
+            this.premios = premios;
         } catch (error) {
-            console.error(error); // Manejamos el error si ocurre
+            console.error(error);
         }
     },
 };

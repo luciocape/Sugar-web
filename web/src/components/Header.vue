@@ -18,7 +18,7 @@
                         <!--Links navbar-->
                         <li v-for="item in links" :key="index" class="nav-item"><a v-if="item.link != 'Premium'"
                                 class="nav-link" :href="item.enlace">{{ item.link }}</a>
-                            <router-link v-else :to="item.enlace" class="nav-link"><span class="">{{ item.link }}</span>
+                            <router-link v-else :to="item.enlace" class="link-premium"><span class="text-warning">{{ item.link }}</span>
                                 <img class="corona" src="../../public/contenido/corona.png" alt="" width="30"></router-link>
                         </li>
                     </ul>
@@ -72,6 +72,9 @@ export default {
     color: rgb(235, 228, 221);
     transition: 300ms;
 }
+.nav-item{
+    align-self: center;
+}
 .corona{
     margin-left: 4px;
 }
@@ -84,6 +87,15 @@ export default {
 }
 header nav{
     box-shadow: 0px 5px 100px 20px black;
+}
+.link-premium {
+    text-decoration: none;
+    margin: auto;
+    font-weight: 900; 
+    color: rgb(215, 238, 5);
+}
+.link-premium:hover{
+    filter: invert(1)
 }
 
 @media only screen and (max-width: 650px) {
@@ -100,4 +112,5 @@ header nav{
     .menu img {
         width: 30px;
     }
-}</style>
+}
+</style>

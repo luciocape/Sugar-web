@@ -1,6 +1,9 @@
 <template>
-  
-  <div class="contenedor-footer"></div><div style="background-color: #00518A;">
+  <div class="ola"></div>
+  <div
+    style="background: linear-gradient(0deg, #2E7684 0%, rgba(0,81,138,1) 75%);; width: 100%; height: 20vh;">
+  </div>
+  <div class="contenedor-footer">
     <div class="container">
       <footer class="row row-cols-1 row-cols-sm-2 row-cols-md-3 ">
         <div class="col mb-3">
@@ -34,6 +37,7 @@
       </footer>
     </div>
   </div>
+
   <!--
     <div class="contenedor-footer w-100 h-auto pb-5">
     <div class="w-100 ">
@@ -116,7 +120,7 @@ export default {
 </script>
 
 <style>
-.contenedor-footer {
+.ola {
   background-image: url('../../public/contenido/ola.png');
   background-repeat: no-repeat;
   background-size: cover;
@@ -129,6 +133,10 @@ export default {
 
 .redes {
   justify-content: end;
+}
+
+.contenedor-footer {
+  background-image: url('../../public/contenido/space_bg_edit.png');
 }
 
 footer {
@@ -163,5 +171,4 @@ footer .nav-link:hover {
     justify-content: center;
     align-items: center;
   }
-}
-</style>
+}</style>

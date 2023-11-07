@@ -27,19 +27,25 @@
                                 </div>
                                 <div class="card-body d-flex flex-column h-100">
                                     <div>
-                                        <div class="card-title pricing-card-title display-5"><span
-                                            v-if="item.precio === '../../contenido/becado.png'"><img :src="item.precio"
-                                                alt="Globo promocional" width="100"> /
-                                            <img src="../../public/contenido/clasico-tachado.png" alt=""></span><img
-                                            :src="item.precio" :alt="item.alt"
-                                            v-else-if="item.precio === '../../contenido/clasico-edit.png'"><span v-else style="font-weight: 800;">{{
-                                                item.precio }}</span></div>
-                                                <span class="lead" v-if="item.precio != 'Contactanos'" >Mensual</span>
+                                        <div class="card-title pricing-card-title display-5">
+                                            <span v-if="item.precio === '../../contenido/becado.png'">
+                                                <img :src="item.precio" alt="Globo promocional" class="img-card1"> 
+                                                /
+                                                <img src="../../public/contenido/clasico-tachado.png" alt=""
+                                                    class="img-card1">
+                                            </span>
+                                            <img :src="item.precio" :alt="item.alt"
+                                            v-else-if="item.precio === '../../contenido/clasico-edit.png'" class="img-card2">
+                                            <span v-else style="font-weight: 800;">
+                                                {{ item.precio }}
+                                            </span>
+                                        </div>
+                                        <span class="lead" v-if="item.precio != 'Contactanos'">Mensual</span>
                                     </div>
-                                    
-                                    <ul class="p-0 m-auto me-0 mt-1 d-flex flex-column" style="width: 90%; gap: 16px;">
+
+                                    <ul class="p-0 m-0 ms-3 d-flex flex-column" style="width: 90%; gap: 16px;">
                                         <li v-for="elemento in  item.beneficios" :key="elemento.id" class="text-start ">
-                                        {{ elemento.beneficio }}</li>
+                                            {{ elemento.beneficio }}</li>
                                     </ul>
                                     <button type="button" class="w-100 btn btn-lg btn-outline-primary m-auto mb-0">{{
                                         item.boton
@@ -213,6 +219,7 @@ export default {
     min-height: 100vh;
     padding-top: 100px;
 }
+
 #premium .card {
     min-width: 250px;
     width: auto;
@@ -229,9 +236,29 @@ export default {
     background: rgba(255, 255, 255, 0.7);
     box-shadow: 0px 0px 35px rgb(190, 56, 231);
 }
-#premium .card ul{
-    list-style-image: url('../../public/contenido/tick.png');
+
+#premium .card ul {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
 }
+
+#premium .card ul li::before {
+    content: '';
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    background-image: url('../../public/contenido/tick.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    margin-right: 10px;
+
+}
+
+
+
 #premium-presentacion {
     color: antiquewhite;
     z-index: 700;
@@ -240,7 +267,19 @@ export default {
     transition: 0.6s;
     max-width: 100%;
 }
-main{
+
+main {
     max-width: 100%;
+}
+.img-card1{
+    width: 100px;
+}
+.img-card2{
+    width: 200px;
+}
+@media only screen and (max-width: 375px) {
+    #premium-presentacion {
+        top: 85px;
+    }
 }
 </style>

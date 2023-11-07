@@ -1,4 +1,5 @@
 // api.js
+/*
 export default function api(url) {
     return fetch(`http://localhost:1337/api${url}`) // Cambia esto por la URL de tu API de Strapi
         .then(response => {
@@ -9,3 +10,4 @@ export default function api(url) {
             }
         });
 }
+*/

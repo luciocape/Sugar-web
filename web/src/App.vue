@@ -99,10 +99,9 @@ h2 {
 
   animation-timeline: --item;
   animation-name: appear;
-  animation-range: entry 0% cover 65%;
+  animation-range: entry 0% cover 60%;
   animation-fill-mode: both;
 }
-
 /*Animaciones*/
 @keyframes show {
   from {
@@ -129,6 +128,16 @@ h2 {
   to {
     opacity: 1;
     scale: 1;
+  }
+}
+@keyframes disappear {
+  from {
+    scale: 1;
+
+  }
+
+  to {
+    scale: 0;
   }
 }
 
