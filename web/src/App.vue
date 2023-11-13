@@ -40,6 +40,9 @@ export default {
   color: #2c3e50;
 
 }
+html{
+  scroll-behavior:smooth;
+}
 
 body {
   font-family: 'Poppins', sans-serif;

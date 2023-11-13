@@ -18,7 +18,8 @@
                         <!--Links navbar-->
                         <li v-for="item in links" :key="index" class="nav-item"><a v-if="item.link != 'Premium'"
                                 class="nav-link" :href="item.enlace">{{ item.link }}</a>
-                            <router-link v-else :to="item.enlace" class="link-premium"><span class="text-warning">{{ item.link }}</span>
+                            <router-link v-else :to="item.enlace" class="link-premium"><span class="text-warning">{{
+                                item.link }}</span>
                                 <img class="corona" src="../../public/contenido/corona.png" alt="" width="30"></router-link>
                         </li>
                     </ul>
@@ -53,7 +54,7 @@ export default {
                 {
                     link: 'Contacto',
                     icon: '',
-                    enlace: '../#contactanos'
+                    enlace: '../#nuestras_novedades'
                 },
                 {
                     link: 'Premium',
@@ -72,12 +73,15 @@ export default {
     color: rgb(235, 228, 221);
     transition: 300ms;
 }
-.nav-item{
+
+.nav-item {
     align-self: center;
 }
-.corona{
+
+.corona {
     margin-left: 4px;
 }
+
 .nav-link {
     filter: grayscale(1);
 }
@@ -85,16 +89,19 @@ export default {
 .nav-link:hover {
     filter: grayscale(0);
 }
-header nav{
+
+header nav {
     box-shadow: 0px 5px 100px 20px black;
 }
+
 .link-premium {
     text-decoration: none;
     margin: auto;
-    font-weight: 900; 
+    font-weight: 900;
     color: rgb(215, 238, 5);
 }
-.link-premium:hover{
+
+.link-premium:hover {
     filter: invert(1)
 }
 
@@ -112,5 +119,4 @@ header nav{
     .menu img {
         width: 30px;
     }
-}
-</style>
+}</style>

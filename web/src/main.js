@@ -6,6 +6,15 @@ import "@/assets/bootstrap.bundle.min.js"
 import { createApp } from 'vue'
 
 createApp(App).use(router).mount('#app')
+
+firebase.messaging().requestPermission()
+    .then(function (token) {
+        console.log('Recibido permiso.');
+        // En el parámetro "token" tienes el código para poder enviar las notificaciones
+    })
+    .catch(function (err) {
+        console.log('No se ha obtenido permiso', err);
+    });
 /*
 try {
     fetch('http://localhost:1337/api/sugar-premios', {

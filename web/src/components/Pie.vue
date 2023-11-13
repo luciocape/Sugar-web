@@ -1,9 +1,6 @@
 <template>
-  <div class="ola"></div>
-  <div
-    style="background: linear-gradient(0deg, #2E7684 0%, rgba(0,81,138,1) 75%);; width: 100%; height: 20vh;">
-  </div>
-  <div class="contenedor-footer">
+  <div class="contenedor-footer position-relative">
+    <div class="ola"></div>
     <div class="container">
       <footer class="row row-cols-1 row-cols-sm-2 row-cols-md-3 ">
         <div class="col mb-3">
@@ -121,7 +118,9 @@ export default {
 
 <style>
 .ola {
-  background-image: url('../../public/contenido/ola.png');
+  position: absolute;
+  top: -230px;
+  background-image: url('../../public/contenido/ola-footer.png');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -137,6 +136,10 @@ export default {
 
 .contenedor-footer {
   background-image: url('../../public/contenido/space_bg_edit.png');
+  background-repeat: repeat;
+  background-size: cover;
+  background-position: center;
+  padding-top: 300px;
 }
 
 footer {
@@ -171,4 +174,5 @@ footer .nav-link:hover {
     justify-content: center;
     align-items: center;
   }
-}</style>
+}
+</style>

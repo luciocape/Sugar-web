@@ -41,7 +41,6 @@
 </template>
 
 <script>
-import { db } from '../firebase-init'; // Ajusta la ruta según la ubicación de tu archivo firebase-init.js
 
 export default {
     name: 'Premios',
