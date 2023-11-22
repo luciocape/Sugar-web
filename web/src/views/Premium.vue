@@ -1,6 +1,6 @@
 <template>
     <q-page id="premium" class="d-flex flex-column justify-content-center align-items-center">
-        <div id="premium-presentacion" :class="{ 'hidden': scrolledDown }" class="position-fixed p-3">
+        <div class="position-fixed p-3 premium-presentacion d-none">
             <h1 class="display-1 mb-1">Premium</h1>
             <h2 class="h2">Elige el plan perfecto para ti</h2>
             <p class="text-center">Este proyecto se sustenta solo con el trabajo y el esfuerzo de los miembros del
@@ -11,11 +11,13 @@
                 Por eso puedes obtener tu licencia Premium totalmente gratis, para que todos tengan acceso y si
                 quieres también puedes aportar y volverte Mecenas o Patreon de SugarCoach</p>
         </div>
+        <div :class="{ 'hidden': scrolledDown }" class="position-fixed p-3 w-100 premium-presentacion" style="height: 10vh;">
+            <img src="" alt="">
+        </div>
         <main>
-            <div class="d-flex justify-content-evenly w-100" style="margin-top: 30vh;">
-                <span v-for="(item, index) in  celus" class="d-flex flex-column align-items-center gap-3"><img
-                        style="width: 15vw;" :src="item.url" :alt="item.al">
-                </span>
+            <div class="d-flex justify-content-evenly w-100 flex-wrap gap-3" style="margin-top: 30vh;">
+                <img v-for="(item, index) in  celus" class="align-items-center  "
+                        style="width: 15vw; min-width: 200px;" :src="item.url" :alt="item.al">
             </div>
             <div class="m-4">
                 <section>
@@ -218,6 +220,7 @@ export default {
     max-width: 100%;
     min-height: 100vh;
     padding-top: 100px;
+    padding-bottom: 50vh;
 }
 
 #premium .card {
@@ -259,7 +262,7 @@ export default {
 
 
 
-#premium-presentacion {
+.premium-presentacion {
     color: antiquewhite;
     z-index: 700;
     top: 105px;

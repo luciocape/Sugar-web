@@ -2,8 +2,8 @@
     <div class="slider">
         <div class="slide-track">
             <div v-for="(item, index) in marcas" :key="index" class="slide">
-                <img v-if="item.nombre != 'Arcor'" :src="item.url" :alt="item.alt">
-                <img v-else :src="item.url" :alt="item.alt" style="width: 9vw; margin: auto;">
+                <img v-if="item.nombre != 'Arcor'" :src="item.url" :alt="item.alt" class="arcor">
+                <img v-else :src="item.url" :alt="item.alt">
             </div>
         </div>
     </div>
@@ -50,7 +50,7 @@ export default {
                     url: '../../../contenido/sanofi-edit.png',
                     alt: 'Logo Sanofi',
                 },
-                
+
                 {
                     nombre: 'Nestle',
                     url: '../../../contenido/nestle-edit.png',
@@ -96,7 +96,7 @@ export default {
                     url: '../../../contenido/sanofi-edit.png',
                     alt: 'Logo Sanofi',
                 },
-                
+
                 {
                     nombre: 'Nestle',
                     url: '../../../contenido/nestle-edit.png',
@@ -121,27 +121,31 @@ export default {
 }
 
 .slider {
-    width: 90vw;
+    width: auto;
     height: auto;
     margin: auto;
     overflow: hidden;
+    margin-top: 20px;
 }
 
 .slider .slide-track {
     display: flex;
     animation: scroll 40s linear infinite;
     -webkit-animation: scroll 40s linear infinite;
-    width: calc(var(--ancho-img) * 18);
+    width: calc(var(--ancho-img) * 18 + 15px);
 }
 
 .slide {
     display: flex;
-    flex-direction: row;
-    width: var(--ancho-img);
+    height: auto;
+    gap: 15px;
 }
 
 .slide img {
-    width: 100%;
+    width: var(--ancho-img);
+}
+.arcor{
+    width: 14.5vw;
 }
 
 @keyframes scroll {
@@ -151,8 +155,32 @@ export default {
     }
 
     100% {
-        -webkit-transform: translateX(calc(var(--ancho-img) * -9));
-        transform: translateX(calc(var(--ancho-img) * -9));
+        -webkit-transform: translateX(calc(var(--ancho-img) * -9 + 15px));
+        transform: translateX(calc(var(--ancho-img) * -9 + 15px));
+    }
+}
+
+@media only screen and (max-width: 640px) {
+    .slide img {
+        width: 96px;
+    }
+}
+.slider .slide-track {
+    width: calc(96px * 18 + 15px);
+}
+.arcor{
+    width: 92px;
+}
+
+@keyframes scroll {
+    0% {
+        -webkit-transform: translateX(0);
+        transform: translatex(0);
+    }
+
+    100% {
+        -webkit-transform: translateX(calc(96px * -9 + 15px));
+        transform: translateX(calc(96px * -9 + 15px));
     }
 }
 </style>
