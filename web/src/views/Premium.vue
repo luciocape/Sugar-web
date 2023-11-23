@@ -1,6 +1,6 @@
 <template>
     <q-page id="premium" class="d-flex flex-column justify-content-center align-items-center">
-        <div class="position-fixed p-3 premium-presentacion d-none">
+        <div :class="{'hidden': !mostrarContenido}" class="position-fixed p-3 premium-presentacion">
             <h1 class="display-1 mb-1">Premium</h1>
             <h2 class="h2">Elige el plan perfecto para ti</h2>
             <p class="text-center">Este proyecto se sustenta solo con el trabajo y el esfuerzo de los miembros del
@@ -11,13 +11,14 @@
                 Por eso puedes obtener tu licencia Premium totalmente gratis, para que todos tengan acceso y si
                 quieres también puedes aportar y volverte Mecenas o Patreon de SugarCoach</p>
         </div>
-        <div :class="{ 'hidden': scrolledDown }" class="position-fixed p-3 w-100 premium-presentacion" style="height: 10vh;">
-            <img src="" alt="">
+        <div :class="{ 'hidden': scrolledDown }" class="position-fixed p-3 w-100 premium-presentacion"
+            style="height: 10vh; z-index: 600;">
+            <span @click="toggleContenido" class="flecha w-25">▼</span>
         </div>
         <main>
             <div class="d-flex justify-content-evenly w-100 flex-wrap gap-3" style="margin-top: 30vh;">
-                <img v-for="(item, index) in  celus" class="align-items-center  "
-                        style="width: 15vw; min-width: 200px;" :src="item.url" :alt="item.al">
+                <img v-for="(item, index) in  celus" class="align-items-center  " style="width: 15vw; min-width: 200px;"
+                    :src="item.url" :alt="item.al">
             </div>
             <div class="m-4">
                 <section>
@@ -31,13 +32,14 @@
                                     <div>
                                         <div class="card-title pricing-card-title display-5">
                                             <span v-if="item.precio === '../../contenido/becado.png'">
-                                                <img :src="item.precio" alt="Globo promocional" class="img-card1"> 
+                                                <img :src="item.precio" alt="Globo promocional" class="img-card1">
                                                 /
                                                 <img src="../../public/contenido/clasico-tachado.png" alt=""
                                                     class="img-card1">
                                             </span>
                                             <img :src="item.precio" :alt="item.alt"
-                                            v-else-if="item.precio === '../../contenido/clasico-edit.png'" class="img-card2">
+                                                v-else-if="item.precio === '../../contenido/clasico-edit.png'"
+                                                class="img-card2">
                                             <span v-else style="font-weight: 800;">
                                                 {{ item.precio }}
                                             </span>
@@ -168,6 +170,7 @@ export default {
             scrolledDown: false,
             lastScrollPosition: 0,
             modalVisible: false,
+            mostrarContenido: false
         }
     },
     created() {
@@ -193,8 +196,14 @@ export default {
                 // Haciendo scroll hacia arriba
                 this.scrolledDown = false;
             }
-
+            this.mostrarContenido =!this.scrolledDown? this.mostrarContenido:false
+            
             this.lastScrollPosition = currentScrollPosition;
+        },
+        toggleContenido() {
+            // Cambia el estado para mostrar u ocultar el contenido
+            this.mostrarContenido =!this.mostrarContenido
+            ;
         }
     },
     mounted() {
@@ -208,7 +217,7 @@ export default {
 /* Estilo para ocultar el header cuando se hace scroll hacia abajo */
 .hidden {
     transform: translateY(-100%);
-    transition: transform 0.8s;
+    transition: 200ms;
 }
 
 #premium {
@@ -271,18 +280,24 @@ export default {
     max-width: 100%;
 }
 
+.flecha:hover {
+    cursor: pointer
+}
+
 main {
     max-width: 100%;
 }
-.img-card1{
+
+.img-card1 {
     width: 100px;
 }
-.img-card2{
+
+.img-card2 {
     width: 200px;
 }
+
 @media only screen and (max-width: 375px) {
-    #premium-presentacion {
+    .premium-presentacion {
         top: 85px;
     }
-}
-</style>
+}</style>

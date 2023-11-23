@@ -2,8 +2,8 @@
     <div class="slider">
         <div class="slide-track">
             <div v-for="(item, index) in marcas" :key="index" class="slide">
-                <img v-if="item.nombre != 'Arcor'" :src="item.url" :alt="item.alt" class="arcor">
-                <img v-else :src="item.url" :alt="item.alt">
+                <img v-if="item.nombre != 'Arcor'" :src="item.url" :alt="item.alt" class="todos">
+                <img v-else :src="item.url" :alt="item.alt" class="arcor" style="width: 10vw;">
             </div>
         </div>
     </div>
@@ -144,9 +144,6 @@ export default {
 .slide img {
     width: var(--ancho-img);
 }
-.arcor{
-    width: 14.5vw;
-}
 
 @keyframes scroll {
     0% {
@@ -160,16 +157,16 @@ export default {
     }
 }
 
-@media only screen and (max-width: 640px) {
+@media only screen and (max-width: 675px) {
     .slide img {
-        width: 96px;
+        width: 120px;
     }
 }
 .slider .slide-track {
-    width: calc(96px * 18 + 15px);
+    width: calc(120px * 18 + 15px);
 }
 .arcor{
-    width: 92px;
+    width: 115px;
 }
 
 @keyframes scroll {
@@ -179,8 +176,8 @@ export default {
     }
 
     100% {
-        -webkit-transform: translateX(calc(96px * -9 + 15px));
-        transform: translateX(calc(96px * -9 + 15px));
+        -webkit-transform: translateX(calc(120px * -8 + 20px));
+        transform: translateX(calc(120px * -8 + 20px));
     }
 }
 </style>
