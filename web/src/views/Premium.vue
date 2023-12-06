@@ -1,6 +1,6 @@
 <template>
     <q-page id="premium" class="d-flex flex-column justify-content-center align-items-center">
-        <div :class="{'hidden': !mostrarContenido}" class="position-fixed p-3 premium-presentacion">
+        <div :class="{ 'hidden': !mostrarContenido }" class="position-fixed p-3 premium-presentacion">
             <h1 class="display-1 mb-1">Premium</h1>
             <h2 class="h2">Elige el plan perfecto para ti</h2>
             <p class="text-center">Este proyecto se sustenta solo con el trabajo y el esfuerzo de los miembros del
@@ -13,7 +13,13 @@
         </div>
         <div :class="{ 'hidden': scrolledDown }" class="position-fixed p-3 w-100 premium-presentacion"
             style="height: 10vh; z-index: 600;">
-            <span @click="toggleContenido" class="flecha w-25">▼</span>
+            <span @click="toggleContenido" class="flecha"><img src="" alt="">
+                <svg xmlns="http://www.w3.org/2000/svg" style="height: 6vh;" fill="currentColor"
+                    class="bi bi-arrow-down-square-fill" viewBox="0 0 16 16">
+                    <path
+                        d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2zm6.5 4.5v5.793l2.146-2.147a.5.5 0 0 1 .708.708l-3 3a.5.5 0 0 1-.708 0l-3-3a.5.5 0 1 1 .708-.708L7.5 10.293V4.5a.5.5 0 0 1 1 0" />
+                </svg>
+            </span>
         </div>
         <main>
             <div class="d-flex justify-content-evenly w-100 flex-wrap gap-3" style="margin-top: 30vh;">
@@ -196,14 +202,14 @@ export default {
                 // Haciendo scroll hacia arriba
                 this.scrolledDown = false;
             }
-            this.mostrarContenido =!this.scrolledDown? this.mostrarContenido:false
-            
+            this.mostrarContenido = !this.scrolledDown ? this.mostrarContenido : false
+
             this.lastScrollPosition = currentScrollPosition;
         },
         toggleContenido() {
             // Cambia el estado para mostrar u ocultar el contenido
-            this.mostrarContenido =!this.mostrarContenido
-            ;
+            this.mostrarContenido = !this.mostrarContenido
+                ;
         }
     },
     mounted() {
@@ -229,7 +235,6 @@ export default {
     max-width: 100%;
     min-height: 100vh;
     padding-top: 100px;
-    padding-bottom: 50vh;
 }
 
 #premium .card {

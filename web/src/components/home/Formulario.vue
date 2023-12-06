@@ -67,7 +67,6 @@ export default {
 #contactanos {
     padding-top: 6vh;
     min-height: 90vh;
-    padding-bottom: 60vh;
 }
 .form-control{
     

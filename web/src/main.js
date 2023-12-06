@@ -23,6 +23,12 @@ catch (error){
 
 //notificaciones de firebase
 // Importar el SDK de Firebase Cloud Messaging JS
+
+
+
+
+
+/*
 import { initializeApp } from "firebase/app";
 import { getMessaging, getToken, onMessage } from "firebase/messaging";
 
@@ -87,4 +93,4 @@ onMessage(messaging, (payload) => {
 
     new Notification(notificationTitle, notificationOptions);
 });
-
+*/

@@ -1,7 +1,10 @@
 <template>
   <Header></header>
   <router-view />
-  <div class="bg-foot">
+  <div class="load d-flex justify-content-center align-items-center" style="width: 100vw; height: 100vh;background: linear-gradient(180deg,rgb(83, 222, 230)15%,rgb(2, 20, 43) 100%);">
+    <img src="../public/contenido/sugar-logo.png" alt="Logo girando">
+  </div>
+  <div class="contenedor-footer">
     <Pie></Pie>
   </div>
 </template>
@@ -40,8 +43,9 @@ export default {
   color: #2c3e50;
 
 }
-html{
-  scroll-behavior:smooth;
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
@@ -78,12 +82,19 @@ h2 {
 .h1 {
   font-family: 'Roboto', 'Lucida Sans Unicode', 'Lucida Grande';
 }
+
 .texto {
   font-family: 'Poppins', sans-serif;
   font-weight: 400;
   font-size: 2vw;
   line-height: 1.5;
   text-align: justify;
+}
+
+.load img {
+  animation-name: load;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
 }
 
 .item-show {
@@ -105,7 +116,23 @@ h2 {
   animation-range: entry 0% cover 60%;
   animation-fill-mode: both;
 }
+
 /*Animaciones*/
+@keyframes load {
+  0% {
+    transform: rotate(0);
+    transform: scale3d(1);
+  }
+
+  25% {
+    transform: rotate(-60deg);
+  }
+
+  100% {
+    transform: rotate(720deg);
+  }
+}
+
 @keyframes show {
   from {
     opacity: 0;
@@ -133,6 +160,7 @@ h2 {
     scale: 1;
   }
 }
+
 @keyframes disappear {
   from {
     scale: 1;
@@ -162,5 +190,4 @@ h2 {
   .texto {
     font-size: 3.8vw;
   }
-}
-</style>
+}</style>

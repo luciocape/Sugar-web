@@ -1,15 +1,15 @@
 <template>
-  <div class="contenedor-footer position-relative">
-    <div class="ola"></div>
+  <div style="background: linear-gradient(180deg, rgba(34,53,77,0) 15%, #39B6BB 100%); width: 100%; height: 250px;"></div>
+  <div class="estrellas">
     <div class="container">
-      <footer class="row row-cols-1 row-cols-sm-2 row-cols-md-3 ">
-        <div class="col mb-3">
+      <footer class="row row-cols-1 row-cols-sm-2 row-cols-md-3">
+        <div class="col">
           <a href="/" class=" m-auto mb-1 w-100 d-flex align-items-center link-body-emphasis text-decoration-none">
             <img class="m-auto mb-0" width="100" src="../../public/contenido/sugar-logo.png" alt="">
           </a>
           <p class="text-body-secondary h4 ">&copy; Sugar Coach, Inc 2023</p>
         </div>
-        <div class="col mb-3">
+        <div class="col">
           <h5>Navegación inicio</h5>
           <nav>
             <ul class="nav flex-column">
@@ -19,22 +19,21 @@
             </ul>
           </nav>
         </div>
-        <div class="col mb-3">
+        <div class="col">
           <h5>Navegación vistas</h5>
           <nav>
             <ul class="nav flex-column">
               <li v-for="item in views" :key="index" class="nav-item mb-2">
-                <router-link :to="item.enlace" class="nav-link p-0" style="color:antiquewhite;">{{ item.link
-                }}</router-link>
+                <a :href="item.enlace" class="nav-link p-0" style="color:antiquewhite;">{{ item.link
+                }}</a>
               </li>
             </ul>
           </nav>
-
         </div>
       </footer>
     </div>
-  </div>
 
+  </div>
   <!--
     <div class="contenedor-footer w-100 h-auto pb-5">
     <div class="w-100 ">
@@ -117,33 +116,33 @@ export default {
 </script>
 
 <style>
-.ola {
-  position: absolute;
-  top: -230px;
-  background-image: url('../../public/contenido/ola-footer.png');
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  background-position-y: bottom;
-
-  width: 100%;
-  height: 80vh;
-}
-
 .redes {
   justify-content: end;
 }
 
 .contenedor-footer {
-  background-image: url('../../public/contenido/space_bg_edit.png');
-  background-repeat: repeat;
+  background-image: url('https://sugar.coach/wp-content/uploads/2021/11/contacto-1.jpg;');
+  background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  padding-top: 300px;
+  background-attachment: fixed;
+  max-width: 100%;
+}
+
+.estrellas {
+  position: relative;
+  width: 100%;
+  height: auto;
+  min-height: 100%;
+  background-image: url('../../public/contenido/space_bg_footer_edit.png');
+  background-position: initial;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 footer {
-  padding-bottom: 20px;
+  position: relative;
+  padding: 80px 0 100px 0;
 }
 
 footer .nav-link {
