@@ -1,7 +1,7 @@
 # Ignorar todo
 *
 # No ignorar la carpeta proyecto
-!/WEB
+!/web
 
 # No ignorar el archivo .gitignore
 !.gitignore
