@@ -1,13 +1,3 @@
-# Ignorar todo
-*
-
-# No ignorar la carpeta actual
-!*/
-
-# No ignorar el archivo .gitignore
-!.gitignore
-
-
 dist
 .DS_Store
 node_modules/
