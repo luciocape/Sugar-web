@@ -1,7 +1,13 @@
+# Ignorar todo
+*
+# No ignorar la carpeta proyecto
+!/WEB
+
+# No ignorar el archivo .gitignore
+!.gitignore
+
 .DS_Store
 node_modules/
-/dist
-
 
 # local env files
 .env.local

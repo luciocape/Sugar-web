@@ -1,7 +1,7 @@
 
 <template>
     <header>
-        <nav class="navbar navbar-expand-sm top-0 position-fixed w-100" style="z-index: 999; background-color: #4B23A5;">
+        <nav class="navbar navbar-expand-sm top-0 position-fixed" style="z-index: 999; background-color: #4B23A5;width: 100%">
             <div class="container-fluid">
                 <a class="navbar-brand" href="/">
                     <img src="../../public/contenido/sugar-logo.png" class="d-inline-block " alt="Logo Sugar Coach"
