@@ -1,70 +1,65 @@
 <template>
     <q-page id="premium" class="d-flex flex-column justify-content-center align-items-center">
-        <div :class="{ 'hidden': !mostrarContenido }" class="position-fixed p-3 premium-presentacion">
-            <h1 class="display-1 mb-1">Premium</h1>
-            <h2 class="h2">Elige el plan perfecto para ti</h2>
-            <p class="text-center">Este proyecto se sustenta solo con el trabajo y el esfuerzo de los miembros del
-                equipo. Todos
-                relacionados de alguna manera con la diabetes,
-                Para seguir desarrollando este proyecto y mejorar las funcionalidades y solucionar los problemas
-                que todos tenemos, necesitamos el aporte de todos.
-                Por eso puedes obtener tu licencia Premium totalmente gratis, para que todos tengan acceso y si
-                quieres también puedes aportar y volverte Mecenas o Patreon de SugarCoach</p>
-        </div>
-        <div :class="{ 'hidden': scrolledDown }" class="position-fixed p-3 w-100 premium-presentacion"
-            style="height: 10vh; z-index: 600;">
-            <span @click="toggleContenido" class="flecha"><img src="" alt="">
-                <svg xmlns="http://www.w3.org/2000/svg" style="height: 6vh;" fill="currentColor"
-                    class="bi bi-arrow-down-square-fill" viewBox="0 0 16 16">
-                    <path
-                        d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2zm6.5 4.5v5.793l2.146-2.147a.5.5 0 0 1 .708.708l-3 3a.5.5 0 0 1-.708 0l-3-3a.5.5 0 1 1 .708-.708L7.5 10.293V4.5a.5.5 0 0 1 1 0" />
-                </svg>
-            </span>
-        </div>
-        <main>
-            <div class="d-flex justify-content-evenly w-100 flex-wrap gap-3" style="margin-top: 30vh;">
-                <img v-for="(item, index) in  celus" class="align-items-center  " style="width: 15vw; min-width: 200px;"
-                    :src="item.url" :alt="item.al">
+        <div class="contenedor-premium filtro">
+            <div :class="{ 'hidden': !mostrarContenido }" class="position-fixed p-3 premium-presentacion">
+                <h1 style="font-size: 9vw;" class="family-premium" :class="{ 'text-flicker-in-glow': mostrarContenido}">Premium</h1>
+                <h2 style="font-size: 4vw;" class="family-premium">Elige el plan perfecto para ti</h2>
+                <p style="font-family: sans-serif; font-weight: 700; font-size: 2vw;" class="text-center">Este proyecto se sustenta solo con el trabajo y el esfuerzo de los miembros del equipo. Todos relacionados de alguna manera con la diabetes. Para seguir desarrollando este proyecto y solucionar los problemas de las personas con diabetes y sus familias, necesitamos tu ayuda!. Por eso puedes ayudar comprando una licencia premium para ti y tu familia. Y si tienes una empresa puedes anunciarte y ayudar a la vez! Como? Comprando Licencias Premium para que nosotros podamos repartir entre aquellos que necesitan tu ayuda. Elige abajo el plan que más te guste!</p>
             </div>
-            <div class="m-4">
-                <section>
-                    <div class="row  gap-3 mb-5 text-center">
-                        <div v-for="(item, index) in  cards " :key="index" class="col p-0">
-                            <div class="card mb-4" style="border-radius: 20px;">
-                                <div class="card-header py-3">
-                                    <h3 class="my-0 fw-normal display-6">{{ item.titulo }}</h3>
-                                </div>
-                                <div class="card-body d-flex flex-column h-100">
-                                    <div>
-                                        <div class="card-title pricing-card-title display-5">
-                                            <span v-if="item.precio === '../../contenido/becado.png'">
-                                                <img :src="item.precio" alt="Globo promocional" class="img-card1">
-                                                /
-                                                <img src="../../public/contenido/clasico-tachado.png" alt=""
-                                                    class="img-card1">
-                                            </span>
-                                            <img :src="item.precio" :alt="item.alt"
-                                                v-else-if="item.precio === '../../contenido/clasico-edit.png'"
-                                                class="img-card2">
-                                            <span v-else style="font-weight: 800;">
-                                                {{ item.precio }}
-                                            </span>
-                                        </div>
-                                        <span class="lead" v-if="item.precio != 'Contactanos'">Mensual</span>
+            <div :class="{ 'hidden': scrolledDown }" class="position-fixed p-3 w-100 premium-presentacion"
+                style="height: 10vh; z-index: 600;">
+                <span @click="toggleContenido" class="flecha"><img src="" alt="">
+                    <svg xmlns="http://www.w3.org/2000/svg" style="height: 6vh;" fill="currentColor"
+                        class="bi bi-arrow-down-square-fill" viewBox="0 0 16 16">
+                        <path
+                            d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2zm6.5 4.5v5.793l2.146-2.147a.5.5 0 0 1 .708.708l-3 3a.5.5 0 0 1-.708 0l-3-3a.5.5 0 1 1 .708-.708L7.5 10.293V4.5a.5.5 0 0 1 1 0" />
+                    </svg>
+                </span>
+            </div>
+            <main>
+                <div class="d-flex justify-content-evenly w-100 flex-wrap gap-3" style="margin-top: 30vh;">
+                    <img v-for="(item, index) in  celus" class="align-items-center  " style="width: 15vw; min-width: 200px;"
+                        :src="item.url" :alt="item.al">
+                </div>
+                <div class="m-4">
+                    <section>
+                        <div class="row  gap-3 mb-5 text-center">
+                            <div v-for="(item, index) in  cards " :key="index" class="col p-0">
+                                <div class="card mb-4" style="border-radius: 20px;">
+                                    <div class="card-header py-3">
+                                        <h3 class="my-0 fw-normal display-6">{{ item.titulo }}</h3>
                                     </div>
+                                    <div class="card-body d-flex flex-column h-100">
+                                        <div>
+                                            <div class="card-title pricing-card-title display-5">
+                                                <span v-if="item.precio === '../../contenido/becado.png'">
+                                                    <img :src="item.precio" alt="Globo promocional" class="img-card1">
+                                                    /
+                                                    <img src="../../public/contenido/clasico-tachado.png" alt=""
+                                                        class="img-card1">
+                                                </span>
+                                                <img :src="item.precio" :alt="item.alt"
+                                                    v-else-if="item.precio === '../../contenido/clasico-edit.png'"
+                                                    class="img-card2">
+                                                <span v-else style="font-weight: 800;">
+                                                    {{ item.precio }}
+                                                </span>
+                                            </div>
+                                            <span class="lead" v-if="item.precio != 'Contactanos'">Mensual</span>
+                                        </div>
 
-                                    <ul class="p-0 m-0 ms-3 d-flex flex-column" style="width: 90%; gap: 16px;">
-                                        <li v-for="elemento in  item.beneficios" :key="elemento.id" class="text-start ">
-                                            {{ elemento.beneficio }}</li>
-                                    </ul>
-                                    <button type="button" class="w-100 btn btn-lg btn-outline-primary m-auto mb-0">{{
-                                        item.boton
-                                    }}</button>
+                                        <ul class="p-0 m-0 ms-3 d-flex flex-column" style="width: 90%; gap: 16px;">
+                                            <li v-for="elemento in  item.beneficios" :key="elemento.id" class="text-start ">
+                                                {{ elemento.beneficio }}</li>
+                                        </ul>
+                                        <button type="button" class="w-100 btn btn-lg btn-outline-primary m-auto mb-0">{{
+                                            item.boton
+                                        }}</button>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <!--
+                        <!--
                                             <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
                         Launch demo modal
                     </button>
@@ -89,11 +84,11 @@
                     </div>
                     -->
 
-                </section>
-                <Slider></Slider>
-            </div>
-        </main>
-
+                    </section>
+                    <Slider></Slider>
+                </div>
+            </main>
+        </div>
 
     </q-page>
 </template>
@@ -227,7 +222,7 @@ export default {
 }
 
 #premium {
-    background-image: url('https://sugar.coach/wp-content/uploads/2021/11/contacto-1.jpg;');
+    background-image: url('../../public/contenido/nene-usando-app.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -235,6 +230,11 @@ export default {
     max-width: 100%;
     min-height: 100vh;
     padding-top: 100px;
+}
+
+.contenedor-premium {
+    max-width: 100%;
+    min-height: 100vh;
 }
 
 #premium .card {
@@ -284,6 +284,9 @@ export default {
     transition: 0.6s;
     max-width: 100%;
 }
+.family-premium{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+}
 
 .flecha:hover {
     cursor: pointer
@@ -305,4 +308,5 @@ main {
     .premium-presentacion {
         top: 85px;
     }
-}</style>
+}
+</style>

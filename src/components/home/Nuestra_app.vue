@@ -19,7 +19,7 @@
                 Conecta a médicos, pacientes y familias que conviven con la diabetes.<br><br>
                 Es una experiencia de usuario gamificada que lo recompensa por cuidar su salud.<br><br>
                 <span class="strong">Jugando cuidas la salud</span><br>
-                <router-link to="/premios" class="link-info link-offset-2-hover h4 d-block mt-3" style="width: fit-content;">Ver premios</router-link>
+                <router-link to="/premios" class="link-info link-offset-2-hover display-4 d-block mt-3" style="width: fit-content;">Ver premios</router-link>
             </p>
         </div>
     </section>
@@ -40,7 +40,7 @@ export default {
 
 
 #nuestra_app {
-    background-image: url('https://sugar.coach/wp-content/uploads/2021/11/nuestraapp.jpg');
+    background-image: url('');
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;

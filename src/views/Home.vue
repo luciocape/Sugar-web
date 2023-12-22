@@ -8,10 +8,11 @@
             <Nuestra_app></Nuestra_app>
             <Equipo></Equipo>
             <div class="bg-foot">
-                <Nuestras_novedades></Nuestras_novedades>
-                <Formulario></Formulario>
+                <div class="filtro">
+                    <Nuestras_novedades></Nuestras_novedades>
+                    <Formulario></Formulario>
+                </div>
             </div>
-
         </main>
     </q-page>
 </template>
