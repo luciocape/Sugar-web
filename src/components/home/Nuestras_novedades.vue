@@ -24,27 +24,27 @@ export default {
             redes: [
                 {
                     enlace: 'https://www.instagram.com/sugar.coach/',
-                    url: 'https://sugar.coach/wp-content/uploads/2021/07/instagram-icon-150x150.png',
+                    url: '../../../contenido/instagram-logo.png',
                     alt: 'Instagram'
                 },
                 {
-                    enlace: 'https://www.facebook.com/sugarcoach/',
-                    url: 'https://sugar.coach/wp-content/uploads/2021/07/facebook-icon-150x150.png',
+                    enlace: 'https://www.facebook.com/SugarCoachApp',
+                    url: '../../../contenido/facebook-logo.png',
                     alt: 'Facebook'
                 },
                 {
-                    enlace: 'https://twitter.com/sugarcoach',
-                    url: 'https://sugar.coach/wp-content/uploads/2021/07/twitter-icon.png',
-                    alt: 'Twitter'
+                    enlace: 'https://twitter.com/sugarcoachapp',
+                    url: '../../../contenido/x-logo.png',
+                    alt: 'X'
                 },
                 {
-                    enlace: 'https://www.youtube.com/user/SugarCoach',
-                    url: 'https://sugar.coach/wp-content/uploads/2021/07/youtube-icon.png',
+                    enlace: 'https://www.youtube.com/@sugarcoachproject3630',
+                    url: '../../../contenido/youtube-logo.png',
                     alt: 'Youtube'
                 },
                 {
-                    enlace: 'https://www.tiktok.com/sugarcoach/',
-                    url: 'https://sugar.coach/wp-content/uploads/2021/11/tiktok.png',
+                    enlace: 'https://www.tiktok.com/@sugar.coach',
+                    url: '../../../contenido/tiktok-logo.png',
                     alt: 'Tiktok'
                 },
             ]

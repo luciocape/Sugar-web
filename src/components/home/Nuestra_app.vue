@@ -40,11 +40,12 @@ export default {
 
 
 #nuestra_app {
-    background-image: url('');
+    background-image: url('../../../public/contenido/11-niños-con-SC.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
-    background-position: center;
+    background-position: left;
+
 
 }
 #nuestra_app .container{
