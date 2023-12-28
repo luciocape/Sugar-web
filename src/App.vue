@@ -49,8 +49,14 @@ export default {
 
 html {
   scroll-behavior: smooth;
+  
 }
-
+html, a, label{
+  cursor: url(../public/contenido/cursor.png), auto !important;
+}
+button, input, path, svg,textarea{
+  cursor: url(../public/contenido/pointer.png), auto !important;
+}
 body {
   font-family: 'Poppins', sans-serif;
   font-weight: 400;
@@ -58,7 +64,7 @@ body {
   line-height: 1.5;
   color: #495057;
   background-color: #fff;
-  cursor: url("../public/contenido/cursor-fondo.png");
+  
 
 }
 

@@ -55,7 +55,7 @@ export default {
                 },
                 {
                     claseCSS: 'carousel-item slide3',
-                    url: '',
+                    url: '../../../contenido/niños-con-app.jpg',
                     alt: 'Slide 3',
                     title: 'Una experiencia gamificada',
                     description: 'Juega y gana recompensas del mundo gaming.',

@@ -50,7 +50,7 @@ export default {
 #testimonios {
     min-height: 350px;
     height: 70vh;
-    background-image: url('https://sugar.coach/wp-content/uploads/2021/11/TEstimonios.jpg');
+    background-image: url('../../../public/contenido/nene-app.jpg');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;

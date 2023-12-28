@@ -60,7 +60,7 @@ export default {
 
 <style>
 #como_funciona {
-    background-image: url('https://sugar.coach/wp-content/uploads/2021/11/funciona.jpg');
+    background-image: url('../../../public/contenido/nene-nena-usando-app.png');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;

@@ -2,9 +2,9 @@
     <q-page id="premium" class="d-flex flex-column justify-content-center align-items-center">
         <div class="contenedor-premium filtro">
             <div :class="{ 'hidden': !mostrarContenido }" class="position-fixed p-3 premium-presentacion">
-                <h1 style="font-size: 9vw;" class="family-premium" :class="{ 'text-flicker-in-glow': mostrarContenido}">Premium</h1>
-                <h2 style="font-size: 4vw;" class="family-premium">Elige el plan perfecto para ti</h2>
-                <p style="font-family: sans-serif; font-weight: 700; font-size: 2vw;" class="text-center">Este proyecto se sustenta solo con el trabajo y el esfuerzo de los miembros del equipo. Todos relacionados de alguna manera con la diabetes. Para seguir desarrollando este proyecto y solucionar los problemas de las personas con diabetes y sus familias, necesitamos tu ayuda!. Por eso puedes ayudar comprando una licencia premium para ti y tu familia. Y si tienes una empresa puedes anunciarte y ayudar a la vez! Como? Comprando Licencias Premium para que nosotros podamos repartir entre aquellos que necesitan tu ayuda. Elige abajo el plan que más te guste!</p>
+                <h1 style="font-size: 9vw;" class="family-premium presentacion-h1" :class="{ 'text-flicker-in-glow': mostrarContenido}">Premium</h1>
+                <h2 style="font-size: 4vw;" class="family-premium presentacion-h2">Elige el plan perfecto para ti</h2>
+                <p style="font-family: sans-serif; font-weight: 700; font-size: 2vw;" class="text-center presentacion-p">Este proyecto se sustenta solo con el trabajo y el esfuerzo de los miembros del equipo. Todos relacionados de alguna manera con la diabetes. Para seguir desarrollando este proyecto y solucionar los problemas de las personas con diabetes y sus familias, necesitamos tu ayuda!. Por eso puedes ayudar comprando una licencia premium para ti y tu familia. Y si tienes una empresa puedes anunciarte y ayudar a la vez! Como? Comprando Licencias Premium para que nosotros podamos repartir entre aquellos que necesitan tu ayuda. Elige abajo el plan que más te guste!</p>
             </div>
             <div :class="{ 'hidden': scrolledDown }" class="position-fixed p-3 w-100 premium-presentacion"
                 style="height: 10vh; z-index: 600;">
@@ -171,7 +171,7 @@ export default {
             scrolledDown: false,
             lastScrollPosition: 0,
             modalVisible: false,
-            mostrarContenido: false
+            mostrarContenido: true
         }
     },
     created() {
@@ -275,7 +275,6 @@ export default {
 }
 
 
-
 .premium-presentacion {
     color: antiquewhite;
     z-index: 700;
@@ -303,10 +302,43 @@ main {
 .img-card2 {
     width: 200px;
 }
+@media only screen and (max-width: 678px){
+    .presentacion-h1{
+        font-size: 11vw !important;
+    }
+    .presentacion-h2{
+        font-size: 7vw !important;
+    }
+    .presentacion-p{
+        font-size: 2.7vw !important;
+    }
+}
 
+@media only screen and (max-width: 415px){
+    .presentacion-h1{
+        font-size: 12vw !important;
+    }
+    .presentacion-h2{
+        font-size: 7.2vw !important;
+    }
+    .presentacion-p{
+        font-size: 3.4vw !important;
+    }
+}
 @media only screen and (max-width: 375px) {
     .premium-presentacion {
         top: 85px;
+    }
+}
+@media only screen and (max-width: 320px){
+    .presentacion-h1{
+        font-size: 12.5vw !important;
+    }
+    .presentacion-h2{
+        font-size: 7.3vw !important;
+    }
+    .presentacion-p{
+        font-size: 3.7vw !important;
     }
 }
 </style>
