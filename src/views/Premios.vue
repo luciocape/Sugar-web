@@ -84,13 +84,13 @@ export default {
                 {
                     titulo: 'Tarjeta 26,5U$',
                     descripcion: 'Este premio es valido por una giftcard de 26,5U$',
-                    url: '../../../contenido/tarjeta-minecraft.webp',
+                    url: '../../../contenido/tarjeta-minecraft.png',
                     puntos: '10000'
                 },
                 {
                     titulo: 'Tarjeta xbox 25U$',
                     descripcion: 'Este premio es valido por una giftcard de 25U$',
-                    url: '../../../contenido/tarjeta-xbox.webp',
+                    url: '../../../contenido/tarjeta-xbox.png',
                     puntos: '10000'
                 }
             ],

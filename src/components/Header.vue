@@ -18,9 +18,9 @@
                         <!--Links navbar-->
                         <li v-for="item in links" :key="index" class="nav-item"><a v-if="item.link != 'Premium'"
                                 class="nav-link" :href="item.enlace">{{ item.link }}</a>
-                            <router-link v-else :to="item.enlace" class="link-premium"><span class="text-warning">{{
+                            <a v-else :href="item.enlace" class="link-premium"><span class="text-warning">{{
                                 item.link }}</span>
-                                <img class="corona" src="../../public/contenido/corona.png" alt="" width="30"></router-link>
+                                <img class="corona" src="../../public/contenido/corona.png" alt="" width="30"></a>
                         </li>
                     </ul>
                 </div>
@@ -59,7 +59,7 @@ export default {
                 {
                     link: 'Premium',
                     icon: 'fas fa-info-circle',
-                    enlace: '/premium/#cards'
+                    enlace: '/premium'
                 }
             ]
         }
