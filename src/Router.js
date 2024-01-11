@@ -21,8 +21,13 @@ const routes = [
     },
     {
         path:'/privacy',
-        name: 'Privacy',
+        name: 'Priacy Policy',
         component: ()=>import('@/views/PrivacyPolicy.vue')
+    },
+    {
+        path:'/account',
+        name: 'Delete Account',
+        component: ()=>import('@/views/DeleteAccount.vue')
     },
     {
         path: '/:catchAll(.*)', // otra ruta
