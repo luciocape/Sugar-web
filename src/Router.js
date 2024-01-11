@@ -20,6 +20,11 @@ const routes = [
         component: ()=>import('@/views/Premios.vue')
     },
     {
+        path:'/privacy',
+        name: 'Privacy',
+        component: ()=>import('@/views/PrivacyPolicy.vue')
+    },
+    {
         path: '/:catchAll(.*)', // otra ruta
         name: 'NotFound',
         component: ()=>import('@/views/404.vue')
