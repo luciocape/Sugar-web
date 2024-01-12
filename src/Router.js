@@ -30,6 +30,11 @@ const routes = [
         component: ()=>import('@/views/DeleteAccount.vue')
     },
     {
+        path:'/isa',
+        name: 'IsaLinktree',
+        component: ()=>import('@/views/Isa.vue')
+    },
+    {
         path: '/:catchAll(.*)', // otra ruta
         name: 'NotFound',
         component: ()=>import('@/views/404.vue')
