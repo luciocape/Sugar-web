@@ -35,6 +35,11 @@ const routes = [
         component: ()=>import('@/views/Isa.vue')
     },
     {
+        path: '/app',
+        name: 'App',
+        component: ()=>import('@/views/App.vue')
+    },
+    {
         path: '/:catchAll(.*)', // otra ruta
         name: 'NotFound',
         component: ()=>import('@/views/404.vue')
