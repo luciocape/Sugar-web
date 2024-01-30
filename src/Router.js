@@ -40,6 +40,11 @@ const routes = [
         component: ()=>import('@/views/App.vue')
     },
     {
+        path: '/lab', // otra ruta
+        name: 'SugarLab',
+        component: ()=>import('@/views/Lab.vue')
+    },
+    {
         path: '/:catchAll(.*)', // otra ruta
         name: 'NotFound',
         component: ()=>import('@/views/404.vue')
