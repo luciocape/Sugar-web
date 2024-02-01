@@ -35,11 +35,6 @@ const routes = [
         component: ()=>import('@/views/Isa.vue')
     },
     {
-        path: '/app',
-        name: 'App',
-        component: ()=>import('@/views/App.vue')
-    },
-    {
         path: '/lab', // otra ruta
         name: 'SugarLab',
         component: ()=>import('@/views/Lab.vue')

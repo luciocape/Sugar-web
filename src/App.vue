@@ -1,19 +1,17 @@
 <template>
-  <Header></header>
+  <Header v-if="!esVistaEspecial"></header>
   <router-view />
   <!--<div class="load d-flex justify-content-center align-items-center" style="width: 100%; height: 100vh;background: linear-gradient(180deg,rgb(83, 222, 230)15%,rgb(2, 20, 43) 100%);">
     <img src="../public/contenido/sugar-logo.png" alt="Logo girando">
   </div>-->
-  <div class="contenedor-footer">
+  <div v-if="!esVistaEspecial" class="contenedor-footer">
     <div class="filtro">
       <Pie></Pie>
     </div>
-      
   </div>
 </template>
 
 <script>
-import router from './Router';
 import Header from './components/Header.vue';
 import Pie from './components/Pie.vue';
 export default {
@@ -21,6 +19,11 @@ export default {
   components: {
     Header,
     Pie
+  },
+  computed: {
+    esVistaEspecial() {
+      return this.$route.path === '/isa' || this.$route.path === '/lab' // o la ruta que quieras usar
+    }
   },
   mounted() {
     document.title = 'Sugar Coach';
@@ -66,6 +69,10 @@ body {
   background-color: #fff;
   
 
+}
+q-page{
+  max-width: 100%;
+  min-height: 100%;
 }
 
 

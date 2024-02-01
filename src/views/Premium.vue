@@ -2,9 +2,16 @@
     <q-page id="premium" class="d-flex flex-column justify-content-center align-items-center">
         <div class="contenedor-premium filtro">
             <div :class="{ 'hidden': !mostrarContenido }" class="position-fixed p-3 premium-presentacion">
-                <h1 style="font-size: 9vw;" class="family-premium presentacion-h1" :class="{ 'text-flicker-in-glow': mostrarContenido}">Premium</h1>
+                <h1 style="font-size: 9vw;" class="family-premium presentacion-h1"
+                    :class="{ 'text-flicker-in-glow': mostrarContenido }">Premium</h1>
                 <h2 style="font-size: 4vw;" class="family-premium presentacion-h2">Elige el plan perfecto para ti</h2>
-                <p style="font-family: sans-serif; font-weight: 700; font-size: 2vw;" class="text-center presentacion-p">Este proyecto se sustenta solo con el trabajo y el esfuerzo de los miembros del equipo. Todos relacionados de alguna manera con la diabetes. Para seguir desarrollando este proyecto y solucionar los problemas de las personas con diabetes y sus familias, necesitamos tu ayuda!. Por eso puedes ayudar comprando una licencia premium para ti y tu familia. Y si tienes una empresa puedes anunciarte y ayudar a la vez! Como? Comprando Licencias Premium para que nosotros podamos repartir entre aquellos que necesitan tu ayuda. Elige abajo el plan que más te guste!</p>
+                <p style="font-family: sans-serif; font-weight: 700; font-size: 2vw;" class="text-center presentacion-p">
+                    Este proyecto se sustenta solo con el trabajo y el esfuerzo de los miembros del equipo. Todos
+                    relacionados de alguna manera con la diabetes. Para seguir desarrollando este proyecto y solucionar los
+                    problemas de las personas con diabetes y sus familias, necesitamos tu ayuda!. Por eso puedes ayudar
+                    comprando una licencia premium para ti y tu familia. Y si tienes una empresa puedes anunciarte y ayudar
+                    a la vez! Como? Comprando Licencias Premium para que nosotros podamos repartir entre aquellos que
+                    necesitan tu ayuda. Elige abajo el plan que más te guste!</p>
             </div>
             <div :class="{ 'hidden': scrolledDown }" class="position-fixed p-3 w-100 premium-presentacion"
                 style="height: 10vh; z-index: 600;">
@@ -52,9 +59,38 @@
                                             <li v-for="elemento in  item.beneficios" :key="elemento.id" class="text-start ">
                                                 {{ elemento.beneficio }}</li>
                                         </ul>
-                                        <button type="button" class="w-100 btn btn-lg btn-outline-primary m-auto mb-0">{{
-                                            item.boton
-                                        }}</button>
+
+                                        <!-- Button trigger modal -->
+                                        <button type="button" class="w-100 btn btn-lg btn-outline-primary m-auto mb-0" data-bs-toggle="modal"
+                                            data-bs-target="#buymodal">
+                                            {{
+                                                item.boton
+                                            }}
+                                        </button>
+
+                                        <!-- Modal -->
+                                        <div class="modal fade" id="buymodal" data-bs-backdrop="static"
+                                            data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel"
+                                            aria-hidden="true">
+                                            <div class="modal-dialog modal-dialog-centered" >
+                                                <div class="modal-content" style="box-shadow: 0 0 20px rgba(4, 128, 185, 0.74);">
+                                                    <div class="modal-header">
+                                                        <h1 class="modal-title fs-5" id="staticBackdropLabel">Modal title
+                                                        </h1>
+                                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                            aria-label="Close"></button>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                        <button type="button" class="btn btn-secondary"
+                                                            data-bs-dismiss="modal">Close</button>
+                                                        <button type="button" class="btn btn-primary">Understood</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -283,7 +319,8 @@ export default {
     transition: 0.6s;
     max-width: 100%;
 }
-.family-premium{
+
+.family-premium {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
 }
 
@@ -302,43 +339,51 @@ main {
 .img-card2 {
     width: 200px;
 }
-@media only screen and (max-width: 678px){
-    .presentacion-h1{
+
+@media only screen and (max-width: 678px) {
+    .presentacion-h1 {
         font-size: 11vw !important;
     }
-    .presentacion-h2{
+
+    .presentacion-h2 {
         font-size: 7vw !important;
     }
-    .presentacion-p{
+
+    .presentacion-p {
         font-size: 2.7vw !important;
     }
 }
 
-@media only screen and (max-width: 415px){
-    .presentacion-h1{
+@media only screen and (max-width: 415px) {
+    .presentacion-h1 {
         font-size: 12vw !important;
     }
-    .presentacion-h2{
+
+    .presentacion-h2 {
         font-size: 7.2vw !important;
     }
-    .presentacion-p{
+
+    .presentacion-p {
         font-size: 3.4vw !important;
     }
 }
+
 @media only screen and (max-width: 375px) {
     .premium-presentacion {
         top: 85px;
     }
 }
-@media only screen and (max-width: 320px){
-    .presentacion-h1{
+
+@media only screen and (max-width: 320px) {
+    .presentacion-h1 {
         font-size: 12.5vw !important;
     }
-    .presentacion-h2{
+
+    .presentacion-h2 {
         font-size: 7.3vw !important;
     }
-    .presentacion-p{
+
+    .presentacion-p {
         font-size: 3.7vw !important;
     }
-}
-</style>
+}</style>
