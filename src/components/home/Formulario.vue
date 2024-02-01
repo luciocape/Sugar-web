@@ -20,7 +20,7 @@
                 </div>
                 <input type="submit" class="btn btn-primary">
 
-                <input type="hidden" name="_next" value="http://172.31.98.253:8080/index.html">
+                <input type="hidden" name="_next" value="http://sugar.coach">
             </form>
 
         </div>

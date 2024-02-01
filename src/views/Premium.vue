@@ -110,10 +110,10 @@
                                                             <input type="submit" class="btn btn-outline-secondary w-25">
 
                                                             <input type="hidden" name="_next"
-                                                                value="http://172.31.98.253:8080/index.html">
+                                                                value="http://sugar.coach">
                                                         </form>
                                                         <p class="mt-4 lead">Si tienes alguna duda o problema, puedes
-                                                            contactarnos a Info@sugar.coach</p>
+                                                            contactarnos a admin.team@sugar.coach</p>
                                                     </div>
                                                     <div class="modal-footer">
                                                         <button type="button" class="btn btn-secondary"
