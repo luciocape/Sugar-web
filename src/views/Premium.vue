@@ -61,32 +61,63 @@
                                         </ul>
 
                                         <!-- Button trigger modal -->
-                                        <button type="button" class="w-100 btn btn-lg btn-outline-primary m-auto mb-0" data-bs-toggle="modal"
-                                            data-bs-target="#buymodal">
+                                        <button type="button" class="w-100 btn btn-lg btn-outline-primary m-auto mb-0"
+                                            data-bs-toggle="modal" :data-bs-target="'#' + item.boton">
                                             {{
                                                 item.boton
                                             }}
                                         </button>
 
                                         <!-- Modal -->
-                                        <div class="modal fade" id="buymodal" data-bs-backdrop="static"
+                                        <div class="modal fade text-bg-secondary" :id="item.boton" data-bs-backdrop="static"
                                             data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel"
                                             aria-hidden="true">
-                                            <div class="modal-dialog modal-dialog-centered" >
-                                                <div class="modal-content" style="box-shadow: 0 0 20px rgba(4, 128, 185, 0.74);">
+                                            <div class="modal-dialog modal-dialog-centered">
+                                                <div class="modal-content bg-dark"
+                                                    style="box-shadow: 0 0 30px rgb(0, 23, 24); min-width: 40vw;">
                                                     <div class="modal-header">
-                                                        <h1 class="modal-title fs-5" id="staticBackdropLabel">Modal title
-                                                        </h1>
-                                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                                            aria-label="Close"></button>
+                                                        <h4 class="modal-title fs-5" id="staticBackdropLabel">
+                                                            {{ item.titulo }}
+                                                        </h4>
+                                                        <button type="button" data-bs-dismiss="modal"
+                                                            aria-label="Close" class="rounded-3"><svg xmlns="http://www.w3.org/2000/svg"
+                                                                width="40" height="40" fill="currentColor"
+                                                                class="bi bi-x-square-fill" viewBox="0 0 16 16">
+                                                                <path
+                                                                    d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2zm3.354 4.646L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 1 1 .708-.708" />
+                                                            </svg></button>
                                                     </div>
                                                     <div class="modal-body">
-                                                        
+                                                        <h5 class="h2">Gracias por elegir nuestro servicio!</h5>
+                                                        <p class="text-start m-auto fw-light"
+                                                            style="width: 90%; font-size: 17px">Para completar tu compra,
+                                                            necesitamos que nos proporciones tu
+                                                            correo electrónico. Te enviaremos un email con un enlace seguro
+                                                            para que puedas realizar el pago con el método que prefieras.
+                                                        </p>
+                                                        <form action="https://formsubmit.co/admin.team@sugar.coach" method="POST"
+                                                            class="mt-4">
+                                                            <div class="mb-3 m-auto" style="width: 90%;">
+                                                                <label class="text-start d-block ">Correo
+                                                                    electronico:</label>
+                                                                <div>
+                                                                    <input type="email"
+                                                                        class="form-control m-auto bg-dark-subtle"
+                                                                        name="email" :id="item.id"
+                                                                        placeholder="juanperez@gmail.com">
+                                                                </div>
+                                                            </div>
+                                                            <input type="submit" class="btn btn-outline-secondary w-25">
+
+                                                            <input type="hidden" name="_next"
+                                                                value="http://172.31.98.253:8080/index.html">
+                                                        </form>
+                                                        <p class="mt-4 lead">Si tienes alguna duda o problema, puedes
+                                                            contactarnos a Info@sugar.coach</p>
                                                     </div>
                                                     <div class="modal-footer">
                                                         <button type="button" class="btn btn-secondary"
                                                             data-bs-dismiss="modal">Close</button>
-                                                        <button type="button" class="btn btn-primary">Understood</button>
                                                     </div>
                                                 </div>
                                             </div>

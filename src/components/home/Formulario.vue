@@ -6,15 +6,15 @@
                 <h3 class="lead">Para conocer más sobre nosotros y SugarCoach podés escribirnos, o seguir la comunidad en
                     las redes</h3>
             </div>
-            <form action="https://formsubmit.co/info@sugar.coach" method="POST">
+            <form action="https://formsubmit.co/admin.team@sugar.coach" method="POST">
                 <div v-for="(item, index) in inputs" :key="index" class="mb-3">
                     <label :for="item.for" class="form-label">{{ item.label }}</label>
                     <div v-if="item.id != 'mesage'">
-                        <input :type="item.type" class="form-control" :name="item.id" :id="item.id"
+                        <input :type="item.type" class="form-control form-controls" :name="item.id" :id="item.id"
                             :placeholder="item.placeholder">
                     </div>
                     <div v-else class="h-25">
-                        <textarea class="form-control" :name="item.id" :id="item.id" :placeholder="item.placeholder"
+                        <textarea class="form-control form-controls" :name="item.id" :id="item.id" :placeholder="item.placeholder"
                             style="max-height: 120px;"></textarea>
                     </div>
                 </div>
@@ -68,11 +68,10 @@ export default {
     padding-top: 6vh;
     min-height: 90vh;
 }
-.form-control{
-    
+.form-controls{
     box-shadow: none;
 }
-.form-control:hover{
+.form-controls:hover{
     box-shadow: 0 0 20px rgba(4, 98, 185, 0.74);
     transition: 300ms;
     
