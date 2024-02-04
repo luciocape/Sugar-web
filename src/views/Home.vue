@@ -43,9 +43,20 @@ export default {
         Pie
 
     },
-    mounted() {
-        document.title = 'Sugar Coach';
+    metaInfo: {
+        title: '', // el título de la página
+        meta: [
+            {
+                name: 'description',
+                content: 'Descubre Sugar Coach, la aplicación que transforma el control de la diabetes infantil en una experiencia gamificada. Supervisa de manera sencilla los niveles de glucosa, insulina, carbohidratos y más. Descarga la versión gratuita o mejora a la premium para acceder a beneficios exclusivos. Patrocina nuestra causa o canjea puntos por tarjetas de regalo. ¡Síguenos en nuestras redes y sigamos cuidandonos!'
+            }, // la descripción de la página
+            {
+                name: 'keywords',
+                content: 'Diabetes infantil, Aplicación para niños con diabetes'
+            } // las palabras clave de la página
+        ]
     }
+
 }
 
 </script>

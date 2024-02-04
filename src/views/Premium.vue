@@ -2,10 +2,10 @@
     <q-page id="premium" class="d-flex flex-column justify-content-center align-items-center">
         <div class="contenedor-premium filtro">
             <div :class="{ 'hidden': !mostrarContenido }" class="position-fixed p-3 premium-presentacion">
-                <h1 style="font-size: 9vw;" class="family-premium presentacion-h1"
+                <h1 class="family-premium presentacion-h1 mb-0"
                     :class="{ 'text-flicker-in-glow': mostrarContenido }">Premium</h1>
-                <h2 style="font-size: 4vw;" class="family-premium presentacion-h2">Elige el plan perfecto para ti</h2>
-                <p style="font-family: sans-serif; font-weight: 700; font-size: 2vw;" class="text-center presentacion-p">
+                <h2 class="family-premium presentacion-h2">Elige el plan perfecto para ti</h2>
+                <p style="font-family: sans-serif; font-weight: 700;" class="text-center presentacion-p">
                     Este proyecto se sustenta solo con el trabajo y el esfuerzo de los miembros del equipo. Todos
                     relacionados de alguna manera con la diabetes. Para seguir desarrollando este proyecto y solucionar los
                     problemas de las personas con diabetes y sus familias, necesitamos tu ayuda!. Por eso puedes ayudar
@@ -79,8 +79,8 @@
                                                         <h4 class="modal-title fs-5" id="staticBackdropLabel">
                                                             {{ item.titulo }}
                                                         </h4>
-                                                        <button type="button" data-bs-dismiss="modal"
-                                                            aria-label="Close" class="rounded-3"><svg xmlns="http://www.w3.org/2000/svg"
+                                                        <button type="button" data-bs-dismiss="modal" aria-label="Close"
+                                                            class="rounded-3"><svg xmlns="http://www.w3.org/2000/svg"
                                                                 width="40" height="40" fill="currentColor"
                                                                 class="bi bi-x-square-fill" viewBox="0 0 16 16">
                                                                 <path
@@ -95,8 +95,8 @@
                                                             correo electrónico. Te enviaremos un email con un enlace seguro
                                                             para que puedas realizar el pago con el método que prefieras.
                                                         </p>
-                                                        <form action="https://formsubmit.co/admin.team@sugar.coach" method="POST"
-                                                            class="mt-4">
+                                                        <form action="https://formsubmit.co/admin.team@sugar.coach"
+                                                            method="POST" class="mt-4">
                                                             <div class="mb-3 m-auto" style="width: 90%;">
                                                                 <label class="text-start d-block ">Correo
                                                                     electronico:</label>
@@ -109,8 +109,7 @@
                                                             </div>
                                                             <input type="submit" class="btn btn-outline-secondary w-25">
 
-                                                            <input type="hidden" name="_next"
-                                                                value="http://sugar.coach">
+                                                            <input type="hidden" name="_next" value="http://sugar.coach">
                                                         </form>
                                                         <p class="mt-4 lead">Si tienes alguna duda o problema, puedes
                                                             contactarnos a admin.team@sugar.coach</p>
@@ -274,9 +273,13 @@ export default {
                 ;
         }
     },
-    mounted() {
-        document.title = 'Premium';
-    }
+    // metaInfo: {
+    //     title: 'Premium', // el título de la página
+    //     meta: [
+    //         { name: 'description', content: '' }, // la descripción de la página
+    //         { name: 'keywords', content: '' } // las palabras clave de la página        
+    //     ]
+    // }
 }
 
 </script>
@@ -371,7 +374,7 @@ main {
     width: 200px;
 }
 
-@media only screen and (max-width: 678px) {
+@media only screen and ( min-height:510px) and (max-width: 678px) {
     .presentacion-h1 {
         font-size: 11vw !important;
     }
@@ -385,7 +388,7 @@ main {
     }
 }
 
-@media only screen and (max-width: 415px) {
+@media only screen and ( min-height:510px) and (max-width: 415px) {
     .presentacion-h1 {
         font-size: 12vw !important;
     }
@@ -399,13 +402,13 @@ main {
     }
 }
 
-@media only screen and (max-width: 375px) {
+@media only screen and ( min-height:510px) and (max-width: 375px) {
     .premium-presentacion {
         top: 85px;
     }
 }
 
-@media only screen and (max-width: 320px) {
+@media only screen and ( min-height:510px) and (max-width: 320px){
     .presentacion-h1 {
         font-size: 12.5vw !important;
     }
@@ -417,4 +420,28 @@ main {
     .presentacion-p {
         font-size: 3.7vw !important;
     }
-}</style>
+}
+@media only screen and (min-width: 678px) and (min-height: 510px) {
+    .presentacion-h1{
+        font-size: 9vw;
+    }
+    .presentacion-h2{
+        font-size: 4vw;
+    }
+    .presentacion-p{
+        font-size: 2vw;
+    }
+}
+
+@media only screen and (max-height: 510px) {
+    .presentacion-h1{
+        font-size: 8.4vw;
+    }
+    .presentacion-h2{
+        font-size: 3.8;
+    }
+    .presentacion-p{
+        font-size: 1.8vw;
+    }
+}
+</style>
