@@ -16,6 +16,7 @@ import Header from './components/Header.vue';
 import Pie from './components/Pie.vue';
 import { computed, reactive } from 'vue'
 import { useHead } from '@vueuse/head'
+
 export default {
   name: 'App',
   components: {
@@ -25,11 +26,6 @@ export default {
   computed: {
     esVistaEspecial() {
       return this.$route.path === '/isa' || this.$route.path === '/lab' // o la ruta que quieras usar
-    }
-  },
-  head: {
-    htmlAttrs: {
-      lang: 'es' // el valor del atributo lang
     }
   },
   setup() {

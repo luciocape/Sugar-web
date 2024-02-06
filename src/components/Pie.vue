@@ -4,13 +4,14 @@
     <div class="container">
       <footer class="row row-cols-1 row-cols-sm-2 row-cols-md-3">
         <div class="col">
-          <a href="/" class=" m-auto mb-1 w-100 d-flex align-items-center link-body-emphasis text-decoration-none">
-            <img class="m-auto mb-0" width="100" src="../../public/contenido/sugar-logo.png" alt="">
+          <a href="/" aria-label="Ir al inicio"
+            class=" m-auto mb-1 w-100 d-flex align-items-center link-body-emphasis text-decoration-none">
+            <img class="m-auto mb-0" width="100" src="../../public/contenido/sugar-logo.png" alt="Logo SugarCoach">
           </a>
           <p class="text-body-secondary h4 ">&copy; Sugar Coach, Inc 2023</p>
         </div>
         <div class="col">
-          <h5>Navegación inicio</h5>
+          <h2>Navegación inicio</h2>
           <nav>
             <ul class="nav flex-column">
               <li v-for="item in links" :key="index" class="nav-item mb-2">
@@ -20,7 +21,7 @@
           </nav>
         </div>
         <div class="col">
-          <h5>Navegación vistas</h5>
+          <h2>Navegación vistas</h2>
           <nav>
             <ul class="nav flex-column">
               <li v-for="item in views" :key="index" class="nav-item mb-2">
@@ -150,7 +151,8 @@ footer .nav-link {
   transition: 200ms;
 }
 
-footer h5 {
+footer h2 {
+  font-size: 22px;
   margin-top: 0;
   font-weight: 900;
   margin-bottom: 15px;

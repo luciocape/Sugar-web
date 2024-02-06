@@ -56,7 +56,7 @@ export default {
                 },
                 {
                     name: `keywords`,
-                    content: 'SugarCoach, aplicación, Diabetes nfantil, Control de glucosa, App gamificada, Descarga gratuita, Versión premium, redes sociales',
+                    content: 'SugarCoach, aplicación, Diabetes infantil, Control de glucosa, App gamificada, Descarga gratuita, Versión premium, redes sociales, mysugr, social diabetes',
                 },
             ],
 
