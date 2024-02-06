@@ -2,8 +2,8 @@
     <q-page id="premium" class="d-flex flex-column justify-content-center align-items-center">
         <div class="contenedor-premium filtro">
             <div :class="{ 'hidden': !mostrarContenido }" class="position-fixed p-3 premium-presentacion">
-                <h1 class="family-premium presentacion-h1 mb-0"
-                    :class="{ 'text-flicker-in-glow': mostrarContenido }">Premium</h1>
+                <h1 class="family-premium presentacion-h1 mb-0" :class="{ 'text-flicker-in-glow': mostrarContenido }">
+                    Premium</h1>
                 <h2 class="family-premium presentacion-h2">Elige el plan perfecto para ti</h2>
                 <p style="font-family: sans-serif; font-weight: 700;" class="text-center presentacion-p">
                     Este proyecto se sustenta solo con el trabajo y el esfuerzo de los miembros del equipo. Todos
@@ -88,7 +88,7 @@
                                                             </svg></button>
                                                     </div>
                                                     <div class="modal-body">
-                                                        <h5 class="h2">Gracias por elegir nuestro servicio!</h5>
+                                                        <p class="h2">Gracias por elegir nuestro servicio!</p>
                                                         <p class="text-start m-auto fw-light"
                                                             style="width: 90%; font-size: 17px">Para completar tu compra,
                                                             necesitamos que nos proporciones tu
@@ -168,6 +168,7 @@
 import Header from '../components/Header.vue';
 import Pie from '../components/Pie.vue';
 import Slider from '../components/reutilizable/Slider.vue';
+import { useHead } from '@vueuse/head'
 
 export default {
     name: 'Premium',
@@ -175,6 +176,24 @@ export default {
         Header,
         Pie,
         Slider
+    },
+    setup() {
+
+        useHead({
+            // Can be static or computed
+            title: 'SugarCoach - Premium: Accede a más beneficios y funciones por un precio asequible',
+            meta: [
+                {
+                    name: `description`,
+                    content: 'Mejora tu experiencia con Sugar Coach adquiriendo la versión premium. Accede a beneficios exclusivos para un control aún más efectivo de la diabetes infantil. Descubre todas las funciones y suscríbete hoy.',
+                },
+                {
+                    name: `keywords`,
+                    content: 'Versión premium, Beneficios exclusivos, Mejora en el control de la diabetes, Suscripción paga, Becado, Patrocina',
+                },
+            ],
+
+        })
     },
     data() {
         return {
@@ -374,7 +393,7 @@ main {
     width: 200px;
 }
 
-@media only screen and ( min-height:510px) and (max-width: 678px) {
+@media only screen and (min-height:510px) and (max-width: 678px) {
     .presentacion-h1 {
         font-size: 11vw !important;
     }
@@ -388,7 +407,7 @@ main {
     }
 }
 
-@media only screen and ( min-height:510px) and (max-width: 415px) {
+@media only screen and (min-height:510px) and (max-width: 415px) {
     .presentacion-h1 {
         font-size: 12vw !important;
     }
@@ -402,13 +421,13 @@ main {
     }
 }
 
-@media only screen and ( min-height:510px) and (max-width: 375px) {
+@media only screen and (min-height:510px) and (max-width: 375px) {
     .premium-presentacion {
         top: 85px;
     }
 }
 
-@media only screen and ( min-height:510px) and (max-width: 320px){
+@media only screen and (min-height:510px) and (max-width: 320px) {
     .presentacion-h1 {
         font-size: 12.5vw !important;
     }
@@ -421,27 +440,31 @@ main {
         font-size: 3.7vw !important;
     }
 }
+
 @media only screen and (min-width: 678px) and (min-height: 510px) {
-    .presentacion-h1{
+    .presentacion-h1 {
         font-size: 9vw;
     }
-    .presentacion-h2{
+
+    .presentacion-h2 {
         font-size: 4vw;
     }
-    .presentacion-p{
+
+    .presentacion-p {
         font-size: 2vw;
     }
 }
 
 @media only screen and (max-height: 510px) {
-    .presentacion-h1{
+    .presentacion-h1 {
         font-size: 8.4vw;
     }
-    .presentacion-h2{
+
+    .presentacion-h2 {
         font-size: 3.8;
     }
-    .presentacion-p{
+
+    .presentacion-p {
         font-size: 1.8vw;
     }
-}
-</style>
+}</style>

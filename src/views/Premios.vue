@@ -59,7 +59,7 @@
                             </div>
                         </div>
                     </div>
-                    <div v-else style="margin: 25vh auto 5vh auto; position: relative; width: 50px;" >
+                    <div v-else style="margin: 25vh auto 5vh auto; position: relative; width: 50px;">
                         <div class="loader m-auto"></div>
                     </div>
                 </section>
@@ -69,9 +69,27 @@
 </template>
 
 <script>
-
+import { useHead } from '@vueuse/head'
 export default {
     name: 'Premios',
+    setup() {
+
+        useHead({
+            // Can be static or computed
+            title: 'SugarCoach Rewards: Canjea tus puntos por giftcards de tus juegos favoritos',
+            meta: [
+                {
+                    name: `description`,
+                    content: 'Canjea puntos por increíbles premios en Sugar Coach. Obtén recompensas exclusivas al alcanzar tus metas de salud. Descubre cómo acumular puntos y elige tus premios favoritos.',
+                },
+                {
+                    name: `keywords`,
+                    content: 'Canje de puntos, Recompensas unicas, Metas de salud, Premios en SugarCoach., giftcards, Targeta de regalo para juegos',
+                },
+            ],
+
+        })
+    },
     data() {
         return {
             premios_cargados: [
@@ -158,15 +176,17 @@ export default {
     font-weight: 700;
     font-size: 1.5rem;
 }
-.loader{
+
+.loader {
     width: 60px;
     height: 60px;
     border-radius: 50%;
     border-top-color: transparent;
     animation: spin 1.2s linear infinite;
 }
-@keyframes spin{
-    to{
+
+@keyframes spin {
+    to {
         transform: rotate(360deg);
     }
 }
@@ -192,6 +212,6 @@ export default {
     background-color: #E9E9EC;
     top: 50%;
     left: 50%;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
 }
 </style>

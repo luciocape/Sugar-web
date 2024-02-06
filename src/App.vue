@@ -14,6 +14,8 @@
 <script>
 import Header from './components/Header.vue';
 import Pie from './components/Pie.vue';
+import { computed, reactive } from 'vue'
+import { useHead } from '@vueuse/head'
 export default {
   name: 'App',
   components: {
@@ -25,9 +27,32 @@ export default {
       return this.$route.path === '/isa' || this.$route.path === '/lab' // o la ruta que quieras usar
     }
   },
-  mounted() {
-    document.title = 'Sugar Coach';
-  }
+  head: {
+    htmlAttrs: {
+      lang: 'es' // el valor del atributo lang
+    }
+  },
+  setup() {
+    const siteData = reactive({
+      title: `SugarCoach`,
+      description: `Descubre SugarCoach, la aplicación que transforma el control de la diabetes infantil en una experiencia gamificada. Supervisa de manera sencilla los niveles de glucosa, insulina y carbohidratos de tu hijo. Descarga la versión gratuita o mejora a la premium para acceder a beneficios exclusivos. Patrocina nuestra causa o canjea puntos por tarjetas de regalo. ¡Síguenos en redes sociales y sigamos cuidandonos!`,
+      keywords: `Experiencia de juego para control de diabetes, Monitoreo de salud infantil, App de seguimiento de diabetes pediátrica, Registro de niveles de glucosa, SugarCoach, aplicación, Diabetes infantil, App gamificada, Descarga gratuita, Versión premium, Canjea puntos por premios`,	
+    })
+    useHead({
+      // Can be static or computed
+      title: computed(() => siteData.title),
+      meta: [
+        {
+          name: `description`,
+          content: computed(() => siteData.description),
+        },
+        {
+          name: `keywords`,
+          content: computed(() => siteData.keywords),
+        }
+      ],
+    })
+  },
 }
 </script>
 
@@ -52,14 +77,23 @@ export default {
 
 html {
   scroll-behavior: smooth;
-  
+
 }
-html, a, label{
+
+html,
+a,
+label {
   cursor: url(../public/contenido/cursor.png), auto !important;
 }
-button, input, path, svg,textarea{
+
+button,
+input,
+path,
+svg,
+textarea {
   cursor: url(../public/contenido/pointer.png), auto !important;
 }
+
 body {
   font-family: 'Poppins', sans-serif;
   font-weight: 400;
@@ -67,10 +101,11 @@ body {
   line-height: 1.5;
   color: #495057;
   background-color: #fff;
-  
+
 
 }
-q-page{
+
+q-page {
   max-width: 100%;
   min-height: 100%;
 }
@@ -89,7 +124,8 @@ q-page{
   background-position: center;
   background-attachment: fixed;
 }
-.filtro{
+
+.filtro {
   background-color: rgba(240, 240, 240, 0.75);
 }
 
@@ -135,12 +171,15 @@ h2 {
   animation-range: entry 0% cover 60%;
   animation-fill-mode: both;
 }
+
 .text-flicker-out-glow {
-	animation: text-flicker-out-glow 100ms linear both;
+  animation: text-flicker-out-glow 100ms linear both;
 }
+
 .text-flicker-in-glow {
-	animation: text-flicker-in-glow 2.5s linear both;
+  animation: text-flicker-in-glow 2.5s linear both;
 }
+
 /*Animaciones*/
 
 @keyframes load {
@@ -201,122 +240,152 @@ h2 {
   0% {
     opacity: 0;
   }
+
   10% {
     opacity: 0;
     text-shadow: none;
   }
+
   10.1% {
     opacity: 1;
     text-shadow: none;
   }
+
   10.2% {
     opacity: 0;
     text-shadow: none;
   }
+
   20% {
     opacity: 0;
     text-shadow: none;
   }
+
   20.1% {
     opacity: 1;
     text-shadow: 0 0 30px rgba(255, 255, 255, 0.25);
   }
+
   20.6% {
     opacity: 0;
     text-shadow: none;
   }
+
   30% {
     opacity: 0;
     text-shadow: none;
   }
+
   30.1% {
     opacity: 1;
     text-shadow: 0 0 30px rgba(255, 255, 255, 0.45), 0 0 60px rgba(255, 255, 255, 0.25);
   }
+
   30.5% {
     opacity: 1;
     text-shadow: 0 0 30px rgba(255, 255, 255, 0.45), 0 0 60px rgba(255, 255, 255, 0.25);
   }
+
   30.6% {
     opacity: 0;
     text-shadow: none;
   }
+
   45% {
     opacity: 0;
     text-shadow: none;
   }
+
   45.1% {
     opacity: 1;
     text-shadow: 0 0 30px rgba(255, 255, 255, 0.45), 0 0 60px rgba(255, 255, 255, 0.25);
   }
+
   50% {
     opacity: 1;
     text-shadow: 0 0 30px rgba(255, 255, 255, 0.45), 0 0 60px rgba(255, 255, 255, 0.25);
   }
+
   55% {
     opacity: 1;
     text-shadow: 0 0 30px rgba(255, 255, 255, 0.45), 0 0 60px rgba(255, 255, 255, 0.25);
   }
+
   55.1% {
     opacity: 0;
     text-shadow: none;
   }
+
   57% {
     opacity: 0;
     text-shadow: none;
   }
+
   57.1% {
     opacity: 1;
     text-shadow: 0 0 30px rgba(255, 255, 255, 0.55), 0 0 60px rgba(255, 255, 255, 0.35);
   }
+
   60% {
     opacity: 1;
     text-shadow: 0 0 30px rgba(255, 255, 255, 0.55), 0 0 60px rgba(255, 255, 255, 0.35);
   }
+
   60.1% {
     opacity: 0;
     text-shadow: none;
   }
+
   65% {
     opacity: 0;
     text-shadow: none;
   }
+
   65.1% {
     opacity: 1;
     text-shadow: 0 0 30px rgba(255, 255, 255, 0.55), 0 0 60px rgba(255, 255, 255, 0.35), 0 0 100px rgba(255, 255, 255, 0.1);
   }
+
   75% {
     opacity: 1;
     text-shadow: 0 0 30px rgba(255, 255, 255, 0.55), 0 0 60px rgba(255, 255, 255, 0.35), 0 0 100px rgba(255, 255, 255, 0.1);
   }
+
   75.1% {
     opacity: 0;
     text-shadow: none;
   }
+
   77% {
     opacity: 0;
     text-shadow: none;
   }
+
   77.1% {
     opacity: 1;
     text-shadow: 0 0 30px rgba(255, 255, 255, 0.55), 0 0 60px rgba(255, 255, 255, 0.4), 0 0 110px rgba(255, 255, 255, 0.2), 0 0 100px rgba(255, 255, 255, 0.1);
   }
+
   85% {
     opacity: 1;
     text-shadow: 0 0 30px rgba(255, 255, 255, 0.55), 0 0 60px rgba(255, 255, 255, 0.4), 0 0 110px rgba(255, 255, 255, 0.2), 0 0 100px rgba(255, 255, 255, 0.1);
   }
+
   85.1% {
     opacity: 0;
     text-shadow: none;
   }
+
   86% {
     opacity: 0;
     text-shadow: none;
   }
+
   86.1% {
     opacity: 1;
     text-shadow: 0 0 30px rgba(255, 255, 255, 0.6), 0 0 60px rgba(255, 255, 255, 0.45), 0 0 110px rgba(255, 255, 255, 0.25), 0 0 100px rgba(255, 255, 255, 0.1);
   }
+
   100% {
     opacity: 1;
     text-shadow: 0 0 30px rgba(255, 255, 255, 0.6), 0 0 60px rgba(255, 255, 255, 0.45), 0 0 110px rgba(255, 255, 255, 0.25), 0 0 100px rgba(255, 255, 255, 0.1);

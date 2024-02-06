@@ -28,6 +28,7 @@ import Testimonios from '../components/home/Testimonios.vue';
 import Descargar from '../components/reutilizable/Descargar.vue';
 import Formulario from '../components/home/Formulario.vue';
 import Nuestras_novedades from '../components/home/Nuestras_novedades.vue';
+import { useHead } from '@vueuse/head'
 export default {
     name: 'Home',
     components: {
@@ -43,20 +44,24 @@ export default {
         Pie
 
     },
-    metaInfo: {
-        title: '', // el título de la página
-        meta: [
-            {
-                name: 'description',
-                content: 'Descubre Sugar Coach, la aplicación que transforma el control de la diabetes infantil en una experiencia gamificada. Supervisa de manera sencilla los niveles de glucosa, insulina, carbohidratos y más. Descarga la versión gratuita o mejora a la premium para acceder a beneficios exclusivos. Patrocina nuestra causa o canjea puntos por tarjetas de regalo. ¡Síguenos en nuestras redes y sigamos cuidandonos!'
-            }, // la descripción de la página
-            {
-                name: 'keywords',
-                content: 'Diabetes infantil, Aplicación para niños con diabetes'
-            } // las palabras clave de la página
-        ]
-    }
+    setup() {
 
+        useHead({
+            // Can be static or computed
+            title: 'SugarCoach: La app que te ayuda a cuidar de tu hijo con diabetes',
+            meta: [
+                {
+                    name: `description`,
+                    content: 'Descubre Sugar Coach, la aplicación gamificada que ayuda a niños con diabetes a controlar sus valores de salud. Descarga la app gratis, explora nuestras redes sociales, contacta con nosotros y mucho más.',
+                },
+                {
+                    name: `keywords`,
+                    content: 'SugarCoach, aplicación, Diabetes nfantil, Control de glucosa, App gamificada, Descarga gratuita, Versión premium, redes sociales',
+                },
+            ],
+
+        })
+    },
 }
 
 </script>
