@@ -10,7 +10,7 @@
         </div>
         <div class="carousel-inner">
             <div v-for="(item, index) in  carousels " :key="index" :class="item.claseCSS">
-                <img :src="item.url" :alt="item.alt" class="img-bg d-block w-100" loading="lazy">
+                <img :src="item.url" :alt="item.alt" class="img-bg d-block w-100">
                 <div class="color-bg"></div>
                 <div class="container">
                     <div class="carousel-caption text-start mb-4 ps-0" style="left: 60px; width: 65%;">

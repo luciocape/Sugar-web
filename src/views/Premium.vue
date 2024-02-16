@@ -26,7 +26,7 @@
             <main>
                 <div class="d-flex justify-content-evenly w-100 flex-wrap gap-3" style="margin-top: 30vh;">
                     <img v-for="(item, index) in  celus" class="align-items-center" style="width: 15vw; min-width: 200px;"
-                        :src="item.url" :alt="item.al" loading="lazy">
+                        :src="item.url" :alt="item.alt">
                 </div>
                 <div class="m-4">
                     <section>
@@ -200,17 +200,17 @@ export default {
             celus: [
                 {
                     url: '../../contenido/celu1.png',
-                    alt: 'pantalla1',
+                    alt: 'Celular',
                     description: 'Lorem ipsum dolor sit amet, consectetur'
                 },
                 {
                     url: '../../contenido/celu2.png',
-                    alt: 'pantalla2',
+                    alt: 'Celular',
                     description: 'Lorem ipsum dolor sit amet, consectetur'
                 },
                 {
                     url: '../../contenido/celu3.png',
-                    alt: 'pantalla3',
+                    alt: 'Celular',
                     description: 'Lorem ipsum dolor sit amet, consectetury'
                 }
             ],
