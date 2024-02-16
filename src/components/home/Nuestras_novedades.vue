@@ -9,7 +9,7 @@
             <ul class="w-100 d-flex justify-content-center gap-3">
                 <li v-for="(item, index) in redes" :key="index" style="list-style: none;"><a :href="item.enlace"
                         target="_blank"><img :src="item.url" :alt="item.alt" class="logo-red-social"
-                            style="width: 10vw;max-width: 60px; min-width: 20px; "></a></li>
+                            style="width: 10vw;max-width: 60px; min-width: 20px;" loading="lazy"></a></li>
             </ul>
         </div>
     </section>
