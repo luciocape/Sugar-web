@@ -3,7 +3,7 @@
         <div class="equipo__contenedor d-flex flex-column d-sm-block">
             <div class="container">
                 <h2 class="fw-bolder display-3">Somos un equipo</h2>
-                <img src="../../../public/contenido/integrantes-equipo.png" alt="Equipo" class="img-equipo item-appear">
+                <img src="../../../public/contenido/integrantes-equipo.png" alt="Equipo" class="img-equipo item-appear" loading="lazy">
                     <p class="texto">Somos un grupo de mujeres decididas a mejorar la calidad de vida de las familias
                         con
                         niños
@@ -23,7 +23,7 @@
             <ul class="lista-equipo mt-4 mb-5 contenedor-integrantes d-flex flex-wrap justify-content-center align-items-center gap-4" style="text-align: center;">
                 <li v-for="(item, index) in  integrantes" :key="index" style="min-width: 150px;">
                     <div class="d-flex flex-column justify-content-center align-items-center"><img :src="item.url" :alt="item.alt" style=" max-width: 100%;"
-                            class="rounded-circle mb-2 img-integrante item-appear"><span class="fw-bold">{{ item.Nombre }}</span> <span
+                            class="rounded-circle mb-2 img-integrante item-appear" loading="lazy"><span class="fw-bold">{{ item.Nombre }}</span> <span
                             class="fw-light">{{ item.cargo }}</span></div>
                 </li>
             </ul>

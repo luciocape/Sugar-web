@@ -4,13 +4,13 @@
         <nav class="navbar navbar-expand-sm top-0 position-fixed" style="z-index: 999; background-color: #4B23A5;width: 100%">
             <div class="container-fluid">
                 <a class="navbar-brand" href="/">
-                    <img src="../../public/contenido/sugar-logo.png" class="d-inline-block " alt="Logo SugarCoach"
+                    <img src="../../public/contenido/sugar-logo.png" loading="lazy" class="d-inline-block " alt="Logo SugarCoach"
                         width="60">
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                     aria-label="Toggle navigation">
-                    <span class="menu"><img src="../../public/contenido/menu.png" alt="menu" width="45"
+                    <span class="menu"><img src="../../public/contenido/menu.png" alt="menu" width="45" loading="lazy"
                             style="filter: invert(85%);"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -20,7 +20,7 @@
                                 class="nav-link" :href="item.enlace">{{ item.link }}</a>
                             <a v-else :href="item.enlace" class="link-premium"><span class="text-warning">{{
                                 item.link }}</span>
-                                <img class="corona" src="../../public/contenido/corona.png" alt="" width="30"></a>
+                                <img class="corona" src="../../public/contenido/corona.png" alt="Corona" width="30" loading="lazy"></a>
                         </li>
                     </ul>
                 </div>

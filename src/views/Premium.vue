@@ -15,9 +15,9 @@
             </div>
             <div :class="{ 'hidden': scrolledDown }" class="position-fixed p-3 w-100 premium-presentacion"
                 style="height: 10vh; z-index: 600;">
-                <span @click="toggleContenido" class="flecha"><img src="" alt="">
+                <span @click="toggleContenido" class="flecha">
                     <svg xmlns="http://www.w3.org/2000/svg" style="height: 6vh;" fill="currentColor"
-                        class="bi bi-arrow-down-square-fill" viewBox="0 0 16 16">
+                        class="bi bi-arrow-down-square-fill" viewBox="0 0 16 16" loading="lazy">
                         <path
                             d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2zm6.5 4.5v5.793l2.146-2.147a.5.5 0 0 1 .708.708l-3 3a.5.5 0 0 1-.708 0l-3-3a.5.5 0 1 1 .708-.708L7.5 10.293V4.5a.5.5 0 0 1 1 0" />
                     </svg>
@@ -25,8 +25,8 @@
             </div>
             <main>
                 <div class="d-flex justify-content-evenly w-100 flex-wrap gap-3" style="margin-top: 30vh;">
-                    <img v-for="(item, index) in  celus" class="align-items-center  " style="width: 15vw; min-width: 200px;"
-                        :src="item.url" :alt="item.al">
+                    <img v-for="(item, index) in  celus" class="align-items-center" style="width: 15vw; min-width: 200px;"
+                        :src="item.url" :alt="item.al" loading="lazy">
                 </div>
                 <div class="m-4">
                     <section>
@@ -40,14 +40,14 @@
                                         <div>
                                             <div class="card-title pricing-card-title display-5">
                                                 <span v-if="item.precio === '../../contenido/becado.png'">
-                                                    <img :src="item.precio" alt="Globo promocional" class="img-card1">
+                                                    <img :src="item.precio" alt="Globo promocional" class="img-card1" loading="lazy">
                                                     /
-                                                    <img src="../../public/contenido/clasico-tachado.png" alt=""
-                                                        class="img-card1">
+                                                    <img src="../../public/contenido/clasico-tachado.png" alt="Precio tachado"
+                                                        class="img-card1" loading="lazy">
                                                 </span>
                                                 <img :src="item.precio" :alt="item.alt"
                                                     v-else-if="item.precio === '../../contenido/clasico-edit.png'"
-                                                    class="img-card2">
+                                                    class="img-card2" loading="lazy">
                                                 <span v-else style="font-weight: 800;">
                                                     {{ item.precio }}
                                                 </span>
@@ -82,7 +82,7 @@
                                                         <button type="button" data-bs-dismiss="modal" aria-label="Close"
                                                             class="rounded-3"><svg xmlns="http://www.w3.org/2000/svg"
                                                                 width="40" height="40" fill="currentColor"
-                                                                class="bi bi-x-square-fill" viewBox="0 0 16 16">
+                                                                class="bi bi-x-square-fill" viewBox="0 0 16 16" loading="lazy">
                                                                 <path
                                                                     d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2zm3.354 4.646L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 1 1 .708-.708" />
                                                             </svg></button>

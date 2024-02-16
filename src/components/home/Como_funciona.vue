@@ -9,7 +9,7 @@
                 <div class="row">
                     <div class="col-md-6 col-sm-12 item-show" v-for="(item, index) in items" :key="index">
                         <div class="card mb-3 d-flex align-items-center" style="border: none; background-color: rgba(0, 0, 0, 0);">
-                            <img :src="item.url" :alt="item.alt" class="rounded-4" width="70">
+                            <img :src="item.url" :alt="item.alt" class="rounded-4" width="70" loading="lazy">
                             <div class="card-body">
                                 <h4 class="card-title">{{ item.title }}</h4>
                                 <p class="card-text texto">{{ item.description }}</p>

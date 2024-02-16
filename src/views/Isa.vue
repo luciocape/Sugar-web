@@ -1,7 +1,7 @@
 <template>
   <q-page>
     <div class="w-100 h-100 d-flex justify-content-center align-items-center">
-      <img class="img-carta-isa" style="height: 100vh;" src="../../public/contenido/Linktree_Isa.png" />
+      <img class="img-carta-isa" style="height: 100vh;" src="../../public/contenido/Linktree_Isa.png" alt="Targeta de presentación Isabel Berizzo"/>
     </div>
     <a href="https://www.linkedin.com/feed/update/urn:li:activity:7095142348136865793" target="_blank" class="link-isa"
       style="background-color: blue"></a>

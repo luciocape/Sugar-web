@@ -8,7 +8,7 @@
                             class="card ms-0 ms-auto me-0 me-auto d-flex align-items-center text-start rounded-3 border-0"
                             style="font-family: cursive; max-height: 80vh; min-height: 60vh;">
 
-                            <img class="h-75 w-75 mt-1" style="" :src="premio.url" :alt="premio.titulo">
+                            <img class="h-75 w-75 mt-1" :src="premio.url" :alt="premio.titulo" loading="lazy">
 
 
                             <div class="card-body d-flex container-fluid" style="min-height: 30%;">
@@ -37,7 +37,7 @@
                                 style="min-height: 250px; width: auto; margin: auto; margin-top: 20px; overflow: hidden;">
                                 <img class="h-100 w-auto"
                                     :src="'http://localhost:1337' + premio.attributes.ImgPremio.data.attributes.formats.thumbnail.url"
-                                    alt="premios.attributes.Titulo">
+                                    :alt="premio.attributes.Titulo" loading="lazy">
                             </div>
 
                             <div class="card-body d-flex container-fluid">

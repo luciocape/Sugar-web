@@ -6,7 +6,7 @@
         <div class="col">
           <a href="/" aria-label="Ir al inicio"
             class=" m-auto mb-1 w-100 d-flex align-items-center link-body-emphasis text-decoration-none">
-            <img class="m-auto mb-0" width="100" src="../../public/contenido/sugar-logo.png" alt="Logo SugarCoach">
+            <img class="m-auto mb-0" width="100" loading="lazy" src="../../public/contenido/sugar-logo.png" alt="Logo SugarCoach">
           </a>
           <p class="text-body-secondary h4 ">&copy; Sugar Coach, Inc 2023</p>
         </div>

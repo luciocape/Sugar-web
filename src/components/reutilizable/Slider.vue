@@ -2,8 +2,8 @@
     <div class="slider">
         <div class="slide-track">
             <div v-for="(item, index) in marcas" :key="index" class="slide">
-                <img v-if="item.nombre != 'Arcor'" :src="item.url" :alt="item.alt" class="todos">
-                <img v-else :src="item.url" :alt="item.alt" class="arcor" style="width: 10vw;">
+                <img v-if="item.nombre != 'Arcor'" :src="item.url" :alt="item.alt" class="todos" loading="lazy">
+                <img v-else :src="item.url" :alt="item.alt" class="arcor" style="width: 10vw;" loading="lazy">
             </div>
         </div>
     </div>
