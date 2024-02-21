@@ -8,11 +8,18 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-6 col-sm-12 item-show" v-for="(item, index) in items" :key="index">
-                        <div class="card mb-3 d-flex align-items-center" style="border: none; background-color: rgba(0, 0, 0, 0);">
+                        <div class="card mb-3 d-flex align-items-center"
+                            style="border: none; background-color: rgba(0, 0, 0, 0);">
                             <img :src="item.url" :alt="item.alt" class="rounded-4" width="70" loading="lazy">
                             <div class="card-body">
                                 <h4 class="card-title">{{ item.title }}</h4>
-                                <p class="card-text texto">{{ item.description }}</p>
+                                <p class="card-text texto" style="word-spacing: 3px;">
+                                    <span v-for="palabra in item.description.split(' ')" class="d-inline-block">
+                                        <strong v-if="esPalabraClave[palabra]">{{ palabra }}</strong>
+                                        <span v-else>{{ palabra }}</span>
+                                        <span style="visibility: hidden;">.</span>
+                                    </span>
+                                </p>
                             </div>
                         </div>
                     </div>
@@ -42,17 +49,27 @@ export default {
                 },
                 {
                     title: 'Manteniendo informado al grupo familiar sobre la diabetes infantil',
-                    description: 'Es muy común que la diabetes tipo 1 se presenta en niños desde corta edad. Por lo tanto, el control lo realizan los adultos responsables y pueden llevarlo varios integrantes de la familia. SugarCoach envía mensajes automáticos para alertar un episodio de hipoglucemia o hiperglucemia grave.',
+                    description: 'Es muy común que la diabetes se presenta en niños desde corta edad. Por lo tanto, el control lo realizan los adultos responsables y pueden llevarlo varios integrantes de la familia. SugarCoach envía mensajes automáticos para alertar un episodio de hipoglucemia o hiperglucemia grave.',
                     url: '../../../contenido/campana.png',
                     alt: 'Campana'
                 },
                 {
                     title: 'Con informes claros y útiles para el médico sobre la hemoglobina glicosilada (HbA1c)',
-                    description: 'SugarCoach envía informes regulares al equipo médico sobre el seguimiento de la diabetes. Además cuenta con gráficos y estadísticas simples y útiles donde contrastar el desarrollo de la glucemia a lo largo del tiempo. Además permite la telemedicina.',
+                    description: 'SugarCoach envía informes regulares al equipo médico para el seguimiento de la diabetes. Además cuenta con gráficos y estadísticas simples y útiles donde contrastar el desarrollo de la glucemia a lo largo del tiempo. Además permite la telemedicina.',
                     url: '../../../contenido/documento.png',
                     alt: 'Documento'
                 }
-            ]
+            ],
+            palabrasClave: ["diabetes infantil", "diabetes tipo 1", "hemoglobina glicosilada", "(HbA1c)", "telemedicina", "aplicación para diabéticos", "bomaba infusora de insulina", "hipoglucemia", "hiperglucemia"]
+        }
+    },
+    computed: {
+        esPalabraClave() {
+            let obj = {};
+            for (let palabra of this.palabrasClave) {
+                obj[palabra] = true;
+            }
+            return obj;
         }
     }
 }
@@ -72,12 +89,14 @@ export default {
     background-color: rgba(255, 255, 255, 0.6);
 }
 
-
+span {
+    white-space-collapse: preserve-spaces;
+}
 
 /*Queries*/
 @media only screen and (max-width: 768px) {
     #como_funciona {
-    background-image: url('../../../public/contenido/nenes-usando-app.png');
-}    
+        background-image: url('../../../public/contenido/nenes-usando-app.png');
+    }
 }
 </style>

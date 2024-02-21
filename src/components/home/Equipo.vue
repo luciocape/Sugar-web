@@ -5,10 +5,10 @@
                 <h2 class="fw-bolder display-3">Somos un equipo</h2>
                 <img src="../../../public/contenido/integrantes-equipo.png" alt="Equipo" class="img-equipo item-appear"
                     loading="lazy">
-                <p class="texto">Somos un equipo decidido a mejorar la calidad de vida de las familias de niños con diabetes
-                    tipo 1. SugarCoach nació de la necesidad de mantener vivos y sanos a los hijos de Isabel. Como muchos
-                    padres de niños con DT1, ella se dio cuenta que controlar la enfermedad era un trabajo exhaustivo y
-                    cambiaba la dinamica para toda la familia (diabetes 3). Por eso pensó en crear una App para la diabetes
+                <p class="texto">Somos un equipo decidido a mejorar la calidad de vida de las familias de niños con <strong>diabetes
+                    tipo 1</strong>. SugarCoach nació de la necesidad de mantener vivos y sanos a los hijos de Isabel. Como muchos
+                    padres de niños con <strong>DT1</strong>, ella se dio cuenta que controlar la enfermedad era un trabajo exhaustivo y
+                    cambiaba la dinamica para toda la familia <strong>(diabetes 3)</strong>. Por eso pensó en crear una aplicación
                     que no solo resolviera su problema, sino que también pudiera ayudar a otras familias que vivían lo
                     mismo. En 2021, junto a Verónica Aveldaño, nuestra COO lanzaron SugarCoach, un proyecto integral que
                     incluye una App móvil, educativa y de contención para la comunidad de familias con diabetes tipo 1.

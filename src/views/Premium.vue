@@ -7,9 +7,9 @@
                 <h2 class="family-premium presentacion-h2">Elige el plan perfecto para ti</h2>
                 <p style="font-family: sans-serif; font-weight: 700;" class="text-center presentacion-p">
                     Este proyecto se sustenta solo con el trabajo y el esfuerzo de los miembros del equipo. Todos
-                    relacionados de alguna manera con la diabetes tipo 1. Para seguir desarrollando este proyecto y
-                    solucionar los problemas de las chicos con diabetes infantil y sus familias, necesitamos tu ayuda!. Por
-                    eso puedes ayudar comprando una licencia premium para ti y tu familia. Y si tienes una empresa puedes
+                    relacionados de alguna manera con la <strong>diabetes tipo 1</strong>. Para seguir desarrollando este proyecto y
+                    solucionar los problemas de las chicos con <strong>diabetes infantil</strong> y sus familias, necesitamos tu ayuda!. Por
+                    eso puedes colaborar adquiriendo una <strong>licencia premium</strong> para ti y tu familia. Y si tienes una empresa puedes
                     anunciarte y ayudar a la vez! Como? Comprando Licencias Premium para que nosotros podamos repartir entre
                     aquellos que necesitan tu ayuda. Elige abajo el plan que más te guste</p>
             </div>
