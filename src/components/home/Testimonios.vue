@@ -50,7 +50,7 @@ export default {
 #testimonios {
     min-height: 350px;
     height: 70vh;
-    background-image: url('../../../public/contenido/nene-app.jpg');
+    background-image: url('../../../public/contenido/7-Niños-con-SC.png');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;

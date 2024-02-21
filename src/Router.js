@@ -49,7 +49,12 @@ const routes = [
 // Crea una instancia del router y pasa las rutas como opción
 const router = createRouter({
     history: createWebHistory(process.env.BASE_URL), // usa el modo history para evitar el hash (#) en la URL
-    routes // abreviatura de routes: routes
+    routes,
+    scrollBehavior (to, from, savedPosition) {
+        if (to.path !== from.path) {
+            return { left: 0, top: 0, behavior: 'instant' };
+        }
+    }
 })
 
 // Exporta el router para usarlo en tu aplicación

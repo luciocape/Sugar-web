@@ -3,10 +3,10 @@
     <header>
         <nav class="navbar navbar-expand-sm top-0 position-fixed" style="z-index: 999; background-color: #4B23A5;width: 100%">
             <div class="container-fluid">
-                <a class="navbar-brand" href="/">
+                <router-link class="navbar-brand" to="/">
                     <img src="../../public/contenido/sugar-logo.png" loading="lazy" class="d-inline-block " alt="Logo SugarCoach"
                         width="60">
-                </a>
+                </router-link>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                     aria-label="Toggle navigation">
@@ -18,9 +18,9 @@
                         <!--Links navbar-->
                         <li v-for="item in links" :key="index" class="nav-item"><a v-if="item.link != 'Premium'"
                                 class="nav-link" :href="item.enlace">{{ item.link }}</a>
-                            <a v-else :href="item.enlace" class="link-premium"><span class="text-warning">{{
+                            <router-link v-else to="/premium" class="link-premium"><span class="text-warning">{{
                                 item.link }}</span>
-                                <img class="corona" src="../../public/contenido/corona.png" alt="Corona" width="30" loading="lazy"></a>
+                                <img class="corona" src="../../public/contenido/corona.png" alt="Corona" width="30" loading="lazy"></router-link>
                         </li>
                     </ul>
                 </div>

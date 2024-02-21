@@ -7,11 +7,11 @@
                 <h2 class="family-premium presentacion-h2">Elige el plan perfecto para ti</h2>
                 <p style="font-family: sans-serif; font-weight: 700;" class="text-center presentacion-p">
                     Este proyecto se sustenta solo con el trabajo y el esfuerzo de los miembros del equipo. Todos
-                    relacionados de alguna manera con la diabetes. Para seguir desarrollando este proyecto y solucionar los
-                    problemas de las personas con diabetes y sus familias, necesitamos tu ayuda!. Por eso puedes ayudar
-                    comprando una licencia premium para ti y tu familia. Y si tienes una empresa puedes anunciarte y ayudar
-                    a la vez! Como? Comprando Licencias Premium para que nosotros podamos repartir entre aquellos que
-                    necesitan tu ayuda. Elige abajo el plan que más te guste!</p>
+                    relacionados de alguna manera con la diabetes tipo 1. Para seguir desarrollando este proyecto y
+                    solucionar los problemas de las chicos con diabetes infantil y sus familias, necesitamos tu ayuda!. Por
+                    eso puedes ayudar comprando una licencia premium para ti y tu familia. Y si tienes una empresa puedes
+                    anunciarte y ayudar a la vez! Como? Comprando Licencias Premium para que nosotros podamos repartir entre
+                    aquellos que necesitan tu ayuda. Elige abajo el plan que más te guste</p>
             </div>
             <div :class="{ 'hidden': scrolledDown }" class="position-fixed p-3 w-100 premium-presentacion"
                 style="height: 10vh; z-index: 600;">
@@ -40,10 +40,11 @@
                                         <div>
                                             <div class="card-title pricing-card-title display-5">
                                                 <span v-if="item.precio === '../../contenido/becado.png'">
-                                                    <img :src="item.precio" alt="Globo promocional" class="img-card1" loading="lazy">
+                                                    <img :src="item.precio" alt="Globo promocional" class="img-card1"
+                                                        loading="lazy">
                                                     /
-                                                    <img src="../../public/contenido/clasico-tachado.png" alt="Precio tachado"
-                                                        class="img-card1" loading="lazy">
+                                                    <img src="../../public/contenido/clasico-tachado.png"
+                                                        alt="Precio tachado" class="img-card1" loading="lazy">
                                                 </span>
                                                 <img :src="item.precio" :alt="item.alt"
                                                     v-else-if="item.precio === '../../contenido/clasico-edit.png'"
@@ -82,7 +83,8 @@
                                                         <button type="button" data-bs-dismiss="modal" aria-label="Close"
                                                             class="rounded-3"><svg xmlns="http://www.w3.org/2000/svg"
                                                                 width="40" height="40" fill="currentColor"
-                                                                class="bi bi-x-square-fill" viewBox="0 0 16 16" loading="lazy">
+                                                                class="bi bi-x-square-fill" viewBox="0 0 16 16"
+                                                                loading="lazy">
                                                                 <path
                                                                     d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2zm3.354 4.646L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 1 1 .708-.708" />
                                                             </svg></button>

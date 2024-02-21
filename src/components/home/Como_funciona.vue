@@ -29,26 +29,26 @@ export default {
         return {
             items: [
                 {
-                    title: 'Una experiencia gamificada',
-                    description: 'Cada persona define su perfil y su historia clínica así SugarCoach puede comunicarse con su equipo médico. En cada comida, el usuario carga valores de glucemia, insulina y carbohidratos. Y lo más importante es que gana premios por cuidarse. SugarCoach se adapta a todos los tratamientos y dispositivos, incluso registra los perfiles de la Bomba Infusora de Insulina.',
+                    title: 'Una experiencia gamificada para el control de la diabetes tipo 1',
+                    description: 'Cada persona define su perfil y su historia clínica así SugarCoach puede comunicarse con su equipo médico y ofrecerle un tratamiento personalizado de la diabetes. En cada comida, el usuario carga valores de glucemia, insulina y carbohidratos. Y lo más importante es que gana premios por cuidarse. SugarCoach se adapta a todos los tratamientos y dispositivos, incluso registra los perfiles de la Bomba Infusora de Insulina.',
                     url: '../../../contenido/game-control.png',
                     alt: 'Control de consola'
                 },
                 {
-                    title: 'Aprendiendo a cuidarse',
-                    description: 'Creamos una herramienta moderna, rápida y amigable diseñada desde el punto de vista del usuario real que permite al usuario crear hábitos saludables.  Con explicaciones sencillas para llevar un control eficiente de la Diabetes Tipo 1 el usuario juega y recibe recompensas del mundo gaming.',
+                    title: 'Aprendiendo a cuidarse con una aplicación para diabéticos',
+                    description: 'Creamos una herramienta moderna, rápida y amigable diseñada desde el punto de vista del usuario real que permite al usuario crear hábitos saludables. Con explicaciones sencillas para llevar un control eficiente de la diabetes tipo 1 el usuario juega y recibe recompensas del mundo gaming.',
                     url: '../../../contenido/mano-curadora.png',
-                    alt: 'Mano curadora'
+                    alt: 'Mano Sanadora'
                 },
                 {
-                    title: 'Manteniendo informado al grupo familiar',
-                    description: 'Es muy común que la Diabetes Tipo 1 se presenta en niños desde corta edad. Por lo tanto, el control lo realizan los adultos responsables y pueden llevarlo varios integrantes de la familia. SugarCoach envía mensajes automáticos para alertar un episodio de hipoglucemia o hiperglucemia grave.',
+                    title: 'Manteniendo informado al grupo familiar sobre la diabetes infantil',
+                    description: 'Es muy común que la diabetes tipo 1 se presenta en niños desde corta edad. Por lo tanto, el control lo realizan los adultos responsables y pueden llevarlo varios integrantes de la familia. SugarCoach envía mensajes automáticos para alertar un episodio de hipoglucemia o hiperglucemia grave.',
                     url: '../../../contenido/campana.png',
                     alt: 'Campana'
                 },
                 {
-                    title: 'Con informes claros y útiles para el médico',
-                    description: 'SugarCoach envía informes regulares al equipo médico. Además cuenta con gráficos y estadísticas simples y útiles donde contrastar el desarrollo de la glucemia a lo largo del tiempo. Además permite la telemedicina.',
+                    title: 'Con informes claros y útiles para el médico sobre la hemoglobina glicosilada (HbA1c)',
+                    description: 'SugarCoach envía informes regulares al equipo médico sobre el seguimiento de la diabetes. Además cuenta con gráficos y estadísticas simples y útiles donde contrastar el desarrollo de la glucemia a lo largo del tiempo. Además permite la telemedicina.',
                     url: '../../../contenido/documento.png',
                     alt: 'Documento'
                 }
@@ -60,7 +60,7 @@ export default {
 
 <style>
 #como_funciona {
-    background-image: url('../../../public/contenido/nene-nena-usando-app.png');
+    background-image: url('../../../public/contenido/1-Niños-con-SC.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;

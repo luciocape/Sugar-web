@@ -4,10 +4,10 @@
     <div class="container">
       <footer class="row row-cols-1 row-cols-sm-2 row-cols-md-3">
         <div class="col">
-          <a href="/" aria-label="Ir al inicio"
+          <router-link to="/" aria-label="Ir al inicio"
             class=" m-auto mb-1 w-100 d-flex align-items-center link-body-emphasis text-decoration-none">
             <img class="m-auto mb-0" width="100" loading="lazy" src="../../public/contenido/sugar-logo.png" alt="Logo SugarCoach">
-          </a>
+          </router-link>
           <p class="text-body-secondary h4 ">&copy; Sugar Coach, Inc 2023</p>
         </div>
         <div class="col">
@@ -25,8 +25,8 @@
           <nav>
             <ul class="nav flex-column">
               <li v-for="item in views" :key="index" class="nav-item mb-2">
-                <a :href="item.enlace" class="nav-link p-0" style="color:antiquewhite;">{{ item.link
-                }}</a>
+                <router-link :to="item.enlace" class="nav-link p-0" style="color:antiquewhite;">{{ item.link
+                }}</router-link>
               </li>
             </ul>
           </nav>

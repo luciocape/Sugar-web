@@ -41,7 +41,7 @@ export default {
             carousels: [
                 {
                     claseCSS: 'carousel-item active slide1',
-                    url: '../../../contenido/nene-nena-usando-app.png',
+                    url: '../../../contenido/1-Niños-con-SC.jpg',
                     alt: 'Slide 1',
                     title: 'Convertimos el control de la diabetes en un juego',
                     description: '',
