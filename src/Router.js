@@ -1,6 +1,7 @@
 // Importa el módulo vue-router y los componentes que quieres usar
 import { createRouter, createWebHistory } from 'vue-router'
 import Home from './views/Home.vue'
+import { useHead } from '@vueuse/head'
 
 // Define un array de objetos con las rutas
 const routes = [
