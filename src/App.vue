@@ -35,7 +35,6 @@ export default {
       keywords: `Experiencia de juego para control de diabetes, Monitoreo de salud infantil, App de seguimiento de diabetes pediátrica, Registro de niveles de glucosa, SugarCoach, aplicación, Diabetes infantil, App gamificada, Descarga gratuita, Versión premium, Canjea puntos por premios`,	
     })
     useHead({
-      // Can be static or computed
       title: computed(() => siteData.title),
       meta: [
         {
@@ -154,7 +153,7 @@ h2 {
 
   animation-timeline: --item;
   animation-name: show;
-  animation-range: entry 0% exit 5%;
+  animation-range: entry 0% cover 60%;
   animation-fill-mode: both;
 }
 
@@ -392,20 +391,20 @@ h2 {
 
 @media only screen and (min-width: 800px) {
   .texto {
-    font-size: 1.6vw;
+    font-size: 1.3vw;
   }
 }
 
 @media only screen and (max-width: 600px) {
   .texto {
 
-    font-size: 3vw;
+    font-size: 2.5vw;
   }
 
 }
 
 @media only screen and (max-width: 450px) {
   .texto {
-    font-size: 3.8vw;
+    font-size: 3vw;
   }
 }</style>

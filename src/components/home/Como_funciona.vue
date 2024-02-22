@@ -7,18 +7,76 @@
             </div>
             <div class="container">
                 <div class="row">
-                    <div class="col-md-6 col-sm-12 item-show" v-for="(item, index) in items" :key="index">
+                    <div class="col-md-6 col-sm-12 item-show">
                         <div class="card mb-3 d-flex align-items-center"
                             style="border: none; background-color: rgba(0, 0, 0, 0);">
-                            <img :src="item.url" :alt="item.alt" class="rounded-4" width="70" loading="lazy">
+                            <img :src="items.at(0).url" :alt="items.at(0).alt" class="rounded-4" width="70" loading="lazy">
                             <div class="card-body">
-                                <h4 class="card-title">{{ item.title }}</h4>
-                                <p class="card-text texto" style="word-spacing: 3px;">
-                                    <span v-for="palabra in item.description.split(' ')" class="d-inline-block">
-                                        <strong v-if="esPalabraClave[palabra]">{{ palabra }}</strong>
-                                        <span v-else>{{ palabra }}</span>
-                                        <span style="visibility: hidden;">.</span>
-                                    </span>
+                                <h3 class="card-title h5">Una experiencia gamificada para el control de la <strong>diabetes
+                                        tipo 1</strong></h3>
+                                <p class="card-text texto">
+                                    Cada persona define su perfil y su historia clínica así <b>SugarCoach</b> puede
+                                    comunicarse con
+                                    su equipo médico y ofrecerle un tratamiento personalizado de la
+                                    <strong>diabetes</strong>. En cada
+                                    comida, el usuario carga valores de glucemia, insulina y carbohidratos. Y lo más
+                                    importante es que gana premios por cuidarse. <b>SugarCoach</b> se adapta a todos los
+                                    tratamientos y dispositivos, incluso registra los perfiles de la <strong>Bomba Infusora
+                                        de
+                                        Insulina</strong>.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-sm-12 item-show">
+                        <div class="card mb-3 d-flex align-items-center"
+                            style="border: none; background-color: rgba(0, 0, 0, 0);">
+                            <img :src="items.at(1).url" :alt="items.at(1).alt" class="rounded-4" width="70" loading="lazy">
+                            <div class="card-body">
+                                <h3 class="card-title h5">Aprendiendo a cuidarse con una <strong>aplicación para
+                                        diabéticos</strong></h3>
+                                <p class="card-text texto">
+                                    Creamos una herramienta moderna, rápida y amigable diseñada desde el punto de vista del
+                                    usuario real que permite al usuario crear hábitos saludables. Con explicaciones
+                                    sencillas para llevar un control eficiente de la <strong>diabetes tipo 1</strong> el
+                                    usuario juega y
+                                    recibe recompensas del <strong>mundo gaming</strong>.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-sm-12 item-show">
+                        <div class="card mb-3 d-flex align-items-center"
+                            style="border: none; background-color: rgba(0, 0, 0, 0);">
+                            <img :src="items.at(2).url" :alt="items.at(2).alt" class="rounded-4" width="70" loading="lazy">
+                            <div class="card-body">
+                                <h3 class="card-title h5">Manteniendo informado al grupo familiar sobre la <strong>diabetes
+                                        infantil</strong></h3>
+                                <p class="card-text texto">
+                                    Es muy común que la <strong>diabetes</strong> se presenta en niños desde corta edad. Por
+                                    lo tanto, el
+                                    control lo realizan los adultos responsables y pueden llevarlo varios integrantes de la
+                                    familia. <b>SugarCoach</b> envía mensajes automáticos para alertar un episodio de
+                                    <strong>hipoglucemia</strong>
+                                    o <strong>hiperglucemia</strong> grave.
+
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-sm-12 item-show">
+                        <div class="card mb-3 d-flex align-items-center"
+                            style="border: none; background-color: rgba(0, 0, 0, 0);">
+                            <img :src="items.at(3).url" :alt="items.at(3).alt" class="rounded-4" width="70" loading="lazy">
+                            <div class="card-body">
+                                <h4 class="card-title h5">Con informes claros y útiles para el médico sobre la
+                                    <strong>hemoglobina glicosilada</strong> <strong>(HbA1c)</strong></h4>
+                                <p class="card-text texto">
+                                    <b>SugarCoach</b> envía informes regulares al equipo médico para el seguimiento de la
+                                    <strong>diabetes</strong>.
+                                    Además cuenta con gráficos y estadísticas simples y útiles donde contrastar el
+                                    desarrollo de la glucemia a lo largo del tiempo. Además permite la
+                                    <strong>telemedicina</strong>.
                                 </p>
                             </div>
                         </div>
@@ -89,14 +147,9 @@ export default {
     background-color: rgba(255, 255, 255, 0.6);
 }
 
-span {
-    white-space-collapse: preserve-spaces;
-}
-
 /*Queries*/
 @media only screen and (max-width: 768px) {
     #como_funciona {
         background-image: url('../../../public/contenido/nenes-usando-app.png');
     }
-}
-</style>
+}</style>
