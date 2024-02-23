@@ -90,11 +90,6 @@ router.beforeEach((to, from, next) => {
             ]
         })
     }
-    else {
-        useHead({
-            script: []
-        })
-    }
     // Se continúa con la navegación
     next()
 })
