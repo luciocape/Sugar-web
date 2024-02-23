@@ -82,8 +82,17 @@ router.beforeEach((to, from, next) => {
                     gtag('js', new Date());
                     gtag('config', 'G-600XFCVLS9');
                     `
-                }
+                },
+                {
+                    src: 'https://www.googletagmanager.com/gtm.js?id=GTM-NV92RNH5',
+                    async: true
+                },
             ]
+        })
+    }
+    else {
+        useHead({
+            script: []
         })
     }
     // Se continúa con la navegación
