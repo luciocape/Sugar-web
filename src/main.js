@@ -8,9 +8,10 @@ import { createApp } from 'vue'
 import { createGtm } from 'vue-gtm'
 
 const head = createHead()
+const app = createApp(App)
 
-createApp(App).use(head).use(router).mount('#app')
-
+app.use(head)
+app.use(router)
 app.use(
     createGtm({
         id: 'GTM-NV92RNH5', // Tu ID de Google Tag Manager
@@ -19,7 +20,9 @@ app.use(
         vueRouter: router, // Pasa la instancia del enrutador para sincronizar con el enrutador
         ignoredViews: ['/lab', '/isa', '/privacy','/account'], // No dispara eventos para los nombres de ruta especificados
     }),
-);
+)
+
+app.mount('#app')
 /*
 try {
     fetch('http://localhost:1337/api/sugar-premios', {
