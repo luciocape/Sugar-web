@@ -5,12 +5,21 @@ import "@/assets/bootstrap.bundle.min.js"
 import { createHead } from "@vueuse/head"
 // Importa la función createApp desde el módulo 'vue'
 import { createApp } from 'vue'
+import { createGtm } from 'vue-gtm'
 
 const head = createHead()
 
 createApp(App).use(head).use(router).mount('#app')
 
-
+app.use(
+    createGtm({
+        id: 'GTM-NV92RNH5', // Tu ID de Google Tag Manager
+        enabled: true, // Habilita o deshabilita el plugin
+        debug: true, // Muestra o no mensajes de depuración en la consola
+        vueRouter: router, // Pasa la instancia del enrutador para sincronizar con el enrutador
+        ignoredViews: ['/lab', '/isa', '/privacy','/account'], // No dispara eventos para los nombres de ruta especificados
+    }),
+);
 /*
 try {
     fetch('http://localhost:1337/api/sugar-premios', {

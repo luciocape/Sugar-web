@@ -83,10 +83,6 @@ router.beforeEach((to, from, next) => {
                     gtag('config', 'G-600XFCVLS9');
                     `
                 },
-                {
-                    src: 'https://www.googletagmanager.com/gtm.js?id=GTM-NV92RNH5',
-                    async: true
-                },
             ]
         })
     }
