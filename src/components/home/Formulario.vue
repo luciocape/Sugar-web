@@ -18,7 +18,7 @@
                             style="max-height: 120px;"></textarea>
                     </div>
                 </div>
-                <input type="submit" class="btn btn-primary">
+                <input type="submit" class="btn btn-primary" style="width: 150px;">
 
                 <input type="hidden" name="_next" value="http://sugar.coach">
             </form>

@@ -5,13 +5,14 @@ import "@/assets/bootstrap.bundle.min.js"
 import { createHead } from "@vueuse/head"
 // Importa la función createApp desde el módulo 'vue'
 import { createApp } from 'vue'
-import { createGtm } from 'vue-gtm'
+//import { createGtm } from 'vue-gtm'
 
 const head = createHead()
 const app = createApp(App)
 
 app.use(head)
 app.use(router)
+/*
 app.use(
     createGtm({
         id: 'GTM-NV92RNH5', // Tu ID de Google Tag Manager
@@ -21,7 +22,7 @@ app.use(
         ignoredViews: ['/lab', '/isa', '/privacy','/account'], // No dispara eventos para los nombres de ruta especificados
     }),
 )
-
+*/
 app.mount('#app')
 /*
 try {

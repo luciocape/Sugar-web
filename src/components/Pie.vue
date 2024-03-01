@@ -94,17 +94,6 @@ export default {
           icon: 'fas fa-info-circle',
           enlace: '/premium'
         },
-
-        {
-          link: 'Para Empresas',
-          icon: 'fas fa-info-circle',
-          enlace: '/para-empresas'
-        },
-        {
-          link: 'Becado',
-          icon: 'fas fa-info-circle',
-          enlace: '/becado'
-        },
         {
           link: 'Premios',
           icon: 'fas fa-info-circle',

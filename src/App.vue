@@ -32,10 +32,18 @@ export default {
     const siteData = reactive({
       title: `SugarCoach`,
       description: `Descubre SugarCoach, la aplicación que transforma el control de la diabetes infantil en una experiencia gamificada. Supervisa de manera sencilla los niveles de glucosa, insulina y carbohidratos de tu hijo. Descarga la versión gratuita o mejora a la premium para acceder a beneficios exclusivos. Patrocina nuestra causa o canjea puntos por tarjetas de regalo. ¡Síguenos en redes sociales y sigamos cuidandonos!`,
-      keywords: `Experiencia de juego para control de diabetes, Monitoreo de salud infantil, App de seguimiento de diabetes pediátrica, Registro de niveles de glucosa, SugarCoach, aplicación, Diabetes infantil, App gamificada, Descarga gratuita, Versión premium, Canjea puntos por premios`,	
+      keywords: `Experiencia de juego para control de diabetes, Monitoreo de salud infantil, App de seguimiento de diabetes pediátrica, Registro de niveles de glucosa, SugarCoach, aplicación, Diabetes infantil, App gamificada, Descarga gratuita, Versión premium, Canjea puntos por premios`,
     })
     useHead({
       title: computed(() => siteData.title),
+      script: [
+        {
+          src: 'https://static.elfsight.com/platform/platform.js',
+          async: true,
+          'data-use-service-core': '',
+          'defer': ''
+        },
+      ],
       meta: [
         {
           name: `description`,
@@ -44,6 +52,10 @@ export default {
         {
           name: `keywords`,
           content: computed(() => siteData.keywords),
+        },
+        {
+          name: 'theme-color',
+          content: '#317EFB'
         }
       ],
     })
@@ -72,7 +84,9 @@ export default {
 
 html {
   scroll-behavior: smooth;
-
+  /*  
+  overflow: -moz-scrollbars-none;
+  scrollbar-width: none;*/
 }
 
 html,
@@ -98,6 +112,43 @@ body {
   background-color: #fff;
 
 
+}
+
+/*
+::-webkit-scrollbar {
+  width: 0;
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(#81d7ec, #10096d, #81d7ec);
+  border-radius: 5px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #4741d7;
+}
+*/
+/* Estilo para la barra de desplazamiento */
+body::-webkit-scrollbar {
+  width: 15px;
+  /* Ancho de la barra de desplazamiento */
+}
+
+body::-webkit-scrollbar-track {
+  background: #753edb8a;
+  /* Color del área de seguimiento */
+}
+
+body::-webkit-scrollbar-thumb {
+  background: linear-gradient(to bottom, #4741d7, rgb(13, 1, 56));
+  /* Gradiente lineal en la barra de desplazamiento */
+  border-radius: 20px;
+  /* Redondez de la barra de desplazamiento */
+  transition: 500ms linear;
+}
+
+body::-webkit-scrollbar-thumb:hover {
+  background: #4182d7;
 }
 
 q-page {
@@ -407,4 +458,5 @@ h2 {
   .texto {
     font-size: 3vw;
   }
-}</style>
+}
+</style>

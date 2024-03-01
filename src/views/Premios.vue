@@ -46,7 +46,6 @@
                                         <div class="mt-4">
                                             <p class="puntos m-auto">{{ premio.attributes.puntos }}</p>
                                             <p class="m-auto">Puntos</p>
-
                                         </div>
                                     </div>
                                     <div class="col-7">
@@ -59,8 +58,14 @@
                             </div>
                         </div>
                     </div>
-                    <div v-else style="margin: 25vh auto 5vh auto; position: relative; width: 50px;">
-                        <div class="loader m-auto"></div>
+                    <div v-else style="margin: 25vh auto 5vh auto; position: relative; width: 60px;">
+                        <div class="loader m-auto"
+                            style="background-color: linear-gradient(0deg, rgb(8, 0, 73) 0%, rgb(0, 204, 255) 100%);">
+                            
+                        </div>
+                        <div class="tap-loader">
+                            <div class="filtro w-100 h-100" style="border-radius: 50%;"></div>
+                        </div>
                     </div>
                 </section>
             </main>
@@ -181,16 +186,32 @@ export default {
     width: 60px;
     height: 60px;
     border-radius: 50%;
-    border-top-color: transparent;
-    animation: spin 1.2s linear infinite;
-}
+    position: relative;
+    margin: 0 auto;
+    background: linear-gradient(to right, rgb(8, 0, 73) 0%, rgb(0, 204, 255) 100%);
+    animation: spin 1s linear infinite;
 
+}
+.tap-loader{
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background-image: url('../../public/contenido/nene-usando-app.jpg');
+    background-attachment: fixed;
+    background-position: center;
+    position: absolute;
+    background-repeat: no-repeat;
+    background-size: cover;
+    top: 7.5px;
+    left: 7.5px;
+}
 @keyframes spin {
     to {
         transform: rotate(360deg);
     }
 }
 
+/*
 .loader::after,
 .loader::before {
     content: '';
@@ -206,6 +227,7 @@ export default {
     left: 0;
 }
 
+
 .loader::after {
     width: 82%;
     height: 82%;
@@ -213,5 +235,5 @@ export default {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-}
+}*/
 </style>
