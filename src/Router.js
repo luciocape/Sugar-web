@@ -32,7 +32,8 @@ const routes = [
     {
         path: '/account',
         name: 'Delete Account',
-        component: () => import('@/views/DeleteAccount.vue'),
+        //component: () => import('@/views/DeleteAccount.vue'),
+        beforeEnter: () => window.location.href='https://luaeiyvw.formester.com/f/54c8bc99-d562-4d44-9e1c-222a80f2faf8',
         meta: { analytics: false }
     },
     {

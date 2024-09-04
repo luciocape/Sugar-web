@@ -102,7 +102,7 @@ export default {
         {
           link: 'Delete Account',
           icon: 'fas fa-info-circle',
-          enlace: 'https://luaeiyvw.formester.com/f/54c8bc99-d562-4d44-9e1c-222a80f2faf8'
+          enlace: '/account'
         },
       ]
     }
